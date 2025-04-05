@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "ComingSoon": {
+    "title": "We Are Work On Something Amazing!",
+    "description": "Our website is under construction. We will soon launch innovative marketing services that will change the concept of digital marketing.",
+    "formTitle": "Stay Tuned",
+    "formDescription": "subscribe to our newsletter to be the first notefied when we lunch",
+    "followUs": "follow us",
+    "buttonLable": "subscribe"
+  }
+}
