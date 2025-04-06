@@ -1,12 +1,9 @@
-import { useTranslations } from "next-intl";
 import { Mail, Instagram, Facebook, Linkedin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import LocaleSwitcher from "@/i18n/locale-switcher";
 
 export default function Comingoon() {
-  const t = useTranslations("ComingSoon");
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#011749] via-[#011749]/90 to-[#1285ca] flex flex-col items-center justify-center p-4 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none hidden md:block">
@@ -32,15 +29,18 @@ export default function Comingoon() {
         />
 
         <h1 className="text-center text-3xl font-bold bg-gradient-to-r to-white/90 from-[#17ddb9] bg-clip-text text-transparent">
-          {t("title")}
+          نحن نعمل علي شيئ مميز
         </h1>
-        <p className="text-center text-white/50 my-5">{t("description")}</p>
+        <p className="text-center text-white/50 my-5">
+          موقعنا قيد الإنشاء. سنطلق قريباً خدمات تسويقية مبتكرة ستغير مفهوم
+          التسويق الرقمي.
+        </p>
         <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#17ddb9] to-transparent mx-auto mb-7"></div>
         <p className="text-center font-semibold text-xl text-white/85">
-          {t("formTitle")}
+          أبقى على اطلاع
         </p>
         <p className="text-center text-base text-white/50 mt-3">
-          {t("formDescription")}
+          اشترك في نشرتنا البريدية للحصول على إشعار عند إطلاق الموقع
         </p>
         <div className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto w-full mt-4">
           <div className="relative flex-grow">
@@ -55,11 +55,13 @@ export default function Comingoon() {
             />
           </div>
           <Button className="bg-[#17ddb9] hover:bg-[#17ddb9]/80 text-[#011749] font-medium text-center items-center flex">
-            {t("buttonLable")}
+            اشترك الان
           </Button>
         </div>
         <div className="mt-10">
-          <p className="text-white/50 mb-4 text-center">{t("followUs")}</p>
+          <p className="text-white/50 mb-4 text-center">
+            تابعنا علي وسائل التواصل الاجتماعي
+          </p>
           <ul className="flex justify-center gap-4">
             {[
               {
@@ -93,7 +95,6 @@ export default function Comingoon() {
           </ul>
         </div>
       </div>
-      <LocaleSwitcher />
     </main>
   );
 }
