@@ -1,5 +1,17 @@
+import CustomHeroSection from "@/components/shared/custom-hero-section";
+import SectionTitle from "@/components/shared/section-title";
 import React from "react";
 
 export default function AboutUs() {
-  return <div>page</div>;
+  return (
+    <>
+      <CustomHeroSection>
+        <SectionTitle
+          headline="تعرف علينا"
+          title="فريق من المبدعين يصنع الفرق"
+          description="نحن أكثر من مجرد وكالة تسويق. نحن شركاء في نجاحك، نعمل معًا لتحقيق أهدافك وتجاوز توقعاتك"
+        />
+      </CustomHeroSection>
+    </>
+  );
 }
