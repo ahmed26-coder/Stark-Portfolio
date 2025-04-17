@@ -1,9 +1,9 @@
-import SectionTitle from "@/components/shared/section-title";
 import React from "react";
 import { HeroSection, HeroStatus } from "./page.chunks";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import DecorativeSeparator from "@/components/shared/decorative-separator";
 
 export default function HomePage() {
   return (
@@ -44,6 +44,7 @@ export default function HomePage() {
           </Link>
         </div>
       </HeroSection>
+      <DecorativeSeparator />
     </>
   );
 }
