@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Cairo, Rubik } from "next/font/google";
+import { Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 // Fonts
-const cairo = Cairo({
+const cairo = Noto_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-cairo",
   display: "swap",
