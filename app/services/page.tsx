@@ -1,5 +1,6 @@
+import Services from "@/components/layouts/services/page";
 import React from "react";
 
 export default function page() {
-  return <div>مرحبا بكم</div>;
+  return <Services />
 }

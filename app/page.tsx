@@ -1,10 +1,11 @@
 import DecorativeSeparator from "@/components/decorative-separator";
+import HomePage from "@/components/layouts/home/page";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-export default function HomePage() {
+export default function page() {
   const status = [
     {
       title: "+500",
@@ -90,6 +91,7 @@ export default function HomePage() {
         </div>
       </main>
       <DecorativeSeparator />
+      <HomePage />
     </div>
   );
 }

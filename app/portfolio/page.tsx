@@ -1,5 +1,6 @@
+import Portfolio from "@/components/layouts/portfolio/page";
 import React from "react";
 
 export default function page() {
-  return <div>مرحبا بكم</div>;
+  return <Portfolio />
 }
