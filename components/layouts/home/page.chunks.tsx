@@ -1,65 +1,64 @@
-import DecorativeSeparator from "@/components/shared/decorative-separator";
 import SectionTitle from "@/components/shared/section-title";
 import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar } from "lucide-react";
 import React from "react";
 
 export function HeroSection({ children }: { children: React.ReactNode }) {
-  return (
-    <main className="py-12 md:py-16 xl:py-36 relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10 z-0"></div>
-      <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-secondary/10 blur-3xl"></div>
-      <div className="absolute top-1/3 left-1/4 w-6 h-6 rounded-full bg-secondary/30"></div>
-      <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-primary/20"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-8 h-8 rounded-full bg-primary/20"></div>
-      <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/20 rounded-lg transform rotate-45 animate-float"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-16 h-16 border-2 border-secondary/30 rounded-full animate-float"></div>
-      <div className="absolute top-2/3 right-1/5 w-12 h-12 bg-secondary/10 rounded-md transform -rotate-12 animate-float"></div>
-      <div className="max-w-7xl mx-auto px-4">{children}</div>
-    </main>
-  );
+    return (
+        <main className="py-12 md:py-16 xl:py-36 relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10 z-0"></div>
+            <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-secondary/10 blur-3xl"></div>
+            <div className="absolute top-1/3 left-1/4 w-6 h-6 rounded-full bg-secondary/30"></div>
+            <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-primary/20"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-8 h-8 rounded-full bg-primary/20"></div>
+            <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/20 rounded-lg transform rotate-45 animate-float"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-16 h-16 border-2 border-secondary/30 rounded-full animate-float"></div>
+            <div className="absolute top-2/3 right-1/5 w-12 h-12 bg-secondary/10 rounded-md transform -rotate-12 animate-float"></div>
+            <div className="max-w-7xl mx-auto px-4">{children}</div>
+        </main>
+    );
 }
 
 export function HeroStatus() {
-  const status = [
-    {
-      title: "+500",
-      description: "عميل سعيد",
-    },
-    {
-      title: "+1000",
-      description: "مشروع ناجح",
-    },
-    {
-      title: "+5",
-      description: "سنوات من الخبرة",
-    },
-    {
-      title: "+20",
-      description: "خبير تسويق",
-    },
-  ];
+    const status = [
+        {
+            title: "+500",
+            description: "عميل سعيد",
+        },
+        {
+            title: "+1000",
+            description: "مشروع ناجح",
+        },
+        {
+            title: "+5",
+            description: "سنوات من الخبرة",
+        },
+        {
+            title: "+20",
+            description: "خبير تسويق",
+        },
+    ];
 
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-10 text-center">
-      {status.map((st, idx) => (
-        <div
-          key={idx}
-          className="p-4 rounded-lg bg-white/80 backdrop-blur border relative overflow-hidden group">
-          <div className="absolute inset-0 bg-secondary/5 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-lg"></div>
-          <div className="relative z-10">
-            <div className="text-3xl font-bold text-primary">{st.title}</div>
-            <div className="text-sm text-muted-foreground">
-              {st.description}
-            </div>
-          </div>
+    return (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-10 text-center">
+            {status.map((st, idx) => (
+                <div
+                    key={idx}
+                    className="p-4 rounded-lg bg-white/80 backdrop-blur border relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-secondary/5 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-lg"></div>
+                    <div className="relative z-10">
+                        <div className="text-3xl font-bold text-primary">{st.title}</div>
+                        <div className="text-sm text-muted-foreground">
+                            {st.description}
+                        </div>
+                    </div>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 }
 
-export default function Services() {
+export function Services() {
     const DataServices = [
         {
             id: "1",
@@ -141,54 +140,6 @@ export default function Services() {
         },
     ];
 
-    const Datasteps = [
-        {
-            id: "1",
-            step: "1",
-            title: "الاستماع والفهم",
-            description: "نستمع إلى احتياجاتك وأهدافك ونفهم تحدياتك وفرصك",
-            icon: <Target className="h-8 w-8 text-primary" />,
-        },
-        {
-            id: "2",
-            step: "2",
-            title: "التخطيط والاستراتيجية",
-            description: "نطور استراتيجية مخصصة تناسب أهدافك وميزانيتك",
-            icon: <Layers className="h-8 w-8 text-primary" />,
-        },
-        {
-            id: "3",
-            step: "3",
-            title: "التنفيذ والإبداع",
-            description: "ننفذ الاستراتيجية بأعلى مستويات الإبداع والجودة",
-            icon: <Zap className="h-8 w-8 text-primary" />,
-        },
-        {
-            id: "4",
-            step: "4",
-            title: "القياس والتحسين",
-            description: "نقيس النتائج ونحسن الأداء باستمرار لتحقيق أفضل النتائج",
-            icon: <TrendingUp className="h-8 w-8 text-primary" />,
-        },
-    ];
-
-    const DataAbout = [
-        {
-            id: "1",
-            title: "فريق من الخبراء",
-            description: "يضم فريقنا أكثر من 25 خبيرًا في مختلف مجالات التسويق الرقمي",
-        },
-        {
-            id: "2",
-            title: "نهج مخصص",
-            description: "نصمم استراتيجيات مخصصة تناسب احتياجات كل عميل وأهدافه",
-        },
-        {
-            id: "3",
-            title: "نتائج ملموسة",
-            description: "نركز على تحقيق نتائج ملموسة وقابلة للقياس لعملائنا",
-        },
-    ];
     return (
         <>
             <div className=" max-w-7xl mx-[5%] lg:mx-auto py-12">
@@ -219,107 +170,165 @@ export default function Services() {
                     ))}
                 </div>
             </div>
+        </>
+    );
+}
 
-            {/* Working methodology */}
-            <div className=" bg-primary/5 py-12 sm:py-[13%] lg:py-20">
-                <SectionTitle headline="" title="" description="" />
-                <div className="relative mt-[4%] mx-[5%]">
-                    <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
-                    <div className="grid gap-8 md:grid-cols-4">
-                        {Datasteps.map((step) => (
-                            <article key={step.id} className="relative z-10">
-                                <div className="flex flex-col items-center">
-                                    <div className="w-16 h-16 rounded-full bg-background border-4 border-secondary/20 flex items-center justify-center mb-4 relative">
-                                        <div className="absolute inset-0 rounded-full bg-secondary/10 transform scale-0 hover:scale-100 transition-transform duration-300"></div>
-                                        <span className="text-xl font-bold relative z-10">{step.step}</span>
-                                    </div>
-                                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                    <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
-                                    <div className="mt-4 rounded-full bg-primary/10 p-3">{step.icon}</div>
+
+export function Work() {
+    const Datasteps = [
+        {
+            id: "1",
+            step: "1",
+            title: "الاستماع والفهم",
+            description: "نستمع إلى احتياجاتك وأهدافك ونفهم تحدياتك وفرصك",
+            icon: <Target className="h-8 w-8 text-primary" />,
+        },
+        {
+            id: "2",
+            step: "2",
+            title: "التخطيط والاستراتيجية",
+            description: "نطور استراتيجية مخصصة تناسب أهدافك وميزانيتك",
+            icon: <Layers className="h-8 w-8 text-primary" />,
+        },
+        {
+            id: "3",
+            step: "3",
+            title: "التنفيذ والإبداع",
+            description: "ننفذ الاستراتيجية بأعلى مستويات الإبداع والجودة",
+            icon: <Zap className="h-8 w-8 text-primary" />,
+        },
+        {
+            id: "4",
+            step: "4",
+            title: "القياس والتحسين",
+            description: "نقيس النتائج ونحسن الأداء باستمرار لتحقيق أفضل النتائج",
+            icon: <TrendingUp className="h-8 w-8 text-primary" />,
+        },
+    ];
+    return (
+        < div className=" bg-primary/5 py-12 sm:py-[13%] lg:py-20" >
+            <SectionTitle headline="منهجية العمل" title="كيف نعمل معك" description="نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا" />
+            <div className="relative mt-[4%] mx-[5%]">
+                <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
+                <div className="grid gap-8 md:grid-cols-4">
+                    {Datasteps.map((step) => (
+                        <article key={step.id} className="relative z-10">
+                            <div className="flex flex-col items-center">
+                                <div className="w-16 h-16 rounded-full bg-background border-4 border-secondary/20 flex items-center justify-center mb-4 relative">
+                                    <div className="absolute inset-0 rounded-full bg-secondary/10 transform scale-0 hover:scale-100 transition-transform duration-300"></div>
+                                    <span className="text-xl font-bold relative z-10">{step.step}</span>
                                 </div>
-                            </article>
-                        ))}
-                    </div>
+                                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                                <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
+                                <div className="mt-4 rounded-full bg-primary/10 p-3">{step.icon}</div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
-                <button className=" flex items-center bg-primary text-white py-2 px-5 rounded-md gap-5 mx-auto mt-[5%] hover:bg-primary/90">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></button>
             </div>
-            <DecorativeSeparator />
+            <button className=" flex items-center bg-primary text-white py-2 px-5 rounded-md gap-5 mx-auto mt-[5%] hover:bg-primary/90">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></button>
+        </div >
+    );
+}
 
-            {/* Who we are */}
-            <section className="w-full py-16 md:py-24 lg:py-32 bg-background relative overflow-hidden">
 
-                {/* Svg */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-                <div className="absolute -top-16 -left-16 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="container px-4 md:px-6">
-                    <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-                        <div className="relative">
-                            <div className="aspect-video rounded-xl overflow-hidden bg-muted relative">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5"></div>
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="relative w-48 h-48">
-                                        <div className="absolute top-0 left-0 w-32 h-32 bg-primary/10 rounded-lg transform rotate-45"></div>
-                                        <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary/20 rounded-full"></div>
-                                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-background rounded-lg border-2 border-primary/30 flex items-center justify-center">
-                                            <Printer className="h-12 w-12 text-primary" />
-                                        </div>
+export function Marketing() {
+    const DataAbout = [
+        {
+            id: "1",
+            title: "فريق من الخبراء",
+            description: "يضم فريقنا أكثر من 25 خبيرًا في مختلف مجالات التسويق الرقمي",
+        },
+        {
+            id: "2",
+            title: "نهج مخصص",
+            description: "نصمم استراتيجيات مخصصة تناسب احتياجات كل عميل وأهدافه",
+        },
+        {
+            id: "3",
+            title: "نتائج ملموسة",
+            description: "نركز على تحقيق نتائج ملموسة وقابلة للقياس لعملائنا",
+        },
+    ];
+    return (
+        <section className="max-w-7xl mx-auto w-full py-16 md:py-24 lg:py-32 bg-background relative overflow-hidden">
+
+            {/* Svg */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            <div className="absolute -top-16 -left-16 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="container px-4 md:px-6">
+                <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+                    <div className="relative">
+                        <div className="aspect-video rounded-xl overflow-hidden bg-muted relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5"></div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="relative w-48 h-48">
+                                    <div className="absolute top-0 left-0 w-32 h-32 bg-primary/10 rounded-lg transform rotate-45"></div>
+                                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary/20 rounded-full"></div>
+                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-background rounded-lg border-2 border-primary/30 flex items-center justify-center">
+                                        <Printer className="h-12 w-12 text-primary" />
                                     </div>
                                 </div>
-                                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm rounded-lg p-4 border">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                                            <Calendar className="h-5 w-5 text-primary" />
+                            </div>
+                            <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm rounded-lg p-4 border">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                        <Calendar className="h-5 w-5 text-primary" />
+                                    </div>
+                                    <div>
+                                        <div className="font-bold">تأسست عام 2015</div>
+                                        <div className="text-sm text-muted-foreground">8 سنوات من الخبرة والإبداع</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* text */}
+                    <div className="flex flex-col justify-center space-y-4">
+                        <div className="space-y-2">
+                            <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm">من نحن</div>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-accent">وكالة تسويق رائدة في المنطقة</h2>
+                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                تأسست وكالة ctrl p في عام 2015 بهدف تقديم حلول تسويقية مبتكرة تساعد الشركات على النمو وتحقيق أهدافها.
+                                نحن فريق من المحترفين المتخصصين في مجالات التسويق المختلفة.
+                            </p>
+                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                نؤمن بأن كل علامة تجارية فريدة وتستحق استراتيجية تسويقية مخصصة تناسب أهدافها وجمهورها المستهدف. لذلك
+                                نعمل بشكل وثيق مع عملائنا لفهم احتياجاتهم وتحدياتهم.
+                            </p>
+                            <div className="pt-6 space-y-4">
+                                {DataAbout.map((about) => (
+                                    <article key={about.id} className="flex items-start gap-3">
+                                        <div className="rounded-full bg-primary/10 p-1 mt-1">
+                                            <CheckCircle className="h-4 w-4 text-primary" />
                                         </div>
                                         <div>
-                                            <div className="font-bold">تأسست عام 2015</div>
-                                            <div className="text-sm text-muted-foreground">8 سنوات من الخبرة والإبداع</div>
+                                            <h4 className="font-bold">{about.title}</h4>
+                                            <p className="text-muted-foreground">{about.description}</p>
                                         </div>
-                                    </div>
-                                </div>
+                                    </article>
+                                ))}
                             </div>
                         </div>
-
-                        {/* text */}
-                        <div className="flex flex-col justify-center space-y-4">
-                            <div className="space-y-2">
-                                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm">من نحن</div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-accent">وكالة تسويق رائدة في المنطقة</h2>
-                                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    تأسست وكالة ctrl p في عام 2015 بهدف تقديم حلول تسويقية مبتكرة تساعد الشركات على النمو وتحقيق أهدافها.
-                                    نحن فريق من المحترفين المتخصصين في مجالات التسويق المختلفة.
-                                </p>
-                                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    نؤمن بأن كل علامة تجارية فريدة وتستحق استراتيجية تسويقية مخصصة تناسب أهدافها وجمهورها المستهدف. لذلك
-                                    نعمل بشكل وثيق مع عملائنا لفهم احتياجاتهم وتحدياتهم.
-                                </p>
-                                <div className="pt-6 space-y-4">
-                                    {DataAbout.map((about) => (
-                                        <article key={about.id} className="flex items-start gap-3">
-                                            <div className="rounded-full bg-primary/10 p-1 mt-1">
-                                                <CheckCircle className="h-4 w-4 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold">{about.title}</h4>
-                                                <p className="text-muted-foreground">{about.description}</p>
-                                            </div>
-                                        </article>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
-                                <button className=" bg-primary text-white py-2 px-5 rounded-md hover:bg-primary/90">تعرف على فريقنا</button>
-                                <button className=" border-1 py-2 px-5 rounded-md hover:bg-accent hover:text-white ">شاهد أعمالنا</button>
-                            </div>
+                        <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
+                            <button className=" bg-primary text-white py-2 px-5 rounded-md hover:bg-primary/90">تعرف على فريقنا</button>
+                            <button className=" border-1 py-2 px-5 rounded-md hover:bg-accent hover:text-white ">شاهد أعمالنا</button>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            {/* progect */}
-            <div className=" bg-primary/5 py-[20%] sm:py-[13%] lg:py-[6%]">
-                <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" />
             </div>
-        </>
+        </section>
+    )
+}
+
+
+export function Project() {
+    return (
+        <div className=" bg-primary/5 py-[20%] sm:py-[13%] lg:py-[6%]">
+            <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" />
+        </div>
     )
 }

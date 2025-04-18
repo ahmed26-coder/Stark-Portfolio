@@ -1,4 +1,4 @@
-import Services from "./page.chunks"
+import { Project, Marketing, Services, Work } from "./page.chunks"
 import React from "react";
 import { HeroSection, HeroStatus } from "./page.chunks";
 import Link from "next/link";
@@ -47,6 +47,10 @@ export default function HomePage() {
       </HeroSection>
       <DecorativeSeparator />
       <Services />
+      <Work />
+      <DecorativeSeparator />
+      <Marketing />
+      <Project />
     </>
   );
 }
