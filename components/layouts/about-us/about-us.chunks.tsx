@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/shared/section-title";
+import { DataDistinguishes } from "../../../constants"
 import { CheckCircle, Award, Disc2, Heart, Lightbulb, TrendingUp, ChevronLeft, Mail, Phone, MapPin } from "lucide-react";
 import React from "react";
 
@@ -88,38 +89,6 @@ export function Values() {
 
 
 export function Distinguishes() {
-    const DataDistinguishes = [
-        {
-            id: "1",
-            title: "نهج مخصص",
-            description: "نؤمن بأن كل عميل فريد، لذلك نصمم استراتيجيات مخصصة تناسب احتياجاتك وأهدافك الخاصة.",
-        },
-        {
-            id: "2",
-            title: "فريق متكامل",
-            description: "نمتلك فريقًا متكاملًا من المتخصصين في جميع جوانب التسويق، مما يضمن تقديم حلول شاملة.",
-        },
-        {
-            id: "3",
-            title: "شفافية كاملة",
-            description: "نؤمن بالشفافية في جميع تعاملاتنا. ستكون على اطلاع دائم بتقدم مشروعك والنتائج المحققة.",
-        },
-        {
-            id: "4",
-            title: "التركيز على النتائج",
-            description: "نركز على تحقيق نتائج ملموسة وقابلة للقياس تساهم في نمو عملك وزيادة أرباحك.",
-        },
-        {
-            id: "5",
-            title: "مواكبة التطور",
-            description: "نستثمر باستمرار في تطوير مهاراتنا وأدواتنا لمواكبة أحدث التقنيات والاتجاهات في عالم التسويق.",
-        },
-        {
-            id: "6",
-            title: "دعم مستمر",
-            description: "نقدم دعمًا مستمرًا لعملائنا، ونعمل كشريك استراتيجي على المدى الطويل وليس مجرد مزود خدمة.",
-        },
-    ];
 
     const DataContact = [
         {

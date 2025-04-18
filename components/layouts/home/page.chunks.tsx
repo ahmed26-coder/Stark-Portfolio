@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/shared/section-title";
+import { DataAbout, status } from "../../../constants"
 import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar } from "lucide-react";
 import React from "react";
 
@@ -20,24 +21,6 @@ export function HeroSection({ children }: { children: React.ReactNode }) {
 }
 
 export function HeroStatus() {
-    const status = [
-        {
-            title: "+500",
-            description: "عميل سعيد",
-        },
-        {
-            title: "+1000",
-            description: "مشروع ناجح",
-        },
-        {
-            title: "+5",
-            description: "سنوات من الخبرة",
-        },
-        {
-            title: "+20",
-            description: "خبير تسويق",
-        },
-    ];
 
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-10 text-center">
@@ -221,7 +204,7 @@ export function Work() {
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
                                 <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
-                                <div className="mt-4 rounded-full bg-primary/10 p-3">{step.icon}</div>
+                                <div className="mt-4 rounded-full bg-primary/10 p-3"> <span className="h-8 w-8 text-primary">{step.icon}</span></div>
                             </div>
                         </article>
                     ))}
@@ -234,23 +217,6 @@ export function Work() {
 
 
 export function Marketing() {
-    const DataAbout = [
-        {
-            id: "1",
-            title: "فريق من الخبراء",
-            description: "يضم فريقنا أكثر من 25 خبيرًا في مختلف مجالات التسويق الرقمي",
-        },
-        {
-            id: "2",
-            title: "نهج مخصص",
-            description: "نصمم استراتيجيات مخصصة تناسب احتياجات كل عميل وأهدافه",
-        },
-        {
-            id: "3",
-            title: "نتائج ملموسة",
-            description: "نركز على تحقيق نتائج ملموسة وقابلة للقياس لعملائنا",
-        },
-    ];
     return (
         <section className="max-w-7xl mx-auto w-full py-16 md:py-24 lg:py-32 bg-background relative overflow-hidden">
 
