@@ -1,6 +1,63 @@
-import DecorativeSeparator from "@/components/decorative-separator";
+import DecorativeSeparator from "@/components/shared/decorative-separator";
+import SectionTitle from "@/components/shared/section-title";
 import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar } from "lucide-react";
 import React from "react";
+
+export function HeroSection({ children }: { children: React.ReactNode }) {
+  return (
+    <main className="py-12 md:py-16 xl:py-36 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10 z-0"></div>
+      <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-secondary/10 blur-3xl"></div>
+      <div className="absolute top-1/3 left-1/4 w-6 h-6 rounded-full bg-secondary/30"></div>
+      <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-primary/20"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-8 h-8 rounded-full bg-primary/20"></div>
+      <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/20 rounded-lg transform rotate-45 animate-float"></div>
+      <div className="absolute bottom-1/3 left-1/3 w-16 h-16 border-2 border-secondary/30 rounded-full animate-float"></div>
+      <div className="absolute top-2/3 right-1/5 w-12 h-12 bg-secondary/10 rounded-md transform -rotate-12 animate-float"></div>
+      <div className="max-w-7xl mx-auto px-4">{children}</div>
+    </main>
+  );
+}
+
+export function HeroStatus() {
+  const status = [
+    {
+      title: "+500",
+      description: "عميل سعيد",
+    },
+    {
+      title: "+1000",
+      description: "مشروع ناجح",
+    },
+    {
+      title: "+5",
+      description: "سنوات من الخبرة",
+    },
+    {
+      title: "+20",
+      description: "خبير تسويق",
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-10 text-center">
+      {status.map((st, idx) => (
+        <div
+          key={idx}
+          className="p-4 rounded-lg bg-white/80 backdrop-blur border relative overflow-hidden group">
+          <div className="absolute inset-0 bg-secondary/5 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-lg"></div>
+          <div className="relative z-10">
+            <div className="text-3xl font-bold text-primary">{st.title}</div>
+            <div className="text-sm text-muted-foreground">
+              {st.description}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function Services() {
     const DataServices = [
@@ -134,12 +191,8 @@ export default function Services() {
     ];
     return (
         <>
-            <div className=" max-w-7xl mx-[5%] lg:mx-auto">
-                <div className=" text-center mt-[8%]">
-                    <span className=" bg-primary-foreground py-0.5 px-4 rounded-md">خدماتنا</span>
-                    <h1 className=" lg:text-5xl sm:text-3xl text-2xl font-bold my-3 lg:my-5">حلول تسويقية متكاملة</h1>
-                    <p className=" lg:w-[60%] w-full mx-auto text-muted-foreground text-xl">نقدم مجموعة شاملة من الخدمات التسويقية المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك</p>
-                </div>
+            <div className=" max-w-7xl mx-[5%] lg:mx-auto py-12">
+                <SectionTitle headline="خدماتنا" title="حلول تسويقية متكاملة" description="نقدم مجموعة شاملة من الخدمات التسويقية المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك" />
 
                 {/* Cards */}
                 <div className=" gap-10 grid grid-cols-1 mt-[4%] mb-[10%] sm:grid-cols-2 lg:grid-cols-3">
@@ -266,6 +319,11 @@ export default function Services() {
                     </div>
                 </div>
             </section>
+
+            {/* progect */}
+            <div className=" bg-primary/5 py-[20%] sm:py-[13%] lg:py-[6%]">
+                <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" />
+            </div>
         </>
     )
 }
