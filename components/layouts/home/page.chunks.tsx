@@ -221,12 +221,8 @@ export default function Services() {
             </div>
 
             {/* Working methodology */}
-            <div className=" bg-primary/5 py-[20%] sm:py-[13%] lg:py-[8%]">
-                <div className=" text-center mb-[10%] lg:mb-0">
-                    <span className=" bg-white py-0.5 px-5 rounded-md">منهجية العمل</span>
-                    <h1 className=" lg:text-5xl sm:text-3xl text-2xl font-bold my-3 lg:my-5">كيف نعمل معك</h1>
-                    <p className=" lg:w-[60%] w-full mx-auto text-muted-foreground text-xl">نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا</p>
-                </div>
+            <div className=" bg-primary/5 py-12 sm:py-[13%] lg:py-20">
+                <SectionTitle headline="" title="" description="" />
                 <div className="relative mt-[4%] mx-[5%]">
                     <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
                     <div className="grid gap-8 md:grid-cols-4">
@@ -288,7 +284,7 @@ export default function Services() {
                         <div className="flex flex-col justify-center space-y-4">
                             <div className="space-y-2">
                                 <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm">من نحن</div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">وكالة تسويق رائدة في المنطقة</h2>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-accent">وكالة تسويق رائدة في المنطقة</h2>
                                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     تأسست وكالة ctrl p في عام 2015 بهدف تقديم حلول تسويقية مبتكرة تساعد الشركات على النمو وتحقيق أهدافها.
                                     نحن فريق من المحترفين المتخصصين في مجالات التسويق المختلفة.

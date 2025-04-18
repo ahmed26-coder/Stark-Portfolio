@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/shared/header";
 // Fonts
 const cairo = Noto_Sans_Arabic({
   subsets: ["arabic"],
@@ -22,6 +23,7 @@ export default async function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={`${cairo.className} antialiased bg-white text-gray-900`}>
+        <Header />
         {children}
       </body>
     </html>
