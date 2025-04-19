@@ -1,7 +1,7 @@
 import CustomHeroSection from "@/components/shared/custom-hero-section";
 import SectionTitle from "@/components/shared/section-title";
 import React from "react";
-import { ServicesHeroLinks } from "./services.chunks";
+import Contact, { Advertisements, Design, Identity, Production, Seo, ServicesHeroLinks, SimilarServices, Strategy } from "./services.chunks";
 import DecorativeSeparator from "@/components/shared/decorative-separator";
 
 export default function Services() {
@@ -16,6 +16,14 @@ export default function Services() {
         <ServicesHeroLinks />
       </CustomHeroSection>
       <DecorativeSeparator />
+      <Strategy />
+      <Contact />
+      <Seo />
+      <Advertisements />
+      <Identity />
+      <Design />
+      <Production />
+      <SimilarServices />
     </>
   );
 }

@@ -2,7 +2,7 @@ import CustomHeroSection from "@/components/shared/custom-hero-section";
 import DecorativeSeparator from "@/components/shared/decorative-separator";
 import SectionTitle from "@/components/shared/section-title";
 import React from "react";
-import { Casestudy,Similar, Clients, Stories } from "./portfolio.chunks";
+import { Casestudy, SimilarPortfolio, Clients, Stories } from "./portfolio.chunks";
 
 export default function Portfolio() {
   return (
@@ -19,7 +19,7 @@ export default function Portfolio() {
       <Casestudy />
       <Stories />
       <Clients />
-      <Similar />
+      <SimilarPortfolio />
     </>
   );
 }

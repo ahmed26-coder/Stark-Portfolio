@@ -41,10 +41,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --animate-float: float 8s infinite ease-in-out;
+
 }
 
 :root {
+  --animate-float: float 8s infinite ease-in-out;
+  --animate-spin-slow-reverse: spin-slow-reverse 5s linear infinite;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -95,5 +97,14 @@
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }

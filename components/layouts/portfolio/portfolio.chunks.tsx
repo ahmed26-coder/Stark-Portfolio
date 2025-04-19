@@ -277,7 +277,7 @@ export function Clients() {
     );
 }
 
-export function Similar() {
+export function SimilarPortfolio() {
     return (
         <div className=" bg-secondary/4 py-15 sm:py-[13%] lg:py-20">
             <SectionTitle title="هل أنت جاهز لتحقيق نتائج مماثلة؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانيه." />
@@ -286,7 +286,7 @@ export function Similar() {
                     احصل على استشارة مجانية
                     <ArrowRight className="h-4 w-4 mr-1" />
                 </button>
-                <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3">
+                <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 hover:bg-accent hover:text-white bg-white py-2 px-5 rounded-md gap-3">
                     تعرف على المزيد عن خدماتنا
                 </button>
             </div>
