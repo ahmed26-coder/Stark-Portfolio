@@ -1,8 +1,10 @@
-import { ArrowRight, BarChart, CheckCircle, ChevronLeft, FileText, Globe, MousePointer, PenTool, Search, TrendingUp, Users } from "lucide-react";
-import { DataBenefits, DataExpected, DataSeo, Data, DataIcons, DataResultss, Datapractical, servicesLinks, DatapracticalSeo, DataExpectedSeo, DataAdvertisements, DataExpectedAdvertisements, DatapracticalAdvertisements, DataIdentity, DataIdentiy, DataIdentit, DataDesin, DataDesig, DataProduction, DataProductio, DataProductin } from "../../../constants"
+import { ArrowRight, BarChart, ChevronLeft, FileText, Globe, MousePointer, PenTool, Search, TrendingUp, Users } from "lucide-react";
+import { DataBenefits, DataBenefits2, DataExpected, DataSeo, Data, DataIcons, DataResultss, Datapractical, servicesLinks, DatapracticalSeo, DataExpectedSeo, DataAdvertisements, DataExpectedAdvertisements, DatapracticalAdvertisements, DataIdentity, DataIdentiy, DataIdentit, DataDesin, DataDesig, DataProduction, DataProductio, DataProductin } from "../../../constants"
 import Link from "next/link";
 import React from "react";
 import SectionTitle from "@/components/shared/section-title";
+import ServiceSection from "@/components/shared/ServiceSection";
+import ServiceSectionlight from "@/components/shared/ServiceSectionlight";
 
 export function ServicesHeroLinks() {
 
@@ -31,69 +33,14 @@ export function Strategy() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <BarChart className="h-8 w-8 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">الاستراتيجية والاستشارات</h2>
-              <p className="text-muted-foreground text-lg">
-                نساعدك على وضع استراتيجية تسويقية شاملة تتماشى مع أهداف عملك وتضمن تحقيق أقصى عائد على الاستثمار.
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {DataBenefits.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  <div className="bg-primary/5 rounded-lg p-4">
-                    <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                      <span className="font-bold">1</span>
-                    </div>
-                    <h4 className="font-bold mb-2">التحليل والدراسة</h4>
-                    <p className="text-sm text-muted-foreground">
-                      تحليل وضع علامتك التجارية الحالي، والمنافسين، والسوق المستهدف.
-                    </p>
-                  </div>
-                  <div className="bg-primary/5 rounded-lg p-4">
-                    <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                      <span className="font-bold">2</span>
-                    </div>
-                    <h4 className="font-bold mb-2">تطوير الاستراتيجية</h4>
-                    <p className="text-sm text-muted-foreground">وضع استراتيجية مخصصة تتناسب مع أهدافك وميزانيتك.</p>
-                  </div>
-                  <div className="bg-primary/5 rounded-lg p-4">
-                    <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                      <span className="font-bold">3</span>
-                    </div>
-                    <h4 className="font-bold mb-2">التنفيذ والمتابعة</h4>
-                    <p className="text-sm text-muted-foreground">
-                      تنفيذ الخطة مع قياس النتائج وإجراء التعديلات اللازمة.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 bg-primary/5 p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataExpected.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceSectionlight
+            title="الاستراتيجية والاستشارات"
+            icon={<BarChart className="h-9 w-9 text-primary" />}
+            description="نساعدك على وضع استراتيجية تسويقية شاملة تتماشى مع أهداف عملك وتضمن تحقيق أقصى عائد على الاستثمار."
+            benefits={DataBenefits}
+            workSteps={DataBenefits2}
+            expectedResults={DataExpected}
+          />
 
           <div className="order-1 lg:order-2">
             <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 p-8 flex items-center justify-center">
@@ -143,56 +90,14 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          <div>
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">التسويق عبر وسائل التواصل</h2>
-              <p className="text-muted-foreground text-lg">
-                نساعدك على بناء وجود قوي على منصات التواصل الاجتماعي، وزيادة التفاعل مع جمهورك المستهدف، وتحويل
-                المتابعين إلى عملاء.
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {Data.map((benefit, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {Datapractical.map((item) => (
-                    <article key={item.id} className="bg-background rounded-lg p-4">
-                      <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                        <span className="font-bold">{item.number}</span>
-                      </div>
-                      <h4 className="font-bold mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8 bg-background p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataResultss.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceSection
+            icon={<Users className="h-9 w-9 text-primary" />}
+            title="التسويق عبر وسائل التواصل"
+            description="نساعدك على بناء وجود قوي على منصات التواصل الاجتماعي، وزيادة التفاعل مع جمهورك المستهدف، وتحويل المتابعين إلى عملاء."
+            benefits={Data}
+            workSteps={Datapractical}
+            expectedResults={DataResultss}
+          />
         </div>
       </div>
     </div>
@@ -206,54 +111,14 @@ export function Seo() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <Search className="h-8 w-8 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">تحسين محركات البحث (SEO & SEM)</h2>
-              <p className="text-muted-foreground text-lg">
-                نساعدك على تحسين ظهور موقعك في نتائج محركات البحث، وزيادة حركة المرور العضوية، وتحسين معدلات التحويل.
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {DataSeo.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {DatapracticalSeo.map((item) => (
-                    <article key={item.id} className="bg-primary/5 rounded-lg p-4">
-                      <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                        <span className="font-bold">{item.number}</span>
-                      </div>
-                      <h4 className="font-bold mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8 bg-primary/5 p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataExpectedSeo.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <ServiceSectionlight
+            title="تحسين محركات البحث (SEO & SEM)"
+            icon={<Search className="h-9 w-9 text-primary" />}
+            description="نساعدك على تحسين ظهور موقعك في نتائج محركات البحث، وزيادة حركة المرور العضوية، وتحسين معدلات التحويل."
+            benefits={DataSeo}
+            workSteps={DatapracticalSeo}
+            expectedResults={DataExpectedSeo}
+          />
           <div className="order-1 lg:order-2">
             <div className="relative h-80 w-full overflow-hidden rounded-2xl">
               <div className="absolute inset-0 bg-gradient-to-bl from-primary/20 to-background"></div>
@@ -331,53 +196,14 @@ export function Advertisements() {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <MousePointer className="h-8 w-8 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">الإعلانات المدفوعة (Meta, Google)</h2>
-              <p className="text-muted-foreground text-lg">
-                نصمم وندير حملات إعلانية فعالة على منصات مثل Meta و Google لاستهداف جمهورك المناسب وتحقيق أهدافك التسويقية.
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {DataAdvertisements.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {DataDesin.map((item) => (
-                    <article key={item.id} className="bg-white rounded-lg p-4">
-                      <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                        <span className="font-bold">{item.number}</span>
-                      </div>
-                      <h4 className="font-bold mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8 bg-white p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataDesig.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceSection
+            icon={<MousePointer className="h-9 w-9 text-primary" />}
+            title="الإعلانات المدفوعة (Meta, Google)"
+            description="نصمم وندير حملات إعلانية فعالة على منصات مثل Meta و Google لاستهداف جمهورك المناسب وتحقيق أهدافك التسويقية."
+            benefits={DataAdvertisements}
+            workSteps={DataDesin}
+            expectedResults={DataDesig}
+          />
         </div>
       </div>
     </div>
@@ -391,53 +217,14 @@ export function Identity() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <Search className="h-8 w-8 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">الهوية البصرية والتصميم</h2>
-              <p className="text-muted-foreground text-lg">
-                نصمم هويات بصرية فريدة وجذابة تعكس قيم علامتك التجارية وتميزها عن المنافسين، مع الحفاظ على اتساق العلامة التجارية عبر جميع نقاط الاتصال.
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {DataIdentity.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {DataIdentiy.map((item) => (
-                    <article key={item.id} className="bg-primary/5 rounded-lg p-4">
-                      <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                        <span className="font-bold">{item.number}</span>
-                      </div>
-                      <h4 className="font-bold mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8 bg-primary/5 p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataIdentit.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+        <ServiceSectionlight
+            title="الهوية البصرية والتصميم"
+            icon={<PenTool className="h-9 w-9 text-primary" />}
+            description="نصمم هويات بصرية فريدة وجذابة تعكس قيم علامتك التجارية وتميزها عن المنافسين، مع الحفاظ على اتساق العلامة التجارية عبر جميع نقاط الاتصال."
+            benefits={DataIdentity}
+            workSteps={DataIdentiy}
+            expectedResults={DataIdentit}
+          />
 
           <div className="order-1 lg:order-2">
             <div className="relative h-80 w-full overflow-hidden rounded-2xl">
@@ -518,53 +305,15 @@ export function Design() {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <MousePointer className="h-8 w-8 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">تصميم وتطوير المواقع</h2>
-              <p className="text-muted-foreground text-lg">
-                نصمم ونطور مواقع إلكترونية عصرية وسريعة وسهلة الاستخدام، تعزز تجربة المستخدم وتزيد من معدلات التحويل.
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {DataAdvertisements.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {DatapracticalAdvertisements.map((item) => (
-                    <article key={item.id} className=" bg-white rounded-lg p-4">
-                      <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                        <span className="font-bold">{item.number}</span>
-                      </div>
-                      <h4 className="font-bold mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8 bg-white p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataExpectedAdvertisements.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServiceSection
+            icon={<Globe className="h-9 w-9 text-primary" />}
+            title="الإعلانات المدفوعة (Meta, Google)"
+            description="نصمم وندير حملات إعلانية فعالة على منصات مثل Meta و Google لاستهداف جمهورك المناسب وتحقيق أهدافك التسويقية."
+            benefits={DataAdvertisements}
+            workSteps={DatapracticalAdvertisements}
+            expectedResults={DataExpectedAdvertisements}
+          />
+          
         </div>
       </div>
     </div>
@@ -579,53 +328,14 @@ export function Production() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 p-2">
-                <FileText className="h-8 w-8 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter">إنتاج المحتوى</h2>
-              <p className="text-muted-foreground text-lg">
-                ننتج محتوى إبداعي ومقنع يجذب جمهورك المستهدف ويعزز تواجدك الرقمي، سواء كان نصوصًا أو صورًا أو فيديوهات..
-              </p>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-4">الفوائد</h3>
-                <ul className="space-y-2">
-                  {DataProduction.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {DataProductio.map((item) => (
-                    <article key={item.id} className="bg-primary/5 rounded-lg p-4">
-                      <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
-                        <span className="font-bold">{item.number}</span>
-                      </div>
-                      <h4 className="font-bold mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8 bg-primary/5 p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                  {DataProductin.map((item) => (
-                    <article key={item.id} className="text-center">
-                      <p className="text-2xl font-bold text-primary">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+        <ServiceSectionlight
+            title="إنتاج المحتوى"
+            icon={<FileText className="h-9 w-9 text-primary" />}
+            description="ننتج محتوى إبداعي ومقنع يجذب جمهورك المستهدف ويعزز تواجدك الرقمي، سواء كان نصوصًا أو صورًا أو فيديوهات."
+            benefits={DataProduction}
+            workSteps={DataProductio}
+            expectedResults={DataProductin}
+          />
 
           <div className="order-1 lg:order-2">
             <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-gradient-to-bl from-primary/5 to-primary/20">
@@ -710,17 +420,17 @@ export function Production() {
 
 export function SimilarServices() {
   return (
-      <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-          <SectionTitle title="جاهز لتنمية أعمالك؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." />
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
-              <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">
-                  احصل على استشارة مجانية
-                  <ArrowRight className="h-4 w-4 mr-1" />
-              </button>
-              <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
-                  تعرف على المزيد  
-              </button>
-          </div>
+    <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
+      <SectionTitle title="جاهز لتنمية أعمالك؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." />
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
+        <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">
+          احصل على استشارة مجانية
+          <ArrowRight className="h-4 w-4 mr-1" />
+        </button>
+        <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
+          تعرف على المزيد
+        </button>
       </div>
+    </div>
   )
 }
