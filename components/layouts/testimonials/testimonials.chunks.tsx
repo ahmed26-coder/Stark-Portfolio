@@ -1,5 +1,6 @@
 import SectionTitle from '@/components/shared/section-title'
 import { ArrowRight, Award, BarChart, MessageSquare, PenTool, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { DataPride } from "../../../constants"
 import React from 'react'
 
 export function Clients() {
@@ -108,20 +109,7 @@ export function Clients() {
 
 
 export  function Pride() {
-    const DataPride = [
-        "هورايزن للتقنية",
-        "جرين نيتشر",
-        "منصة تعليم",
-        "لاكشري هومز",
-        "هيلثي فود",
-        "وكالة سفريات الشرق",
-        "بنك الاستثمار",
-        "شركة الاتصالات",
-        "متاجر الأزياء",
-        "مجموعة الفنادق",
-        "شركة التأمين",
-        "مستشفى الرعاية",
-    ];
+
     return (
         <div className=" max-w-7xl mx-auto py-12 lg:py-20">
             <SectionTitle headline='عملاؤنا' title='نفخر بالعمل مع' description='نعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات' />

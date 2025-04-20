@@ -2,6 +2,7 @@ import CustomHeroSection from "@/components/shared/custom-hero-section";
 import DecorativeSeparator from "@/components/shared/decorative-separator";
 import SectionTitle from "@/components/shared/section-title";
 import React from "react";
+import { FAQ } from "./contact-us.chunks";
 
 export default function ContactUs() {
   return (
@@ -14,6 +15,8 @@ export default function ContactUs() {
         />
       </CustomHeroSection>
       <DecorativeSeparator />
+
+      <FAQ />
     </>
   );
 }
