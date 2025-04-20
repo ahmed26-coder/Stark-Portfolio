@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 import SectionTitle from "@/components/shared/section-title";
 import ServiceSection from "@/components/shared/ServiceSection";
-import ServiceSectionlight from "@/components/shared/ServiceSectionlight";
 
 export function ServicesHeroLinks() {
 
@@ -33,13 +32,14 @@ export function Strategy() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <ServiceSectionlight
+          <ServiceSection
             title="الاستراتيجية والاستشارات"
             icon={<BarChart className="h-9 w-9 text-primary" />}
             description="نساعدك على وضع استراتيجية تسويقية شاملة تتماشى مع أهداف عملك وتضمن تحقيق أقصى عائد على الاستثمار."
             benefits={DataBenefits}
             workSteps={DataBenefits2}
             expectedResults={DataExpected}
+            highlighted={true}
           />
 
           <div className="order-1 lg:order-2">
@@ -97,6 +97,7 @@ export default function Contact() {
             benefits={Data}
             workSteps={Datapractical}
             expectedResults={DataResultss}
+            highlighted={false}
           />
         </div>
       </div>
@@ -111,13 +112,14 @@ export function Seo() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <ServiceSectionlight
+        <ServiceSection
             title="تحسين محركات البحث (SEO & SEM)"
             icon={<Search className="h-9 w-9 text-primary" />}
             description="نساعدك على تحسين ظهور موقعك في نتائج محركات البحث، وزيادة حركة المرور العضوية، وتحسين معدلات التحويل."
             benefits={DataSeo}
             workSteps={DatapracticalSeo}
             expectedResults={DataExpectedSeo}
+            highlighted={true}
           />
           <div className="order-1 lg:order-2">
             <div className="relative h-80 w-full overflow-hidden rounded-2xl">
@@ -203,6 +205,7 @@ export function Advertisements() {
             benefits={DataAdvertisements}
             workSteps={DataDesin}
             expectedResults={DataDesig}
+            highlighted={false}
           />
         </div>
       </div>
@@ -217,13 +220,14 @@ export function Identity() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <ServiceSectionlight
+        <ServiceSection
             title="الهوية البصرية والتصميم"
             icon={<PenTool className="h-9 w-9 text-primary" />}
             description="نصمم هويات بصرية فريدة وجذابة تعكس قيم علامتك التجارية وتميزها عن المنافسين، مع الحفاظ على اتساق العلامة التجارية عبر جميع نقاط الاتصال."
             benefits={DataIdentity}
             workSteps={DataIdentiy}
             expectedResults={DataIdentit}
+            highlighted={true}
           />
 
           <div className="order-1 lg:order-2">
@@ -312,6 +316,7 @@ export function Design() {
             benefits={DataAdvertisements}
             workSteps={DatapracticalAdvertisements}
             expectedResults={DataExpectedAdvertisements}
+            highlighted={false}
           />
           
         </div>
@@ -328,13 +333,14 @@ export function Production() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <ServiceSectionlight
+        <ServiceSection
             title="إنتاج المحتوى"
             icon={<FileText className="h-9 w-9 text-primary" />}
             description="ننتج محتوى إبداعي ومقنع يجذب جمهورك المستهدف ويعزز تواجدك الرقمي، سواء كان نصوصًا أو صورًا أو فيديوهات."
             benefits={DataProduction}
             workSteps={DataProductio}
             expectedResults={DataProductin}
+            highlighted={true}
           />
 
           <div className="order-1 lg:order-2">

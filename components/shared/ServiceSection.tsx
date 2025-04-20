@@ -25,6 +25,7 @@ interface ServiceSectionProps {
   benefits: Benefit[];
   workSteps: WorkStep[];
   expectedResults: ExpectedResult[];
+  highlighted?: boolean;
 }
 
 export default function ServiceSection({
@@ -34,6 +35,7 @@ export default function ServiceSection({
   benefits,
   workSteps,
   expectedResults,
+  highlighted,
 }: ServiceSectionProps) {
   return (
     <div>
@@ -56,7 +58,7 @@ export default function ServiceSection({
           <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
           <div className="grid gap-4 md:grid-cols-3">
             {workSteps.map((step) => (
-              <article key={step.id} className="bg-white rounded-lg p-4">
+              <article key={step.id} className= {`p-6 rounded-lg ${highlighted ? "bg-primary/5" : "bg-white"}`}>
                 <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
                   <span className="font-bold">{step.number}</span>
                 </div>
