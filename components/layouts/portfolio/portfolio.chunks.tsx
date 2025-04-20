@@ -112,7 +112,7 @@ export function Casestudy() {
                             {DataSolution.map((item, index) => (
                                 <li key={index} className="flex items-center gap-2">
                                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                                    <span>{item}</span>
+                                    <span>{item.text}</span>
                                 </li>
                             ))}
                         </ul>

@@ -191,26 +191,28 @@ export function Work() {
     ];
     return (
         < div className=" bg-primary/5 py-12 sm:py-[13%] lg:py-20" >
-            <SectionTitle headline="منهجية العمل" title="كيف نعمل معك" description="نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا" />
-            <div className="relative mt-[4%] mx-[5%]">
-                <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
-                <div className="grid gap-8 md:grid-cols-4">
-                    {Datasteps.map((step) => (
-                        <article key={step.id} className="relative z-10">
-                            <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 rounded-full bg-background border-4 border-secondary/20 flex items-center justify-center mb-4 relative">
-                                    <div className="absolute inset-0 rounded-full bg-secondary/10 transform scale-0 hover:scale-100 transition-transform duration-300"></div>
-                                    <span className="text-xl font-bold relative z-10">{step.step}</span>
+            <div className=" max-w-7xl mx-auto">
+                <SectionTitle headline="منهجية العمل" title="كيف نعمل معك" description="نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا" />
+                <div className="relative mt-[4%] mx-[5%]">
+                    <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
+                    <div className="grid gap-8 md:grid-cols-4">
+                        {Datasteps.map((step) => (
+                            <article key={step.id} className="relative z-10">
+                                <div className="flex flex-col items-center">
+                                    <div className="w-16 h-16 rounded-full bg-background border-4 border-secondary/20 flex items-center justify-center mb-4 relative">
+                                        <div className="absolute inset-0 rounded-full bg-secondary/10 transform scale-0 hover:scale-100 transition-transform duration-300"></div>
+                                        <span className="text-xl font-bold relative z-10">{step.step}</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                                    <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
+                                    <div className="mt-4 rounded-full bg-primary/10 p-3"> <span className="h-8 w-8 text-primary">{step.icon}</span></div>
                                 </div>
-                                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
-                                <div className="mt-4 rounded-full bg-primary/10 p-3"> <span className="h-8 w-8 text-primary">{step.icon}</span></div>
-                            </div>
-                        </article>
-                    ))}
+                            </article>
+                        ))}
+                    </div>
                 </div>
+                <button className=" flex items-center bg-primary text-white py-2 px-5 rounded-md gap-5 mx-auto mt-[5%] hover:bg-primary/90">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></button>
             </div>
-            <button className=" flex items-center bg-primary text-white py-2 px-5 rounded-md gap-5 mx-auto mt-[5%] hover:bg-primary/90">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></button>
         </div >
     );
 }
