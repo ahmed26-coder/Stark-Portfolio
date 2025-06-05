@@ -63,7 +63,7 @@ export function Values() {
     return (
         <>
             <div className="  bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-                <SectionTitle headline="رسالتنا وقيمنا" title="ما نؤمن به" description="نسعى لتغيير مشهد التسويق الرقمي في المنطقة من خلال تقديم حلول مبتكرة تحقق نتائج ملموسة" />
+                <SectionTitle headline="رسالتنا وقيمنا" title="ما نؤمن به" description="نسعى لتغيير مشهد التسويق الرقمي في المنطقة من خلال تقديم حلول مبتكرة تحقق نتائج ملموسة" highlighted={true} />
                 <div className="max-w-7xl xl:mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 lg:mx-12 mt-10">
                     {DataValues.map((item) => (
                         <article key={item.id} className=" rounded-2xl bg-white border-1 border-muted-foreground/15 p-8">
@@ -112,7 +112,7 @@ export function Distinguishes() {
     ];
     return (
         <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-            <SectionTitle headline="لماذا تختارنا" title="ما يميزنا عن الآخرين" description="نقدم أكثر من مجرد خدمات تسويقية. نحن نقدم شراكة حقيقية تساعدك على تحقيق أهدافك" />
+            <SectionTitle headline="لماذا تختارنا" title="ما يميزنا عن الآخرين" description="نقدم أكثر من مجرد خدمات تسويقية. نحن نقدم شراكة حقيقية تساعدك على تحقيق أهدافك" highlighted={true} />
             <div className="max-w-7xl xl:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-12 mt-7">
                 {DataDistinguishes.map((item) => (
                     <article key={item.id} className=" rounded-2xl bg-white border-1 border-muted-foreground/15 p-6">

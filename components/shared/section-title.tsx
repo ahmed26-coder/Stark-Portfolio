@@ -4,14 +4,16 @@ export default function SectionTitle({
   headline,
   title,
   description,
+  highlighted
 }: {
   headline?: string;
   title: string;
   description?: string;
+  highlighted?: boolean;
 }) {
   return (
     <div className="px-4 max-w-3xl mx-auto">
-      <p className="bg-primary/10 rounded-lg px-3 py-1 text-sm w-fit mx-auto">
+      <p className={`bg-primary/10 rounded-lg text-sm w-fit mx-auto ${highlighted ? "px-3 py-1" : "px-0 py-0"}`}>
         {headline}
       </p>
       <p className="text-center text-3xl sm:text-5xl font-bold text-accent my-4">

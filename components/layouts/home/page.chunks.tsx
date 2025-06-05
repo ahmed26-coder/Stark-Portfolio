@@ -126,7 +126,7 @@ export function Services() {
     return (
         <>
             <div className=" max-w-7xl mx-[5%] lg:mx-auto py-12">
-                <SectionTitle headline="خدماتنا" title="حلول تسويقية متكاملة" description="نقدم مجموعة شاملة من الخدمات التسويقية المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك" />
+                <SectionTitle headline="خدماتنا" title="حلول تسويقية متكاملة" description="نقدم مجموعة شاملة من الخدمات التسويقية المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك" highlighted={true} />
 
                 {/* Cards */}
                 <div className=" gap-10 grid grid-cols-1 mt-[4%] mb-[10%] sm:grid-cols-2 lg:grid-cols-3">
@@ -192,7 +192,7 @@ export function Work() {
     return (
         < div className=" bg-primary/5 py-12 sm:py-[13%] lg:py-20" >
             <div className=" max-w-7xl mx-auto">
-                <SectionTitle headline="منهجية العمل" title="كيف نعمل معك" description="نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا" />
+                <SectionTitle headline="منهجية العمل" title="كيف نعمل معك" description="نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا" highlighted={true} />
                 <div className="relative mt-[4%] mx-[5%]">
                     <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
                     <div className="grid gap-8 md:grid-cols-4">
@@ -296,7 +296,7 @@ export function Marketing() {
 export function Project() {
     return (
         <div className=" bg-primary/5 py-[20%] sm:py-[13%] lg:py-[6%]">
-            <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" />
+            <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
         </div>
     )
 }

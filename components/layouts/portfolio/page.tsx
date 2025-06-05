@@ -9,6 +9,7 @@ export default function Portfolio() {
     <>
       <CustomHeroSection>
         <SectionTitle
+          highlighted={true}
           headline="أعمالنا"
           title="مشاريع ناجحة تتحدث عن نفسها"
           description="نفخر بالنتائج التي حققناها لعملائنا. استكشف دراسات الحالة لدينا لترى كيف ساعدنا الشركات على تحقيق أهدافها التسويقية"

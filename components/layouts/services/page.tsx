@@ -8,7 +8,8 @@ export default function Services() {
   return (
     <>
       <CustomHeroSection>
-        <SectionTitle
+        <SectionTitle 
+          highlighted={true}
           headline="خدماتنا"
           title="حلول تسويقية متكاملة لنمو أعمالك"
           description="نقدم مجموعة شاملة من الخدمات التسويقية المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك"

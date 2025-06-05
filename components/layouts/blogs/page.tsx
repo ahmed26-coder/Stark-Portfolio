@@ -8,6 +8,7 @@ export default function Blogs() {
     <>
       <CustomHeroSection>
         <SectionTitle
+          highlighted={true}
           headline="المدونة"
           title="أحدث الأفكار والرؤى التسويقية"
           description="اكتشف أحدث الاتجاهات والاستراتيجيات في عالم التسويق الرقمي من خلال مدونتنا المتخصصة"

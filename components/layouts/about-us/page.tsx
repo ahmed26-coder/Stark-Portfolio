@@ -9,6 +9,7 @@ export default function AboutUs() {
     <>
       <CustomHeroSection>
         <SectionTitle
+          highlighted={true}
           headline="تعرف علينا"
           title="فريق من المبدعين يصنع الفرق"
           description="نحن أكثر من مجرد وكالة تسويق. نحن شركاء في نجاحك، نعمل معًا لتحقيق أهدافك وتجاوز توقعاتك"

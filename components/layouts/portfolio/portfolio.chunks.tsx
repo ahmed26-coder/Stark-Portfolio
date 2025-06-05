@@ -19,6 +19,7 @@ export function Casestudy() {
       <SectionTitle
         headline="دراسة حالة مميزة"
         title="كيف ساعدنا شركة هورايزن للتقنية على زيادة مبيعاتها بنسبة 150%"
+        highlighted={true}
       />
       <div className=" max-w-7xl xl:mx-auto mt-15 mx-5 sm:mx-10 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
         <div className="relative h-[400px] overflow-hidden rounded-xl">
@@ -204,6 +205,7 @@ export function Stories() {
     <div className=" py-15 sm:py-[13%] lg:py-20">
       <SectionTitle
         headline="المزيد من دراسات الحالة"
+        highlighted={true}
         title="قصص نجاح أخرى"
         description="استكشف المزيد من المشاريع الناجحة التي ساعدنا فيها عملائنا على تحقيق أهدافهم"
       />
@@ -306,6 +308,7 @@ export function Clients() {
       <SectionTitle
         headline="آراء العملاء"
         title="ماذا يقول عملاؤنا عن تجربتهم معنا"
+        highlighted={true}
       />
       <div className=" max-w-7xl xl:mx-auto mx-5 grid gap-8 md:grid-cols-3 mt-15">
         {DataClients.map((item) => (
@@ -337,6 +340,7 @@ export function SimilarPortfolio() {
   return (
     <div className=" bg-secondary/4 py-15 sm:py-[13%] lg:py-20">
       <SectionTitle
+        highlighted={false}
         title="هل أنت جاهز لتحقيق نتائج مماثلة؟"
         description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانيه."
       />

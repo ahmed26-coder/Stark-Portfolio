@@ -68,7 +68,7 @@ export function Clients() {
     ];
     return (
         <div className=" max-w-7xl mx-auto py-12 lg:py-20">
-            <SectionTitle headline='شهادات مميزة' title='ما يميزنا في نظر عملائنا' />
+            <SectionTitle headline='شهادات مميزة' title='ما يميزنا في نظر عملائنا' highlighted={true} />
             <div className=" grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-15 mx-5">
                 {DataClients.map((item) => (
                     <article key={item.id} className="bg-background rounded-xl p-6 border relative">
@@ -112,7 +112,7 @@ export  function Pride() {
 
     return (
         <div className=" max-w-7xl mx-auto py-12 lg:py-20">
-            <SectionTitle headline='عملاؤنا' title='نفخر بالعمل مع' description='نعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات' />
+            <SectionTitle headline='عملاؤنا' title='نفخر بالعمل مع' description='نعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات' highlighted={true} />
             <div className="grid grid-cols-2  sm:grid-cols-3 lg:grid-cols-6 gap-5 items-center mt-10 mx-5 ">
                 {DataPride.map((text, index) => (
                     <article key={index} className="flex items-center justify-center p-6 bg-muted/50 rounded-lg border hover:border-primary/20 transition-colors">
@@ -130,7 +130,7 @@ export  function Pride() {
 export  function Experience() {
   return (
     <div className=" max-w-7xl lg:mx-auto text-center py-12 lg:py-20 mx-5">
-      <SectionTitle headline='شارك تجربتك' title='هل انت أحد عملائنا؟' description='نحن نقدر آراءك وتجاربك معنا. شارك قصة نجاحك وكيف ساعدناك في تحقيق أهدافك التسويقية' />
+      <SectionTitle headline='شارك تجربتك' title='هل انت أحد عملائنا؟' description='نحن نقدر آراءك وتجاربك معنا. شارك قصة نجاحك وكيف ساعدناك في تحقيق أهدافك التسويقية' highlighted={true} />
       <button className=" sm:w-fit w-[70%] flex gap-4 items-center bg-primary hover:bg-primary/90 text-white py-2 px-5 rounded-md text-lg mt-10 mx-auto">شارك تجربتك معنا <MessageSquare className="h-5 w-5 mr-1" /></button>
     </div>
   )
@@ -141,7 +141,7 @@ export  function Experience() {
 export function Similartestimonials() {
     return (
       <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-        <SectionTitle title="هل أنت جاهز لتحقيق نتائج مماثلة؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." />
+        <SectionTitle title="هل أنت جاهز لتحقيق نتائج مماثلة؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." highlighted={false} />
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
           <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">
             احصل على استشارة مجانية

@@ -112,7 +112,7 @@ export function Seo() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <ServiceSection
+          <ServiceSection
             title="تحسين محركات البحث (SEO & SEM)"
             icon={<Search className="h-9 w-9 text-primary" />}
             description="نساعدك على تحسين ظهور موقعك في نتائج محركات البحث، وزيادة حركة المرور العضوية، وتحسين معدلات التحويل."
@@ -220,7 +220,7 @@ export function Identity() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <ServiceSection
+          <ServiceSection
             title="الهوية البصرية والتصميم"
             icon={<PenTool className="h-9 w-9 text-primary" />}
             description="نصمم هويات بصرية فريدة وجذابة تعكس قيم علامتك التجارية وتميزها عن المنافسين، مع الحفاظ على اتساق العلامة التجارية عبر جميع نقاط الاتصال."
@@ -318,7 +318,7 @@ export function Design() {
             expectedResults={DataExpectedAdvertisements}
             highlighted={false}
           />
-          
+
         </div>
       </div>
     </div>
@@ -333,7 +333,7 @@ export function Production() {
     <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <ServiceSection
+          <ServiceSection
             title="إنتاج المحتوى"
             icon={<FileText className="h-9 w-9 text-primary" />}
             description="ننتج محتوى إبداعي ومقنع يجذب جمهورك المستهدف ويعزز تواجدك الرقمي، سواء كان نصوصًا أو صورًا أو فيديوهات."
