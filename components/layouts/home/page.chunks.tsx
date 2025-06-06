@@ -1,7 +1,8 @@
 import SectionTitle from "@/components/shared/section-title";
 import { DataAbout, status } from "../../../constants"
-import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar } from "lucide-react";
+import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import React from "react";
+import BookingForm from "./page.client";
 
 export function HeroSection({ children }: { children: React.ReactNode }) {
     return (
@@ -295,8 +296,75 @@ export function Marketing() {
 
 export function Project() {
     return (
-        <div className=" bg-primary/5 py-[20%] sm:py-[13%] lg:py-[6%]">
-            <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
-        </div>
+        <section className=" bg-primary/5 py-16 md:py-20 relative overflow-hidden">
+            <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
+                <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
+            </div>
+        </section>
+    )
+}
+
+
+
+export function PageClient() {
+  return (
+        <section className=" py-16 md:py-20 relative overflow-hidden">
+            <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
+                <SectionTitle headline="آراء العملاء" title="ماذا يقول عملاؤنا" description="نحن نفخر بالعلاقات طويلة الأمد التي بنيناها مع عملائنا" highlighted={true} />
+            </div>
+        </section>
+  )
+}
+
+
+
+export function Consultation() {
+    return (
+        <section className=" bg-primary/5 py-16 md:py-20 relative overflow-hidden">
+            <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
+                <SectionTitle headline="اتصل بنا" highlighted={true} title="دعنا نناقش مشروعك" description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك التسويقية" />
+                <div className=" items-center grid gap-10 lg:mx-10 mt-10 lg:grid-cols-2 lg:gap-16">
+                    <div className="space-y-6 mx-5 md:mx-10 lg:mx-0">
+                        <div className="flex items-center gap-4 space-x-reverse">
+                            <div className="rounded-full bg-secondary/10 p-3">
+                                <Mail className="h-6 w-6 text-secondary" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold">البريد الإلكتروني</h3>
+                                <p className="text-muted-foreground">info@ctrlp.com</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 space-x-reverse">
+                            <div className="rounded-full bg-secondary/10 p-3">
+                                <Phone className="h-6 w-6 text-secondary" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold">رقم الهاتف</h3>
+                                <p className="text-muted-foreground">+966 12 345 6789</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 space-x-reverse">
+                            <div className="rounded-full bg-secondary/10 p-3">
+                                <MapPin className="h-6 w-6 text-secondary" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold">العنوان</h3>
+                                <p className="text-muted-foreground">شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        <div className="mt-6">
+                            <h3 className="text-lg font-bold mb-2">تابعنا على</h3>
+                            <div className="flex mt-5 gap-4 space-x-reverse">
+                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Twitter /></a>
+                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Facebook /></a>
+                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Instagram /></a>
+                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Linkedin /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <BookingForm />
+                </div>
+            </div>
+        </section >
     )
 }

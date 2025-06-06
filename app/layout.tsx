@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/header";
+import { Toaster } from "sonner";
 // Fonts
 const cairo = Noto_Sans_Arabic({
   subsets: ["arabic"],
@@ -25,6 +26,7 @@ export default async function RootLayout({
       <body className={`${cairo.className} antialiased bg-white text-gray-900`}>
         <Header />
         {children}
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );

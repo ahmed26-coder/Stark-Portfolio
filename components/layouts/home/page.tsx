@@ -1,10 +1,11 @@
-import { Project, Marketing, Services, Work } from "./page.chunks"
+import { Project, Consultation, Marketing, Services, Work, PageClient } from "./page.chunks"
 import React from "react";
 import { HeroSection, HeroStatus } from "./page.chunks";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import DecorativeSeparator from "@/components/shared/decorative-separator";
+
 
 export default function HomePage() {
   return (
@@ -51,6 +52,8 @@ export default function HomePage() {
       <DecorativeSeparator />
       <Marketing />
       <Project />
+      <PageClient />
+      <Consultation />
     </>
   );
 }

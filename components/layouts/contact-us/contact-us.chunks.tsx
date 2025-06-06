@@ -2,6 +2,7 @@ import SectionTitle from '@/components/shared/section-title'
 import { DataFaq } from "../../../constants"
 import React from 'react'
 import { Calendar, CheckCircle, Clock4, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import ContactForm, { BookingForm } from './contact-us.client'
 
 export function FAQ() {
 
@@ -66,14 +67,15 @@ export function Contactform() {
         },
     ];
     return (
-        <div className=" grid gap-10 lg:grid-cols-2 lg:gap-16 max-w-7xl lg:mx-auto mx-5 py-16 md:py-24">
+        <div className=" grid gap-10 lg:grid-cols-2 lg:gap-16 max-w-7xl xl:mx-auto mx-8 py-16 md:py-24">
+            <ContactForm />
             <div className="space-y-8">
                 <div>
                     <h2 className="text-3xl font-bold tracking-tight mb-4 ">
-                        أرسل لنا رسالة
+                        معلومات الاتصال
                     </h2>
                     <p className="text-muted-foreground mb-6 text-lg ">
-                        املأ النموذج أدناه وسنقوم بالرد عليك في أقرب وقت ممكن. نحن متحمسون للاستماع إلى مشروعك والمساعدة في تحقيق أهدافك.
+                        يمكنك التواصل معنا مباشرة من خلال وسائل الاتصال التالية. نحن متواجدون للرد على استفساراتك من الأحد إلى الخميس، من الساعة 9 صباحًا حتى 5 مساءً.
                     </p>
                 </div>
                 <div className="space-y-4">
@@ -98,45 +100,44 @@ export function Contactform() {
                                 key={index}
                                 className="rounded-full p-3 bg-primary/10 hover:bg-primary/20 transition"
                             >
-                                <div className=" text-2xl">{social.icon}</div>
+                                <a href='' className=" text-2xl">{social.icon}</a>
                             </article>
                         ))}
                     </div>
                 </div>
                 <h1 className="text-3xl font-bold mb-4">موقعنا</h1>
             </div>
-
-
         </div>
     )
 }
 
-export  function Contactreservation() {
+export function Contactreservation() {
     const DataContact = [
         "تحليل أولي لاحتياجاتك التسويقية",
         "نصائح مخصصة لتحسين استراتيجيتك الحالية",
         "فرصة لطرح أسئلتك على خبير متخصص",
         "لا توجد التزامات - استشارة مجانية بالكامل",
     ];
-  return (
-    <div className=" bg-primary/10">
-        <div className=" max-w-7xl lg:mx-auto mx-5 py-16 md:py-24">
-
-
-            <div className=" space-y-3">
-                <span className="bg-primary/10 rounded-lg text-sm w-fit mx-auto px-3 py-1">جدولة مكالمة</span>
-                <h2 className=" text-3xl font-bold mt-5 text-accent">احجز استشارة مجانية</h2>
-                <p className=" text-muted-foreground text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التسويقية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك.</p>
-                <div className=" space-y-2">
-                    {DataContact.map((item, index) => (
-                        <article key={index}>
-                            <p className=" flex items-center gap-2"><CheckCircle size={20} className=" text-primary" />{item}</p>
-                        </article>
-                    ))}
+    return (
+        <div className=" bg-primary/10">
+            <div className=" max-w-7xl lg:mx-auto mx-5 py-16 md:py-24">
+                <div className=" grid grid-cols-1 lg:mx-10 gap-10 md:grid-cols-2 items-center">
+                    <div className=" space-y-3">
+                        <span className="bg-primary/10 rounded-lg text-sm w-fit mx-auto px-3 py-1">جدولة مكالمة</span>
+                        <h2 className=" text-3xl font-bold mt-5 text-accent">احجز استشارة مجانية</h2>
+                        <p className=" text-muted-foreground text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التسويقية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك.</p>
+                        <div className=" space-y-2">
+                            {DataContact.map((item, index) => (
+                                <article key={index}>
+                                    <p className=" flex items-center gap-2"><CheckCircle size={20} className=" text-primary" />{item}</p>
+                                </article>
+                            ))}
+                        </div>
+                        <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">احجز موعدًا الان<Calendar /></button>
+                    </div>
+                    <BookingForm />
                 </div>
-                <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">احجز موعدًا الان<Calendar /></button>
             </div>
         </div>
-    </div>
-  )
+    )
 }
