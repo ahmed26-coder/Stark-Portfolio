@@ -134,7 +134,7 @@ export function BookingForm() {
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">رقم الهاتف</label>
-                  <input type="tel" inputMode="numeric" pattern="[0-9]{10,15}" name="phone" id="phone" placeholder="أدخل رقم هاتفك" className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" required />
+                  <input dir="rtl" type="tel" inputMode="numeric" pattern="[0-9]{10,15}" name="phone" id="phone" placeholder="أدخل رقم هاتفك" className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" required />
                 </div>
               </div>
               <button

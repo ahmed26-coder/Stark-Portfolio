@@ -119,7 +119,7 @@ export function Contactreservation() {
         "لا توجد التزامات - استشارة مجانية بالكامل",
     ];
     return (
-        <div className=" bg-primary/10">
+        <div className=" bg-primary/7">
             <div className=" max-w-7xl lg:mx-auto mx-5 py-16 md:py-24">
                 <div className=" grid grid-cols-1 lg:mx-10 gap-10 md:grid-cols-2 items-center">
                     <div className=" space-y-3">

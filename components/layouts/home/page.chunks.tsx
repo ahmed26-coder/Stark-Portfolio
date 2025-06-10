@@ -2,7 +2,8 @@ import SectionTitle from "@/components/shared/section-title";
 import { DataAbout, status } from "../../../constants"
 import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import React from "react";
-import BookingForm from "./page.client";
+import BookingForm, { CarouselSize } from "./page.client";
+import Link from "next/link";
 
 export function HeroSection({ children }: { children: React.ReactNode }) {
     return (
@@ -282,9 +283,9 @@ export function Marketing() {
                                 ))}
                             </div>
                         </div>
-                        <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
-                            <button className=" bg-primary text-white py-2 px-5 rounded-md hover:bg-primary/90">تعرف على فريقنا</button>
-                            <button className=" border-1 py-2 px-5 rounded-md hover:bg-accent hover:text-white ">شاهد أعمالنا</button>
+                        <div className="flex gap-2 mt-6">
+                            <Link href="/about-us"><button className=" bg-primary text-white py-2 px-5 rounded-md hover:bg-primary/90">تعرف على فريقنا</button></Link>
+                            <Link href="/portfolio"><button className=" border-1 py-2 px-5 rounded-md hover:bg-accent hover:text-white ">شاهد أعمالنا</button></Link>
                         </div>
                     </div>
                 </div>
@@ -296,7 +297,7 @@ export function Marketing() {
 
 export function Project() {
     return (
-        <section className=" bg-primary/5 py-16 md:py-20 relative overflow-hidden">
+        <section className=" bg-primary/5 py-16 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
             </div>
@@ -307,20 +308,23 @@ export function Project() {
 
 
 export function PageClient() {
-  return (
-        <section className=" py-16 md:py-20 relative overflow-hidden">
+    return (
+        <section className=" py-12 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="آراء العملاء" title="ماذا يقول عملاؤنا" description="نحن نفخر بالعلاقات طويلة الأمد التي بنيناها مع عملائنا" highlighted={true} />
+                <div className=" mt-10">
+                    <CarouselSize />
+                </div>
             </div>
         </section>
-  )
+    )
 }
 
 
 
 export function Consultation() {
     return (
-        <section className=" bg-primary/5 py-16 md:py-20 relative overflow-hidden">
+        <section className=" bg-primary/5 py-16 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="اتصل بنا" highlighted={true} title="دعنا نناقش مشروعك" description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك التسويقية" />
                 <div className=" items-center grid gap-10 lg:mx-10 mt-10 lg:grid-cols-2 lg:gap-16">
