@@ -11,9 +11,10 @@ export default function AboutUs() {
         <SectionTitle
           highlighted={true}
           headline="تعرف علينا"
-          title="فريق من المبدعين يصنع الفرق"
-          description="نحن أكثر من مجرد وكالة تسويق. نحن شركاء في نجاحك، نعمل معًا لتحقيق أهدافك وتجاوز توقعاتك"
+          title="نخبة العقول الهندسية في خدمة أعمالك"
+          description="نحن في Stark AI أكثر من مجرد شركة برمجيات. نحن شركاء نجاح ندمج الذكاء الاصطناعي في صميم عملياتك لتحقيق نتائج تفوق التوقعات."
         />
+
       </CustomHeroSection>
       <DecorativeSeparator />
       <Journey />

@@ -166,7 +166,7 @@ export function Experience() {
 
     return (
         <div className=" max-w-7xl lg:mx-auto text-center py-12 lg:py-20 mx-5">
-            <SectionTitle headline='شارك تجربتك' title='هل انت أحد عملائنا؟' description='نحن نقدر آراءك وتجاربك معنا. شارك قصة نجاحك وكيف ساعدناك في تحقيق أهدافك التسويقية' highlighted={true} />
+            <SectionTitle headline='شارك تجربتك' title='هل انت أحد عملائنا؟' description='نحن نقدر آراءك وتجاربك معنا. شارك قصة نجاحك وكيف ساعدناك في تحقيق التحول الرقمي الذكي' highlighted={true} />
 
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger asChild>
@@ -178,7 +178,7 @@ export function Experience() {
                     <DialogHeader>
                         <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-[#17ddb9] bg-clip-text text-transparent">شاركنا قصة نجاحك</DialogTitle>
                         <DialogDescription className="text-right">
-                            يسعدنا سماع رأيك وتجربتك مع ctrl p. سيتم عرض رأيك في صفحة الشهادات بعد المراجعة.
+                            يسعدنا سماع رأيك وتجربتك مع Stark AI. سيتم عرض رأيك في صفحة الشهادات بعد المراجعة.
                         </DialogDescription>
                     </DialogHeader>
                     <form onSubmit={handleSubmit} className="space-y-4 mt-4">

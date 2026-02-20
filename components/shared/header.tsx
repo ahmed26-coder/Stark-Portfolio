@@ -8,8 +8,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-import LogoWord from "@/public/logo-word";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -65,7 +64,19 @@ export default function Header() {
       )}>
       <div className="max-w-7xl mx-auto py-2 px-5">
         <div className="flex items-center justify-between">
-          <LogoWord width="100" height="50" />
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.jpeg"
+              className="rounded-full object-cover"
+              alt="logo"
+              width={50}
+              height={50}
+              priority
+            />
+            <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              STARK
+            </h1>
+          </div>
           <nav className="items-center justify-center gap-2 hidden lg:flex">
             {navLink.map((link) => (
               <Link

@@ -13,16 +13,17 @@ export default function HomePage() {
       <HeroSection>
         <div className="text-center">
           <span className="py-1 px-2.5 inline-block bg-primary/10 rounded-lg text-sm font-medium mb-7">
-            شركة تسويق رقمي متكاملة
+            حلول متكاملة بالذكاء الاصطناعي
           </span>
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-            <span className="block text-secondary">نحول أفكارك </span>
-            <span className="block text-accent">الي حملات تسويقية ناجحة</span>
+            <span className="block text-secondary">نبتكر اليوم </span>
+            <span className="block text-accent">لنبني مستقبل الغد</span>
           </h1>
           <p className="max-w-3xl mx-auto text-muted-foreground text-lg md:text-xl mb-8">
-            نساعدك على النمو وتحقيق أهدافك التسويقية بأحدث الاستراتيجيات
-            والأدوات في عالم التسويق الرقمي المتغير باستمرار
+            في Stark AI، نطور أنظمة ذكية لقطاعات الطب، الهندسة، والمحاسبة
+            تساعدك على اتخاذ قرارات دقيقة وتحسين كفاءة أعمالك بتقنيات المستقبل.
           </p>
+
         </div>
         <HeroStatus />
         <div className="flex items-center justify-center gap-2">

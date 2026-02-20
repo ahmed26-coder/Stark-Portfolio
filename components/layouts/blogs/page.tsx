@@ -10,8 +10,8 @@ export default function Blogs() {
         <SectionTitle
           highlighted={true}
           headline="المدونة"
-          title="أحدث الأفكار والرؤى التسويقية"
-          description="اكتشف أحدث الاتجاهات والاستراتيجيات في عالم التسويق الرقمي من خلال مدونتنا المتخصصة"
+          title="أحدث الأفكار والرؤى في الذكاء الاصطناعي"
+          description="اكتشف أحدث الاتجاهات والابتكارات في عالم الذكاء الاصطناعي من خلال مدونتنا المتخصصة"
         />
       </CustomHeroSection>
       <DecorativeSeparator />

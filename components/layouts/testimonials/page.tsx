@@ -13,7 +13,7 @@ export default function Testimonials() {
           highlighted={true}
           headline="آراء العملاء"
           title="ماذا يقول عملاؤنا عنا"
-          description="نفخر بالعلاقات طويلة الأمد التي بنيناها مع عملائنا. اطلع على تجاربهم معنا وكيف ساعدناهم على تحقيق أهدافهم التسويقية"
+          description="نفخر بالعلاقات طويلة الأمد التي بنيناها مع عملائنا. اطلع على تجاربهم معنا وكيف ساعدناهم على تحقيق أهدافهم الذكية"
         />
       </CustomHeroSection>
       <DecorativeSeparator />

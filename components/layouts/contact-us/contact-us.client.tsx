@@ -231,12 +231,12 @@ export default function ContactForm() {
             className="flex h-10 w-full rounded-md border-2 outline-0 focus:border-primary focus:border-2 border-input bg-background px-3 text-sm"
           >
             <option value="" disabled>اختر الخدمة</option>
-            <option value="التسويق الرقمي">التسويق الرقمي</option>
-            <option value="الهوية البصرية">الهوية البصرية</option>
-            <option value="تطوير المواقع">تطوير المواقع</option>
-            <option value="إدارة وسائل التواصل">إدارة وسائل التواصل</option>
-            <option value="إنتاج المحتوى">إنتاج المحتوى</option>
-            <option value="خدمات الطباعة">خدمات الطباعة</option>
+            <option value="الذكاء الاصطناعي في الطب">الذكاء الاصطناعي في الطب</option>
+            <option value="الحلول الهندسية الذكية">الحلول الهندسية الذكية</option>
+            <option value="أنظمة المحاسبة المتقدمة">أنظمة المحاسبة المتقدمة</option>
+            <option value="التنبؤ بالمخازن">التنبؤ بالمخازن</option>
+            <option value="مساعد الفواتير الذكي">مساعد الفواتير الذكي</option>
+            <option value="تطوير النماذج المخصصة">تطوير النماذج المخصصة</option>
             <option value="أخرى">أخرى</option>
           </select>
         </div>

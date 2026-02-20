@@ -10,6 +10,7 @@ import {
   PenTool,
   Users,
   Zap,
+  Cpu,
 } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -19,7 +20,7 @@ export function Casestudy() {
     <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
       <SectionTitle
         headline="دراسة حالة مميزة"
-        title="كيف ساعدنا شركة هورايزن للتقنية على زيادة مبيعاتها بنسبة 150%"
+        title="كيف ساعدنا مستشفى النخبة على زيادة دقة التشخيص بنسبة 98%"
         highlighted={true}
       />
       <div className=" max-w-7xl xl:mx-auto mt-15 mx-5 sm:mx-10 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
@@ -96,11 +97,11 @@ export function Casestudy() {
             </div>
             <div>
               <span className="text-sm text-muted-foreground">العميل:</span>
-              <h3 className="font-bold">شركة هورايزن للتقنية</h3>
+              <h3 className="font-bold">مستشفى النخبة</h3>
             </div>
             <div className="mr-4">
               <span className="text-sm text-muted-foreground">المجال:</span>
-              <h3 className="font-bold">التكنولوجيا</h3>
+              <h3 className="font-bold">الرعاية الصحية</h3>
             </div>
           </div>
           <div className="bg-background rounded-lg p-6 border">
@@ -111,10 +112,9 @@ export function Casestudy() {
               المشكلة
             </h3>
             <p className="text-muted-foreground">
-              كانت شركة هورايزن للتقنية تعاني من ضعف في الهوية البصرية وعدم
-              اتساقها عبر منصاتها المختلفة، مما أدى إلى صعوبة في التعرف على
-              العلامة التجارية وانخفاض في ثقة العملاء. كما كانت تواجه منافسة
-              شديدة في سوق التكنولوجيا المتنامي.
+              كان مستشفى النخبة يعاني من ضغط هائل على قسم الأشعة وتأخر في صدور
+              النتائج، مما أدى إلى تزاحم المواعيد وصعوبة في إدارة حالات الطوارئ
+              بدقة وسرعة.
             </p>
           </div>
           <div className="bg-background rounded-lg p-6 border">
@@ -125,9 +125,8 @@ export function Casestudy() {
               الحل
             </h3>
             <p className="text-muted-foreground mb-4">
-              قمنا بتطوير هوية بصرية جديدة تمامًا تعكس قيم الشركة وتطلعاتها
-              المستقبلية، مع التركيز على الابتكار والموثوقية. شملت الهوية
-              الجديدة:
+              قمنا بتطبيق نظام Stark AI للتشخيص الطبي، والذي يعمل على تحليل الصور
+              الإشعاعية فورياً وتقديم تقرير أولي دقيق للأطباء. شمل الحل:
             </p>
             <ul className="space-y-2">
               {DataSolution.map((item, index) => (
@@ -160,9 +159,9 @@ export function Casestudy() {
               ))}
             </div>
             <p className="text-muted-foreground">
-              أدت الهوية البصرية الجديدة إلى تحول كبير في أداء الشركة، حيث أصبحت
-              أكثر تميزًا وجاذبية للعملاء. كما ساهمت في بناء ثقة أكبر مع العملاء
-              الحاليين والمحتملين، مما انعكس إيجابًا على المبيعات والنمو.
+              أدى تطبيق النظام إلى تحول جذري في قسم الأشعة، حيث انخفض وقت انتظار
+              المرضى بشكل كبير وتحسنت دقة التشخيص، مما ساهم في إنقاذ العديد من
+              الحالات الحرجة بفضل التدخل المبكر المدعوم بالذكاء الاصطناعي.
             </p>
           </div>
           <Button size="lg" className=" w-full">
@@ -177,16 +176,16 @@ export function Casestudy() {
 export function Stories() {
   const DataStories = [
     {
-      title: "جرين نيتشر",
-      category: "التسويق الرقمي",
-      industry: "المنتجات الطبيعية",
-      problem: "انخفاض في المبيعات وضعف في الوعي بالعلامة التجارية",
-      solution: "استراتيجية تسويق رقمي متكاملة مع حملات إعلانية مستهدفة",
+      title: "مجموعة بن لادن الهندسية",
+      category: "الحلول الهندسية الذكية",
+      industry: "الهندسة والإنشاءات",
+      problem: "صعوبة في التنبؤ باحتياجات المواد وهدر في الموارد",
+      solution: "نظام محاكاة وتنبؤ هندسي مبني على الذكاء الاصطناعي",
       results: [
-        { label: "زيادة في المبيعات", value: "+120%" },
-        { label: "زيادة في الوعي بالعلامة", value: "+200%" },
+        { label: "تقليل الهدر", value: "+30%" },
+        { label: "دقة التنفيذ", value: "+95%" },
       ],
-      icon: <BarChart className="h-10 w-10 text-primary" />,
+      icon: <Cpu className="h-10 w-10 text-primary" />,
     },
     {
       title: "منصة تعليم",
@@ -283,23 +282,23 @@ export function Clients() {
       id: "1",
       icon: <Award />,
       description:
-        "فريق ctrl p قدم لنا هوية بصرية مميزة ساعدتنا على التميز في سوق مزدحم بالمنافسين. النتائج تجاوزت توقعاتنا بكثير.",
-      title: "أحمد الشمري",
-      responsible: "المدير التنفيذي، شركة هورايزن للتقنية",
+        "نظام Stark AI في الطب غير مفهوم الرعاية لدينا. الدقة في تحليل الصور الطبية أصبحت مذهلة وسرعت اتخاذ القرار السريري.",
+      title: "د. خالد المنصور",
+      responsible: "المدير الطبي، مستشفى النخبة",
     },
     {
       id: "2",
       icon: <Zap />,
       description:
-        "استراتيجية التسويق الرقمي التي طورها فريق ctrl p ساعدتنا على زيادة مبيعاتنا بشكل كبير وتوسيع قاعدة عملائنا.",
-      title: "سارة القحطاني",
-      responsible: "مديرة التسويق، جرين نيتشر",
+        "ساعدنا حل Stark AI الهندسي على تقليل تكاليف المواد بشكل ملحوظ وتحسين دقة الجدولة الزمنية لمشاريعنا الكبرى.",
+      title: "م. سارة القحطاني",
+      responsible: "مديرة المشاريع، مجموعة بن لادن",
     },
     {
       id: "3",
       icon: <Users />,
       description:
-        "الموقع الجديد الذي طوره فريق ctrl p غير تجربة المستخدم بالكامل وساهم في زيادة التسجيلات في منصتنا بنسبة 85%.",
+        "الموقع الجديد الذي طوره فريق Stark AI غير تجربة المستخدم بالكامل وساهم في زيادة التسجيلات في منصتنا بنسبة 85%.",
       title: "محمد العتيبي",
       responsible: "مؤسس منصة تعليم",
     },
@@ -343,15 +342,15 @@ export function SimilarPortfolio() {
       <SectionTitle
         highlighted={false}
         title="هل أنت جاهز لتحقيق نتائج مماثلة؟"
-        description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانيه."
+        description="دعنا نساعدك في دمج الذكاء الاصطناعي في صميم أعمالك وتحقيق نتائج استثنائية. تواصل معنا اليوم للحصول على استشارة تقنية مجانية."
       />
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
         <Button size="lg">
-          احصل على استشارة مجانية
+          احصل على استشارة تقنية مجانية
           <ArrowRight className="h-4 w-4 mr-1" />
         </Button>
         <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 hover:bg-accent hover:text-white bg-white py-2 px-5 rounded-md gap-3">
-          تعرف على المزيد عن خدماتنا
+          تعرف على حلولنا الذكية
         </button>
       </div>
     </div>

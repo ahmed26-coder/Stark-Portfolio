@@ -28,7 +28,7 @@ export function Contactform() {
         {
             id: "1",
             title: "البريد الإلكتروني",
-            description: "info@ctrlp.com",
+            description: "info@stark-ai.com",
             icon: <Mail />,
         },
         {
@@ -100,10 +100,10 @@ export function Contactform() {
 
 export function Contactreservation() {
     const DataContact = [
-        "تحليل أولي لاحتياجاتك التسويقية",
-        "نصائح مخصصة لتحسين استراتيجيتك الحالية",
-        "فرصة لطرح أسئلتك على خبير متخصص",
-        "لا توجد التزامات - استشارة مجانية بالكامل",
+        "تحليل أولي لاحتياجاتك التقنية",
+        "نصائح مخصصة لدمج الذكاء الاصطناعي",
+        "فرصة لطرح أسئلتك على خبير تقني",
+        "استشارة مجانية بالكامل - لا توجد التزامات",
     ];
     return (
         <div className=" bg-primary/7">
@@ -112,7 +112,7 @@ export function Contactreservation() {
                     <div className=" space-y-3">
                         <span className="bg-primary/10 rounded-lg text-sm w-fit mx-auto px-3 py-1">جدولة مكالمة</span>
                         <h2 className=" text-3xl font-bold mt-5 text-accent">احجز استشارة مجانية</h2>
-                        <p className=" text-muted-foreground text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التسويقية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك.</p>
+                        <p className=" text-muted-foreground text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التقنية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك الذكية.</p>
                         <div className=" space-y-2">
                             {DataContact.map((item, index) => (
                                 <article key={index}>

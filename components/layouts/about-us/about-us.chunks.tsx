@@ -1,5 +1,6 @@
 import SectionTitle from "@/components/shared/section-title";
 import { DataDistinguishes } from "../../../constants"
+import Image from "next/image";
 import { CheckCircle, Award, Disc2, Heart, Lightbulb, TrendingUp, ChevronLeft, Mail, Phone, MapPin } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -7,14 +8,34 @@ import { Button } from "@/components/ui/button";
 export function Journey() {
     return (
         <>
-            <div className=" max-w-7xl xl:mx-auto my-15 mx-5">
-                <span className=" bg-primary/10 py-0.5 px-5 rounded-md">قصتنا</span>
-                <h1 className=" mt-3 text-4xl font-bold text-accent">كيف بدأت رحلتنا</h1>
-                <p className=" text-xl mt-4 text-muted-foreground">بدأت قصة &quot;ctrl p&quot; في عام 2015 عندما اجتمع أربعة من المتخصصين في مجال التسويق والتصميم، يجمعهم شغف مشترك: تقديم حلول تسويقية مبتكرة تتجاوز التقليدية.</p>
-                <p className=" text-xl mt-4 text-muted-foreground">في بداية الأمر، كنا فريقًا صغيرًا يعمل من مكتب متواضع في الرياض، لكن رؤيتنا كانت كبيرة. أردنا إنشاء وكالة تسويق تفهم حقًا احتياجات العملاء المحليين وتقدم لهم حلولًا مخصصة تناسب السوق العربي.</p>
-                <p className=" text-xl mt-4 text-muted-foreground">اخترنا اسم &quot;ctrl p&quot; تيمنًا بأمر الطباعة في الحاسوب، لأننا نؤمن بأن التسويق الناجح يشبه الطباعة - يحول الأفكار المجردة إلى واقع ملموس يمكن للجميع رؤيته والتفاعل معه.</p>
-                <p className=" text-xl mt-4 text-muted-foreground">مع مرور السنوات، نمت الوكالة لتضم أكثر من 25 متخصصًا في مختلف مجالات التسويق الرقمي، وأصبحنا من الوكالات الرائدة في المنطقة، مع الحفاظ على قيمنا الأساسية: الإبداع، الشفافية، والتركيز على النتائج.</p>
-            </div>
+            <section className=" max-w-7xl xl:mx-auto my-10 mx-5 w-full py-12 md:py-24 lg:py-32 bg-background">
+                <div className="container px-4 md:px-6">
+                    <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+                        <div className="relative">
+                            <div className="absolute inset-0 rounded-2xl bg-primary/25 transform rotate-5"></div>
+                            <Image
+                                src="/about-us.jpg"
+                                width={600}
+                                height={500}
+                                alt="قصة الشركة"
+                                className="relative z-10 rounded-2xl object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-center space-y-4">
+                            <div className="space-y-2">
+                                <div className="space-y-4 text-muted-foreground">
+                                    <span className=" bg-primary/10 text-primary font-bold py-0.5 px-5 rounded-md">قصتنا</span>
+                                    <h1 className=" mt-3 text-4xl font-bold text-accent">كيف بدأت رحلتنا في Stark AI</h1>
+                                    <p className=" text-xl mt-4 text-muted-foreground">بدأت قصة Stark AI في عام 2025، عندما اجتمعت مجموعة من أمهر مهندسي الذكاء الاصطناعي وخبراء البيانات، يجمعهم شغف واحد: سد الفجوة بين التقنيات المتقدمة واحتياجات السوق في الشرق الأوسط.</p>
+                                    <p className=" text-xl mt-4 text-muted-foreground">رؤيتنا كانت واضحة منذ اللحظة الأولى؛ تقديم حلول ذكية مخصصة لقطاعات حيوية مثل الطب، الهندسة، والمحاسبة، بعيداً عن الحلول البرمجية التقليدية والمملة.</p>
+                                    <p className=" text-xl mt-4 text-muted-foreground">اسم Stark يرمز إلى القوة والوضوح، فنحن نؤمن بأن الذكاء الاصطناعي يجب أن يكون قوياً في أدائه وواضحاً في النتائج التي يحققها لأصحاب الأعمال.</p>
+                                    <p className=" text-xl mt-4 text-muted-foreground">اليوم، Stark AI تقود مسيرة الابتكار الرقمي، مع فريق يضم نخبة من المتخصصين الملتزمين بقيمنا الأساسية: التميز التقني، والشفافية، وتحقيق أثر ملموس في نمو عملائنا.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
@@ -25,13 +46,13 @@ export function Values() {
             id: "1",
             icon: <Disc2 size={35} />,
             title: "رسالتنا",
-            description: "مساعدة الشركات على النمو وتحقيق أهدافها من خلال استراتيجيات تسويقية مبتكرة ومخصصة تناسب احتياجاتها وتتماشى مع ثقافة المنطقة. نسعى لأن نكون الشريك الموثوق الذي يساعد العملاء على التميز في سوق تنافسي متغير باستمرار.",
+            description: "تمكين الشركات والمؤسسات من الاستفادة القصوى من الذكاء الاصطناعي لتحويل البيانات إلى رؤى اتخاذ قرار دقيقة، وتحسين الكفاءة التشغيلية في كافة القطاعات الحيوية.",
         },
         {
             id: "2",
             icon: <Lightbulb size={35} />,
             title: "رؤيتنا",
-            description: "أن نصبح الوكالة الرائدة في مجال التسويق الرقمي في الشرق الأوسط، معروفين بالابتكار والجودة والنتائج المتميزة. نطمح لتشكيل مستقبل التسويق الرقمي في المنطقة من خلال تبني أحدث التقنيات والاستراتيجيات العالمية وتكييفها لتناسب السوق المحلي.",
+            description: "أن نكون القوة الدافعة للتحول الرقمي الذكي في الشرق الأوسط، وأن تصبح تقنيات Stark AI هي المعيار العالمي للحلول البرمجية المتخصصة المبنية على الذكاء الاصطناعي.",
         },
     ];
 
@@ -64,7 +85,7 @@ export function Values() {
     return (
         <>
             <div className="  bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-                <SectionTitle headline="رسالتنا وقيمنا" title="ما نؤمن به" description="نسعى لتغيير مشهد التسويق الرقمي في المنطقة من خلال تقديم حلول مبتكرة تحقق نتائج ملموسة" highlighted={true} />
+                <SectionTitle headline="رسالتنا وقيمنا" title="رؤية ذكية للمستقبل" description="نسعى لتغيير مشهد التكنولوجيا في المنطقة من خلال تقديم حلول ذكاء اصطناعي تحقق نتائج حقيقية وملموسة" highlighted={true} />
                 <div className="max-w-7xl xl:mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 lg:mx-12 mt-10">
                     {DataValues.map((item) => (
                         <article key={item.id} className=" rounded-2xl bg-white border-1 border-muted-foreground/15 p-8">
@@ -96,19 +117,19 @@ export function Distinguishes() {
             id: "1",
             icon: <Mail size={27} />,
             title: "البريد الإلكتروني",
-            description: "info@ctrlp.com",
+            description: "info@stark-ai.com",
         },
         {
             id: "2",
             icon: <Phone size={27} />,
             title: "رقم الهاتف",
-            description: "+966 12 345 6789",
+            description: "+966 50 123 4567",
         },
         {
             id: "3",
             icon: <MapPin size={27} />,
             title: "العنوان",
-            description: "شارع الملك فهد، الرياض، المملكة العربية السعودية",
+            description: "مركز التقنية الرقمية، الرياض، المملكة العربية السعودية",
         },
     ];
     return (
@@ -124,8 +145,8 @@ export function Distinguishes() {
             </div>
             <div className=" shadow-sm max-w-7xl xl:mx-auto space-y-8 sm:space-y-0 grid gap-8 md:grid-cols-2 items-center rounded-2xl bg-white border-1 border-muted-foreground/15 p-10 mx-5 lg:mx-12 mt-15">
                 <div className="">
-                    <h1 className=" text-accent text-2xl font-bold">جاهزون للبدء في مشروعك التالي؟</h1>
-                    <p className=" text-muted-foreground py-4  text-lg">دعنا نناقش كيف يمكننا مساعدتك في تحقيق أهدافك التسويقية. احصل على استشارة مجانية أحد خبرائنا.</p>
+                    <h1 className=" text-accent text-2xl font-bold">جاهزون للبدء في التحول الذكي؟</h1>
+                    <p className=" text-muted-foreground py-4  text-lg">دعنا نناقش كيف يمكن لتقنيات Stark AI مساعدتك في تحقيق أهدافك التقنية. احصل على استشارة مجانية مع أحد خبرائنا.</p>
                     <Button size="lg">تواصل معنا الان<ChevronLeft /></Button>
                 </div>
                 <div className=" space-y-5">

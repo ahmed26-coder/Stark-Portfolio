@@ -68,7 +68,7 @@ export default function ServiceSection({
             ))}
           </div>
         </div>
-        <div className="mt-8 bg-white p-4 rounded-lg">
+        <div className={`mt-8 ${highlighted ? "bg-primary/5" : "bg-white"} p-4 rounded-lg`}>
           <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
             {expectedResults.map((result) => (

@@ -12,7 +12,7 @@ export async function createBooking(formData: FormData) {
     return { error: "جميع الحقول مطلوبة" };
   }
 
-  const { error } = await supabase.from("Home-Contact").insert([
+  const { error } = await supabase.from("home_contact").insert([
     { name, email, subject, message },
   ]);
 

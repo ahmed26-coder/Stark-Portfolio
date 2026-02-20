@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/shared/section-title";
 import { DataAbout, status } from "../../../constants"
-import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, BarChart, ChevronLeft } from "lucide-react";
+import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, BarChart, ChevronLeft, Brain } from "lucide-react";
 import React from "react";
 import BookingForm, { CarouselSize } from "./page.client";
 import Link from "next/link";
@@ -48,25 +48,25 @@ export function Services() {
     const DataServices = [
         {
             id: "1",
-            icon: <ChartNoAxesColumnIncreasing size={35} />,
-            title: "التسويق الرقمي",
-            description: "التسويق الرقمي استراتيجيات تسويق رقمي متكاملة تزيد من ظهورك عبر الإنترنت وتحسن معدلات التحويل",
-            feaures: [
-                "تحسين محركات البحث",
-                "إدارة وسائل التواصل",
-                "التسويق بالمحتوى",
-                "الإعلانات المدفوعة"
+            icon: <Brain className="h-10 w-10 text-primary" />,
+            title: "ذكاء اصطناعي متخصص",
+            description: "نطور أنظمة ذكاء اصطناعي متخصصة للقطاعات الطبية والتمريضية والهندسية بدقة تناهز 99%.",
+            features: [
+                "تشخيص طبي ذكي",
+                "محاكاة هندسية",
+                "تحليل بيانات",
+                "نماذج مخصصة"
             ],
             button: " المزيد من التفاصيل"
         },
         {
             id: "2",
             icon: <PenTool size={35} />,
-            title: "تصميم الهوية البصرية",
-            description: "تصميم شعارات وهويات بصرية تعكس قيم علامتك التجارية وتميزها عن المنافسين",
-            feaures: [
+            title: "تصميم الهوية البصرية الذكية",
+            description: "تصميم شعارات وهويات بصرية تعكس الابتكار التقني لشركتك وتميزها عن المنافسين",
+            features: [
                 "تصميم الشعارات",
-                "نظام الألوان",
+                "نظام الألوان التقني",
                 "الخطوط والطباعة",
                 "دليل الهوية البصرية",
             ],
@@ -75,25 +75,25 @@ export function Services() {
         {
             id: "3",
             icon: <Globe size={35} />,
-            title: "تطوير المواقع",
-            description: "تصميم وتطوير مواقع إلكترونية عصرية وسريعة تعزز تجربة المستخدم وتزيد من التحويلات",
-            feaures: [
+            title: "تطوير المنصات الذكية",
+            description: "تصميم وتطوير منصات إلكترونية مدعومة بالذكاء الاصطناعي تعزز تجربة المستخدم",
+            features: [
                 "مواقع متجاوبة",
-                "تحسين سرعة التحميل",
+                "تكامل مع الـ AI",
                 "تجربة مستخدم مميزة",
-                "متوافقة مع SEO",
+                "تحليل البيانات الفوري",
             ],
             button: " المزيد من التفاصيل"
         },
         {
             id: "4",
             icon: <Users size={35} />,
-            title: "إدارة وسائل التواصل",
-            description: "إدارة احترافية لحسابات التواصل الاجتماعي مع محتوى إبداعي يجذب الجمهور المستهدف",
-            feaures: [
-                "إنشاء المحتوى",
+            title: "إدارة المجتمع الرقمي",
+            description: "إدارة احترافية لحضورك الرقمي مع محتوى تقني يجذب الجمهور المستهدف",
+            features: [
+                "إنشاء المحتوى التقني",
                 "جدولة المنشورات",
-                "التفاعل مع الجمهور",
+                "التفاعل الذكي",
                 "تحليل الأداء",
             ],
             button: " المزيد من التفاصيل"
@@ -101,24 +101,24 @@ export function Services() {
         {
             id: "5",
             icon: <FileText size={35} />,
-            title: "إنتاج المحتوى",
-            description: "كتابة محتوى إبداعي ومقنع يعزز من تواجدك الرقمي ويحسن ترتيبك في محركات البحث",
-            feaures: [
-                "مقالات المدونة",
-                "محتوى وسائل التواصل",
-                "نصوص إعلانية",
-                "محتوى الموقع الإلكتروني",
+            title: "تحليل وكتابة المحتوى",
+            description: "كتابة محتوى تقني إبداعي يعزز من تواجدك الرقمي ويشرح حلولك الذكية ببساطة",
+            features: [
+                "مقالات تقنية",
+                "نشرات بريدية",
+                "نصوص إعلانية ذكية",
+                "محتوى تعليمي",
             ],
             button: " المزيد من التفاصيل"
         },
         {
             id: "6",
             icon: <Printer size={35} />,
-            title: "خدمات الطباعة",
-            description: "طباعة مواد تسويقية عالية الجودة من بروشورات وكتيبات وبطاقات عمل وغيرها",
-            feaures: [
-                "بطاقات العمل",
-                "البروشورات",
+            title: "خدمات الطباعة التقنية",
+            description: "طباعة مواد تعريفية عالية الجودة لمشاريعك التقنية وهويتك بذكاء",
+            features: [
+                "بطاقات العمل الذكية",
+                "البروشورات التقنية",
                 "اللافتات الإعلانية",
                 "المواد الترويجية",
             ],
@@ -129,7 +129,7 @@ export function Services() {
     return (
         <>
             <div className=" max-w-7xl mx-[5%] lg:mx-auto py-12">
-                <SectionTitle headline="خدماتنا" title="حلول تسويقية متكاملة" description="نقدم مجموعة شاملة من الخدمات التسويقية المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك" highlighted={true} />
+                <SectionTitle headline="خدماتنا" title="حلول ذكية متكاملة" description="نقدم مجموعة شاملة من خدمات الذكاء الاصطناعي المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك التقنية" highlighted={true} />
 
                 {/* Cards */}
                 <div className=" gap-10 grid grid-cols-1 mt-[4%] mb-[10%] sm:grid-cols-2 lg:grid-cols-3">
@@ -141,17 +141,9 @@ export function Services() {
                             </span>
                             <h2 className=" font-bold text-xl my-3">{item.title}</h2>
                             <p className=" text-muted-foreground mb-4 ">{item.description}</p>
-                            {item.feaures.map((f, idx) => (
+                            {item.features.map((f, idx) => (
                                 <p key={idx} className=" my-2 flex items-center"><CheckCircle className=" text-secondary w-[4.5%] ml-3" />{f}</p>
                             ))}
-                            <div className=" border-1 border-muted-foreground/10 my-6 mx-[2%]"></div>
-                            <button className="flex px-4 py-2 rounded-md items-center justify-between hover:bg-accent w-full hover:text-white">
-                                {item.button}
-                                <ArrowRight
-                                    size={20}
-                                    className="transform transition-transform duration-300 group-hover:-translate-x-1"
-                                />
-                            </button>
                         </article>
                     ))}
                 </div>
@@ -214,7 +206,9 @@ export function Work() {
                         ))}
                     </div>
                 </div>
-                <Button className=" flex items-center py-2 px-5 rounded-md gap-5 mx-auto mt-[5%]">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></Button>
+                <Link href="/about-us">
+                    <Button className=" flex items-center py-2 px-5 rounded-md gap-5 mx-auto mt-[5%]">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></Button>
+                </Link>
             </div>
         </div >
     );
@@ -249,8 +243,8 @@ export function Marketing() {
                                         <Calendar className="h-5 w-5 text-primary" />
                                     </div>
                                     <div>
-                                        <div className="font-bold">تأسست عام 2015</div>
-                                        <div className="text-sm text-muted-foreground">8 سنوات من الخبرة والإبداع</div>
+                                        <div className="font-bold">تأسست عام 2025</div>
+                                        <div className="text-sm text-muted-foreground">1 سنوات من الخبرة والإبداع</div>
                                     </div>
                                 </div>
                             </div>
@@ -261,14 +255,14 @@ export function Marketing() {
                     <div className="flex flex-col justify-center space-y-4">
                         <div className="space-y-2">
                             <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm">من نحن</div>
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-accent">وكالة تسويق رائدة في المنطقة</h2>
-                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                تأسست وكالة ctrl p في عام 2015 بهدف تقديم حلول تسويقية مبتكرة تساعد الشركات على النمو وتحقيق أهدافها.
-                                نحن فريق من المحترفين المتخصصين في مجالات التسويق المختلفة.
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-accent">شركة ذكاء اصطناعي رائدة في المنطقة</h2>
+                            <p className="text-muted-foreground text-lg">
+                                تأسست Stark AI في عام 2025 بهدف تقديم حلول ذكاء اصطناعي مبتكرة تساعد الشركات على التحول الرقمي الذكي وتحقيق أهدافها.
+                                نحن فريق من المحترفين المتخصصين في مجالات هندسة البيانات والتعلم الآلي.
                             </p>
-                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                نؤمن بأن كل علامة تجارية فريدة وتستحق استراتيجية تسويقية مخصصة تناسب أهدافها وجمهورها المستهدف. لذلك
-                                نعمل بشكل وثيق مع عملائنا لفهم احتياجاتهم وتحدياتهم.
+                            <p className="text-muted-foreground text-lg">
+                                نؤمن بأن كل مؤسسة فريدة وتستحق حلولاً ذكية مخصصة تناسب أهدافها وتحدياتها الفنية. لذلك
+                                نركز على التفاصيل ونبذل قصارى جهدنا لضمان تقديم حلول تقنية تفوق التوقعات.
                             </p>
                             <div className="pt-6 space-y-4">
                                 {DataAbout.map((about) => (
@@ -403,7 +397,7 @@ export function Consultation() {
     return (
         <section className=" bg-primary/5 py-16 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
-                <SectionTitle headline="اتصل بنا" highlighted={true} title="دعنا نناقش مشروعك" description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك التسويقية" />
+                <SectionTitle headline="اتصل بنا" highlighted={true} title="دعنا نناقش مشروعك الذكي" description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك بالذكاء الاصطناعي" />
                 <div className=" items-center grid gap-10 lg:mx-10 mt-10 lg:grid-cols-2 lg:gap-16">
                     <div className="space-y-6 mx-5 md:mx-10 lg:mx-0">
                         <div className="flex items-center gap-4 space-x-reverse">
@@ -412,7 +406,7 @@ export function Consultation() {
                             </div>
                             <div>
                                 <h3 className="text-lg font-bold">البريد الإلكتروني</h3>
-                                <p className="text-muted-foreground">info@ctrlp.com</p>
+                                <p className="text-muted-foreground">info@stark-ai.com</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 space-x-reverse">

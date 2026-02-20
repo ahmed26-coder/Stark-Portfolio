@@ -12,7 +12,7 @@ export default function ContactUs() {
           highlighted={true}
           title="دعنا نناقش مشروعك التالي"
           headline="اتصل بنا"
-          description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك التسويقية. تواصل معنا اليوم لبدء رحلة نجاح عملك"
+          description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك بالذكاء الاصطناعي. تواصل معنا اليوم لبدء رحلة التحول الذكي لعملك"
         />
       </CustomHeroSection>
       <DecorativeSeparator />

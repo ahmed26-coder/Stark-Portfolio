@@ -1,5 +1,5 @@
-import { ArrowRight, BarChart, ChevronLeft, FileText, Globe, MousePointer, PenTool, Search, TrendingUp, Users } from "lucide-react";
-import { DataBenefits, DataBenefits2, DataExpected, DataSeo, Data, DataIcons, DataResultss, Datapractical, servicesLinks, DatapracticalSeo, DataExpectedSeo, DataAdvertisements, DataExpectedAdvertisements, DatapracticalAdvertisements, DataIdentity, DataIdentiy, DataIdentit, DataDesin, DataDesig, DataProduction, DataProductio, DataProductin } from "../../../constants"
+import { ArrowRight, BarChart, Brain, Calculator, ChevronLeft, Cpu, Database, FileCheck, FileText, Globe, Microscope, MousePointer, Package, PenTool, Search, Stethoscope, TrendingUp, Users, Zap } from "lucide-react";
+import { DataBenefits, DataBenefits2, DataExpected, DataSeo, Data, DataIcons, DataResultss, Datapractical, servicesLinks, DatapracticalSeo, DataExpectedSeo, DataAdvertisements, DataExpectedAdvertisements, DatapracticalAdvertisements, DataIdentity, DataIdentiy, DataIdentit, DataDesign, DataDesin, DataDesig, DataProduction, DataProductio, DataProductin } from "../../../constants"
 import Link from "next/link";
 import React from "react";
 import SectionTitle from "@/components/shared/section-title";
@@ -30,16 +30,16 @@ export function ServicesHeroLinks() {
 
 export function Strategy() {
   return (
-    <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
+    <div id="medical-ai" className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <ServiceSection
-            title="الاستراتيجية والاستشارات"
-            icon={<BarChart className="h-9 w-9 text-primary" />}
-            description="نساعدك على وضع استراتيجية تسويقية شاملة تتماشى مع أهداف عملك وتضمن تحقيق أقصى عائد على الاستثمار."
-            benefits={DataBenefits}
-            workSteps={DataBenefits2}
-            expectedResults={DataExpected}
+            title="الذكاء الاصطناعي في الطب"
+            icon={<Stethoscope className="h-9 w-9 text-primary" />}
+            description="نطور خوارزميات متقدمة لتحليل الصور الطبية، وتشخيص الأمراض بدقة عالية، وإدارة بيانات المرضى بذكاء لتحسين الرعاية الصحية."
+            benefits={Data}
+            workSteps={Datapractical}
+            expectedResults={DataResultss}
             highlighted={true}
           />
 
@@ -49,10 +49,10 @@ export function Strategy() {
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/10 rounded-full transform translate-x-1/3 translate-y-1/3"></div>
               <div className="relative z-10 text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 mb-4">
-                  <BarChart className="h-10 w-10 text-primary" />
+                  <Microscope className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">استراتيجية متكاملة</h3>
-                <p className="mt-2 max-w-xs mx-auto">نحول رؤيتك إلى خطة عمل واضحة وقابلة للتنفيذ</p>
+                <h3 className="text-2xl font-bold">دقة طبية فائقة</h3>
+                <p className="mt-2 max-w-xs mx-auto">نحول البيانات الطبية المعقدة إلى رؤى إنقاذ حياة</p>
               </div>
             </div>
           </div>
@@ -61,6 +61,7 @@ export function Strategy() {
     </div>
   )
 }
+
 
 
 
@@ -110,16 +111,16 @@ export default function Contact() {
 
 export function Seo() {
   return (
-    <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
+    <div id="accounting-ai" className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <ServiceSection
-            title="تحسين محركات البحث (SEO & SEM)"
-            icon={<Search className="h-9 w-9 text-primary" />}
-            description="نساعدك على تحسين ظهور موقعك في نتائج محركات البحث، وزيادة حركة المرور العضوية، وتحسين معدلات التحويل."
-            benefits={DataSeo}
-            workSteps={DatapracticalSeo}
-            expectedResults={DataExpectedSeo}
+            title="أنظمة المحاسبة المتقدمة"
+            icon={<Calculator className="h-9 w-9 text-primary" />}
+            description="نحول العمليات المحاسبية التقليدية إلى أنظمة ذكية تقوم بالأتمتة الكاملة للقيود، وكشف الأخطاء المالية، وتحليل التدفقات النقدية بدقة 100%."
+            benefits={DataAdvertisements}
+            workSteps={DatapracticalAdvertisements}
+            expectedResults={DataExpectedAdvertisements}
             highlighted={true}
           />
           <div className="order-1 lg:order-2">
@@ -136,7 +137,7 @@ export function Seo() {
                     <div className="bg-muted h-6 rounded mb-2"></div>
                     <div className="space-y-2">
                       <div className="bg-primary/10 h-10 rounded flex items-center px-3">
-                        <Search className="h-4 w-4 text-primary mr-2" />
+                        <Calculator className="h-4 w-4 text-primary mr-2" />
                         <div className="bg-background h-4 w-full rounded"></div>
                       </div>
                       <div className="bg-muted h-4 w-3/4 rounded"></div>
@@ -161,9 +162,10 @@ export function Seo() {
 
 
 
+
 export function Advertisements() {
   return (
-    <div className=" w-full py-16 md:py-24 bg-primary/5">
+    <div id="inventory-prediction" className=" w-full py-16 md:py-24 bg-primary/5">
       <div className=" max-w-7xl mx-auto container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
@@ -171,27 +173,27 @@ export function Advertisements() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-4 p-6 w-full max-w-md">
                   <div className="col-span-2 bg-background rounded-lg gap-2 shadow-sm p-4 flex items-center">
-                    <MousePointer className="h-8 w-8 text-primary mr-3" />
+                    <Package className="h-8 w-8 text-primary mr-3" />
                     <div>
-                      <div className="font-bold">إعلانات مستهدفة</div>
-                      <div className="text-xs text-muted-foreground">تصل إلى الجمهور المناسب في الوقت المناسب</div>
+                      <div className="font-bold">تنبؤ ذكي بالمخزون</div>
+                      <div className="text-xs text-muted-foreground">وداعاً للهالك والمنتجات الراكدة</div>
                     </div>
                   </div>
                   <div className="bg-background rounded-lg shadow-sm p-3 flex flex-col items-center justify-center">
-                    <div className="text-primary font-bold text-xl">Meta</div>
-                    <div className="text-xs text-muted-foreground">فيسبوك وانستغرام</div>
+                    <div className="text-primary font-bold text-xl">WMS</div>
+                    <div className="text-xs text-muted-foreground">تكامل الأنظمة</div>
                   </div>
                   <div className="bg-background rounded-lg shadow-sm p-3 flex flex-col items-center justify-center">
-                    <div className="text-primary font-bold text-xl">Google</div>
-                    <div className="text-xs text-muted-foreground">بحث وعرض</div>
+                    <div className="text-primary font-bold text-xl">AI</div>
+                    <div className="text-xs text-muted-foreground">تحليل موسمي</div>
                   </div>
                   <div className="col-span-2 bg-background/80 backdrop-blur rounded-lg shadow-sm p-3">
                     <div className="flex justify-between items-center mb-2">
-                      <div className="font-medium">أداء الحملة</div>
+                      <div className="font-medium">دقة التنبؤ</div>
                       <TrendingUp className="h-4 w-4 text-green-500" />
                     </div>
                     <div className="h-2 bg-muted rounded-full overflow-hidden">
-                      <div className="h-full bg-primary w-3/4 rounded-full"></div>
+                      <div className="h-full bg-primary w-[95%] rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -200,12 +202,12 @@ export function Advertisements() {
           </div>
 
           <ServiceSection
-            icon={<MousePointer className="h-9 w-9 text-primary" />}
-            title="الإعلانات المدفوعة (Meta, Google)"
-            description="نصمم وندير حملات إعلانية فعالة على منصات مثل Meta و Google لاستهداف جمهورك المناسب وتحقيق أهدافك التسويقية."
-            benefits={DataAdvertisements}
-            workSteps={DataDesin}
-            expectedResults={DataDesig}
+            icon={<Package className="h-9 w-9 text-primary" />}
+            title="نظام التنبؤ بالمخازن"
+            description="نساعد المستودعات والشركات اللوجستية على توقع الكميات المطلوبة مستقبلاً بناءً على بيانات المبيعات التاريخية والمتغيرات الخارجية."
+            benefits={DataIdentity}
+            workSteps={DataIdentiy}
+            expectedResults={DataIdentit}
             highlighted={false}
           />
         </div>
@@ -216,18 +218,19 @@ export function Advertisements() {
 
 
 
+
 export function Identity() {
   return (
-    <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
+    <div id="invoice-assistant" className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <ServiceSection
-            title="الهوية البصرية والتصميم"
-            icon={<PenTool className="h-9 w-9 text-primary" />}
-            description="نصمم هويات بصرية فريدة وجذابة تعكس قيم علامتك التجارية وتميزها عن المنافسين، مع الحفاظ على اتساق العلامة التجارية عبر جميع نقاط الاتصال."
-            benefits={DataIdentity}
-            workSteps={DataIdentiy}
-            expectedResults={DataIdentit}
+            title="مساعد الفواتير الذكي"
+            icon={<FileCheck className="h-9 w-9 text-primary" />}
+            description="نظام معالجة تلقائي للفواتير يستخدم رؤية الكمبيوتر (Computer Vision) لقراءة البيانات واستخراجها وتحويلها إلى قيود محاسبية فورية."
+            benefits={DataDesign}
+            workSteps={DataDesin}
+            expectedResults={DataDesig}
             highlighted={true}
           />
 
@@ -241,19 +244,19 @@ export function Identity() {
                     style={{ animation: 'var(--animate-spin-slow-reverse)' }}
                   ></div>
                   <div className="absolute inset-8 rounded-full bg-background shadow-lg flex items-center justify-center">
-                    <PenTool className="h-12 w-12 text-primary" />
+                    <FileCheck className="h-12 w-12 text-primary" />
                   </div>
                   <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-background px-3 py-1 rounded-full text-sm font-medium">
-                    الألوان
+                    جدولة
                   </div>
                   <div className="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 bg-background px-3 py-1 rounded-full text-sm font-medium">
-                    الخطوط
+                    OCR
                   </div>
                   <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 bg-background px-3 py-1 rounded-full text-sm font-medium">
-                    الشعار
+                    استخراج
                   </div>
                   <div className="absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-background px-3 py-1 rounded-full text-sm font-medium">
-                    الهوية
+                    مطابقة
                   </div>
                 </div>
               </div>
@@ -268,76 +271,21 @@ export function Identity() {
 
 
 
-export function Design() {
-  return (
-    <div className=" w-full py-16 md:py-24 bg-primary/5">
-      <div className=" max-w-7xl mx-auto container px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-background to-primary/10">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full max-w-md p-6">
-                <div className="bg-background rounded-t-lg shadow-sm p-3 border-b border-muted">
-                  <div className="flex items-center mb-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                </div>
-                <div className="bg-background shadow-sm p-4">
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="bg-primary/10 h-8 w-24 rounded"></div>
-                    <div className="flex gap-2">
-                      <div className="bg-muted h-6 w-16 rounded"></div>
-                      <div className="bg-muted h-6 w-16 rounded"></div>
-                      <div className="bg-muted h-6 w-16 rounded"></div>
-                    </div>
-                  </div>
-                  <div className="bg-primary/5 h-40 rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <div className="bg-primary/20 h-12 w-12 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <Globe className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="bg-muted h-4 w-32 rounded mx-auto"></div>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-muted h-20 rounded"></div>
-                    <div className="bg-muted h-20 rounded"></div>
-                    <div className="bg-muted h-20 rounded"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <ServiceSection
-            icon={<Globe className="h-9 w-9 text-primary" />}
-            title="الإعلانات المدفوعة (Meta, Google)"
-            description="نصمم وندير حملات إعلانية فعالة على منصات مثل Meta و Google لاستهداف جمهورك المناسب وتحقيق أهدافك التسويقية."
-            benefits={DataAdvertisements}
-            workSteps={DatapracticalAdvertisements}
-            expectedResults={DataExpectedAdvertisements}
-            highlighted={false}
-          />
 
-        </div>
-      </div>
-    </div>
-  )
-}
 
 
 
 
 export function Production() {
   return (
-    <div className=" max-w-7xl mx-auto w-full py-16 md:py-24 bg-background">
-      <div className="container px-4 md:px-6">
+    <div id="custom-models" className=" w-full py-16 md:py-24 bg-primary/5">
+      <div className="container px-4 max-w-7xl mx-auto md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <ServiceSection
-            title="إنتاج المحتوى"
-            icon={<FileText className="h-9 w-9 text-primary" />}
-            description="ننتج محتوى إبداعي ومقنع يجذب جمهورك المستهدف ويعزز تواجدك الرقمي، سواء كان نصوصًا أو صورًا أو فيديوهات."
+            title="تطوير نماذج ذكاء اصطناعي مخصصة"
+            icon={<Cpu className="h-9 w-9 text-primary" />}
+            description="نبني نماذج تعلم آلي وتوأمة رقمية (Digital Twin) مخصصة لتلبية احتياجات فريدة في منشأتك الصناعية أو التجارية لزيادة كفاءة الإنتاج."
             benefits={DataProduction}
             workSteps={DataProductio}
             expectedResults={DataProductin}
@@ -351,8 +299,8 @@ export function Production() {
                   <div className="grid grid-cols-3 gap-3">
                     <div className="col-span-3 bg-background rounded-lg shadow-sm p-4 mb-3">
                       <div className="flex items-center mb-2">
-                        <FileText className="h-5 w-5 text-primary mr-2" />
-                        <div className="font-bold">المدونة</div>
+                        <Cpu className="h-5 w-5 text-primary mr-2" />
+                        <div className="font-bold">نماذج مخصصة</div>
                       </div>
                       <div className="space-y-1">
                         <div className="bg-muted h-3 w-full rounded"></div>
@@ -362,55 +310,21 @@ export function Production() {
                     </div>
                     <div className="bg-background rounded-lg shadow-sm p-3 flex flex-col items-center justify-center">
                       <div className="bg-primary/10 h-8 w-8 rounded-full flex items-center justify-center mb-2">
-                        <FileText className="h-4 w-4 text-primary" />
+                        <Brain className="h-4 w-4 text-primary" />
                       </div>
-                      <div className="text-xs font-medium">مقالات</div>
+                      <div className="text-xs font-medium">تعلم عميق</div>
                     </div>
                     <div className="bg-background rounded-lg shadow-sm p-3 flex flex-col items-center justify-center">
                       <div className="bg-primary/10 h-8 w-8 rounded-full flex items-center justify-center mb-2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-primary"
-                        >
-                          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
-                          <line x1="7" y1="2" x2="7" y2="22" />
-                          <line x1="17" y1="2" x2="17" y2="22" />
-                          <line x1="2" y1="12" x2="22" y2="12" />
-                          <line x1="2" y1="7" x2="7" y2="7" />
-                          <line x1="2" y1="17" x2="7" y2="17" />
-                          <line x1="17" y1="17" x2="22" y2="17" />
-                          <line x1="17" y1="7" x2="22" y2="7" />
-                        </svg>
+                        <Zap className="h-4 w-4 text-primary" />
                       </div>
-                      <div className="text-xs font-medium">انفوجرافيك</div>
+                      <div className="text-xs font-medium">سرعة أداء</div>
                     </div>
                     <div className="bg-background rounded-lg shadow-sm p-3 flex flex-col items-center justify-center">
                       <div className="bg-primary/10 h-8 w-8 rounded-full flex items-center justify-center mb-2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-primary"
-                        >
-                          <polygon points="23 7 16 12 23 17 23 7" />
-                          <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                        </svg>
+                        <Database className="h-4 w-4 text-primary" />
                       </div>
-                      <div className="text-xs font-medium">فيديو</div>
+                      <div className="text-xs font-medium">بيانات ضخمة</div>
                     </div>
                   </div>
                 </div>
@@ -425,18 +339,23 @@ export function Production() {
 
 
 
+
 export function SimilarServices() {
   return (
-    <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-      <SectionTitle title="جاهز لتنمية أعمالك؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." />
+    <div className=" py-15 sm:py-[13%] lg:py-20">
+      <SectionTitle title="جاهز لبدء التحول الذكي؟" description="دعنا نساعدك في دمج الذكاء الاصطناعي في صميم أعمالك وتحقيق نتائج استثنائية. تواصل معنا اليوم للحصول على استشارة تقنية مجانية." />
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
-        <Button size="lg">
-          احصل على استشارة مجانية
-          <ArrowRight className="h-4 w-4 mr-1" />
-        </Button>
-        <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
-          تعرف على المزيد
-        </button>
+        <Link href="/contact-us">
+          <Button size="lg">
+            احصل على استشارة تقنية مجانية
+            <ArrowRight className="h-4 w-4 mr-1" />
+          </Button>
+        </Link>
+        <Link href="/about-us">
+          <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
+            تعرف على حلولنا
+          </button>
+        </Link>
       </div>
     </div>
   )

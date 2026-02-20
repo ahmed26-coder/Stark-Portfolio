@@ -8,7 +8,7 @@ import Link from 'next/link';
 export function Similartestimonials() {
     return (
         <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-            <SectionTitle title="هل أنت جاهز لتحقيق نتائج مماثلة؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." highlighted={false} />
+            <SectionTitle title="هل أنت جاهز لتحقيق نتائج مماثلة؟" description="دعنا نساعدك في دمج الذكاء الاصطناعي في صميم أعمالك وتحقيق نتائج استثنائية. تواصل معنا اليوم للحصول على استشارة تقنية مجانية." highlighted={false} />
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
                 <Link href="/services" className="cursor-pointer">
                     <Button size="lg">
