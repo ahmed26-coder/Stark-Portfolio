@@ -1,8 +1,9 @@
 import SectionTitle from '@/components/shared/section-title'
 import { DataFaq } from "../../../constants"
 import React from 'react'
-import { Calendar, CheckCircle, Clock4, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import { Calendar, CheckCircle, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react'
 import ContactForm, { BookingForm } from './contact-us.client'
+import { Button } from '@/components/ui/button'
 
 export function FAQ() {
 
@@ -22,8 +23,6 @@ export function FAQ() {
 }
 
 
-
-
 export function Contactform() {
     const DataContact = [
         {
@@ -35,20 +34,8 @@ export function Contactform() {
         {
             id: "2",
             title: "رقم الهاتف",
-            description: "+966 12 345 6789",
+            description: "+201123244937",
             icon: <Phone />,
-        },
-        {
-            id: "3",
-            title: "العنوان",
-            description: "شارع الملك فهد، الرياض، المملكة العربية السعودية",
-            icon: <MapPin />,
-        },
-        {
-            id: "4",
-            title: "ساعات العمل",
-            description: "الأحد - الخميس: 9 صباحًا - 5 مساءً",
-            icon: <Clock4 />,
         },
     ];
 
@@ -75,7 +62,7 @@ export function Contactform() {
                         معلومات الاتصال
                     </h2>
                     <p className="text-muted-foreground mb-6 text-lg ">
-                        يمكنك التواصل معنا مباشرة من خلال وسائل الاتصال التالية. نحن متواجدون للرد على استفساراتك من الأحد إلى الخميس، من الساعة 9 صباحًا حتى 5 مساءً.
+                        يمكنك التواصل معنا مباشرة من خلال وسائل الاتصال التالية.
                     </p>
                 </div>
                 <div className="space-y-4">
@@ -133,9 +120,10 @@ export function Contactreservation() {
                                 </article>
                             ))}
                         </div>
-                        <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">احجز موعدًا الان<Calendar /></button>
+                        <Button size="lg">احجز موعدًا الان<Calendar /></Button>
                     </div>
                     <BookingForm />
+                    {/*<BookingForm />*/}
                 </div>
             </div>
         </div>

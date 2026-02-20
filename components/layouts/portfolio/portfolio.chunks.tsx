@@ -12,6 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 export function Casestudy() {
   return (
@@ -164,9 +165,9 @@ export function Casestudy() {
               الحاليين والمحتملين، مما انعكس إيجابًا على المبيعات والنمو.
             </p>
           </div>
-          <button className="w-full bg-primary text-white rounded-md py-2 hover:bg-primary/90">
+          <Button size="lg" className=" w-full">
             عرض دراسة الحالة كاملة
-          </button>
+          </Button>
         </div>
       </div>
     </div>
@@ -345,10 +346,10 @@ export function SimilarPortfolio() {
         description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانيه."
       />
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
-        <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">
+        <Button size="lg">
           احصل على استشارة مجانية
           <ArrowRight className="h-4 w-4 mr-1" />
-        </button>
+        </Button>
         <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 hover:bg-accent hover:text-white bg-white py-2 px-5 rounded-md gap-3">
           تعرف على المزيد عن خدماتنا
         </button>

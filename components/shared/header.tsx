@@ -14,6 +14,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import LanguageSwitcher from "./language-switcher";
 
 const navLink = [
   {
@@ -35,10 +36,6 @@ const navLink = [
   {
     lable: "آراء العملاء",
     href: "/testimonials",
-  },
-  {
-    lable: "المدونة",
-    href: "/blogs",
   },
 ];
 export default function Header() {
@@ -83,6 +80,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center justify-start gap-2">
+            <LanguageSwitcher />
             <Link href={"/contact-us"} className="hidden lg:block">
               <Button>تواصل معنا</Button>
             </Link>

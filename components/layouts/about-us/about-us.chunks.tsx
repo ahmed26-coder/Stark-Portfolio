@@ -2,6 +2,7 @@ import SectionTitle from "@/components/shared/section-title";
 import { DataDistinguishes } from "../../../constants"
 import { CheckCircle, Award, Disc2, Heart, Lightbulb, TrendingUp, ChevronLeft, Mail, Phone, MapPin } from "lucide-react";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 export function Journey() {
     return (
@@ -125,7 +126,7 @@ export function Distinguishes() {
                 <div className="">
                     <h1 className=" text-accent text-2xl font-bold">جاهزون للبدء في مشروعك التالي؟</h1>
                     <p className=" text-muted-foreground py-4  text-lg">دعنا نناقش كيف يمكننا مساعدتك في تحقيق أهدافك التسويقية. احصل على استشارة مجانية أحد خبرائنا.</p>
-                    <button className=" bg-primary py-2 px-5 rounded-md flex text-white hover:bg-primary/90 gap-10">تواصل معنا الان<ChevronLeft /></button>
+                    <Button size="lg">تواصل معنا الان<ChevronLeft /></Button>
                 </div>
                 <div className=" space-y-5">
                     {DataContact.map((item) => (

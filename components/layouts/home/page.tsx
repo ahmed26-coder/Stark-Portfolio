@@ -52,6 +52,7 @@ export default function HomePage() {
       <DecorativeSeparator />
       <Marketing />
       <Project />
+      <DecorativeSeparator />
       <PageClient />
       <Consultation />
     </>

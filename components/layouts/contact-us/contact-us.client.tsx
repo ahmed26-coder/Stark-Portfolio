@@ -8,23 +8,28 @@ type DateItem = { day: string; date: string };
 
 const times = ["10:00 ص", "11:30 ص", "1:00 م", "2:30 م", "4:00 م", "5:30 م"];
 const weekdays = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+const customWeekdays = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء"];
 
 const generateNextDates = (count = 4): DateItem[] => {
   const today = new Date();
-  const result: DateItem[] = [];
+  const currentDate = new Date(today);
+  const result: DateItem[] = [];;
+  while (result.length < count) {
+    const dayIndex = currentDate.getDay();
+    const dayName = weekdays[dayIndex];
+    const dateStr = `${currentDate.getDate()}/${currentDate.getMonth() + 1}`;
 
-  for (let i = 1; i <= count; i++) {
-    const date = new Date(today);
-    date.setDate(today.getDate() + i);
+    if (customWeekdays.includes(dayName)) {
+      result.push({ day: dayName, date: dateStr });
+    }
 
-    const dayName = weekdays[date.getDay()];
-    const dateStr = `${date.getDate()}/${date.getMonth() + 1}`;
-
-    result.push({ day: dayName, date: dateStr });
+    currentDate.setDate(currentDate.getDate() + 1);
   }
-
-  return result;
+  return customWeekdays.flatMap((day) =>
+    result.filter((item) => item.day === day)
+  );
 };
+
 
 export function BookingForm() {
   const dates = generateNextDates();
@@ -86,7 +91,7 @@ export function BookingForm() {
                       key={i}
                       name="date"
                       className={`cursor-pointer rounded-lg p-2 text-center text-sm transition-colors
-          ${selectedDate === d.date
+                        ${selectedDate === d.date
                           ? "bg-primary/80 text-white"
                           : "bg-primary/4 hover:bg-primary/10"
                         }`}
@@ -97,6 +102,7 @@ export function BookingForm() {
                       {d.date}
                     </button>
                   ))}
+
                 </div>
               </div>
 
@@ -124,22 +130,22 @@ export function BookingForm() {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">الاسم</label>
-                  <input type="text" name="name" id="name" placeholder="أدخل اسمك" className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" required />
+                  <input type="text" name="name" id="name" placeholder="أدخل اسمك" className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" required />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">البريد الإلكتروني</label>
-                  <input type="email" name="email" id="email" placeholder="أدخل بريدك الإلكتروني" className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" required />
+                  <input type="email" name="email" id="email" placeholder="أدخل بريدك الإلكتروني" className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" required />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">رقم الهاتف</label>
-                  <input dir="rtl" type="tel" inputMode="numeric" pattern="[0-9]{10,15}" name="phone" id="phone" placeholder="أدخل رقم هاتفك" className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" required />
+                  <input dir="rtl" type="tel" inputMode="numeric" pattern="[0-9]{10,15}" name="phone" id="phone" placeholder="أدخل رقم هاتفك" className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" required />
                 </div>
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded disabled:opacity-50"
+                className="w-full bg-primary hover:bg-primary/85 text-white py-2 rounded disabled:opacity-50"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "جاري الإرسال..." : "تأكيد الحجز"}
@@ -151,8 +157,6 @@ export function BookingForm() {
     </>
   );
 }
-
-
 
 
 
@@ -170,18 +174,18 @@ export default function ContactForm() {
     const formData = new FormData(form);
 
     try {
-      const result = await sendMessage(formData) as { error?: string | boolean };
+      const result = await sendMessage(formData);
 
       if (result?.error) {
-        toast.error("حدث خطأ أثناء الإرسال. حاول مرة أخرى.");
+        toast.error(result.error);
       } else {
         toast.success("تم إرسال الرسالة بنجاح!");
         form.reset();
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("حدث خطأ غير متوقع. حاول مرة أخرى.");
     }
+
 
     setIsSubmitting(false);
   };
@@ -195,26 +199,26 @@ export default function ContactForm() {
         </p>
       </div>
 
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 mx-5 lg:mx-0 ">
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 lg:mx-0 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="name" className="text-sm font-medium">الاسم</label>
-            <input className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" id="name" name="name" placeholder="أدخل اسمك" required />
+            <input className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" id="name" name="name" placeholder="أدخل اسمك" required />
           </div>
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-sm font-medium">البريد الإلكتروني</label>
-            <input className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" id="email" name="email" type="email" placeholder="أدخل بريدك الإلكتروني" required />
+            <input className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" id="email" name="email" type="email" placeholder="أدخل بريدك الإلكتروني" required />
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
           <label htmlFor="phone" className="text-sm font-medium">رقم الهاتف</label>
-          <input className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" id="phone" name="phone" type="tel" inputMode="numeric" pattern="[0-9]{10,15}" placeholder="أدخل رقم هاتفك" required />
+          <input className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" id="phone" name="phone" type="tel" inputMode="numeric" pattern="[0-9]{10,15}" placeholder="أدخل رقم هاتفك" required />
         </div>
 
         <div className="flex flex-col gap-2">
           <label htmlFor="Subject" className="text-sm font-medium">الموضوع</label>
-          <input className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" id="Subject" name="Subject" placeholder="أدخل موضوع الرسالة" required />
+          <input className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" id="Subject" name="Subject" placeholder="أدخل موضوع الرسالة" required />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -224,7 +228,7 @@ export default function ContactForm() {
             name="Service"
             defaultValue=""
             required
-            className="flex h-10 w-full rounded-md border-2 outline-0 focus:border-blue-500 focus:border-2 border-input bg-background px-3 py-2 text-sm"
+            className="flex h-10 w-full rounded-md border-2 outline-0 focus:border-primary focus:border-2 border-input bg-background px-3 text-sm"
           >
             <option value="" disabled>اختر الخدمة</option>
             <option value="التسويق الرقمي">التسويق الرقمي</option>
@@ -239,12 +243,12 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-2">
           <label htmlFor="Message" className="text-sm font-medium">الرسالة</label>
-          <textarea className="block w-full border-2 outline-0 focus:border-blue-500 focus:border-2 my-2 p-2 rounded" rows={6} id="Message" name="Message" placeholder="اكتب رسالتك هنا" required />
+          <textarea className="block w-full border-2 outline-0 focus:border-primary focus:border-2 my-2 p-2 rounded" rows={6} id="Message" name="Message" placeholder="اكتب رسالتك هنا" required />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded disabled:opacity-50"
+          className="w-full bg-primary hover:bg-primary/85 text-white py-2 rounded disabled:opacity-50"
           disabled={isSubmitting}
         >
           {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}

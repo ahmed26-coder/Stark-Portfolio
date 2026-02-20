@@ -9,42 +9,58 @@ export async function createBooking(formData: FormData) {
   const date = formData.get("date") as string | null;
   const time = formData.get("time") as string | null;
 
-  if (!date || !time) {
-    return { error: "يرجى اختيار التاريخ والوقت" };
+  if (!name || !email || !phone || !date || !time) {
+    return { error: "يرجى ملء جميع الحقول المطلوبة واختيار التاريخ والوقت" };
   }
 
-  const { error } = await supabase.from("Consultation").insert([
-    { name, email, phone, date, time },
-  ]);
+  try {
+    const { error } = await supabase.from("Consultation").insert([
+      { name, email, phone, date, time },
+    ]);
 
-  if (error) {
-    return { error: "حدث خطأ أثناء الحجز" };
+    if (error) {
+      console.error("Supabase error (Consultation):", error.message);
+      return { error: "حدث خطأ أثناء حفظ الحجز" };
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Booking action error:", error);
+    return { error: "حدث خطأ غير متوقع أثناء الحجز" };
   }
-
-  return { success: true };
 }
 
 export async function sendMessage(formData: FormData) {
-  const name = formData.get("name") as string;
-  const email = formData.get("email") as string;
-  const phone = formData.get("phone") as string;
-  const Subject = formData.get("Subject") as string;
-  const Service = formData.get("Service") as string;
-  const Message = formData.get("Message") as string;
+  const name = formData.get("name") as string | null;
+  const email = formData.get("email") as string | null;
+  const phone = formData.get("phone") as string | null;
+  const Subject = formData.get("Subject") as string | null;
+  const Service = formData.get("Service") as string | null;
+  const Message = formData.get("Message") as string | null;
 
-  const { error } = await supabase.from("Contact").insert({
-    name,
-    email,
-    phone,
-    Subject,
-    Service,
-    Message,
-  });
-
-  if (error) {
-    console.error("Supabase error:", error.message);
-    throw new Error("حدث خطأ أثناء إرسال الرسالة");
+  if (!name || !email || !phone || !Subject || !Service || !Message) {
+    return { error: "يرجى ملء جميع الحقول المطلوبة" };
   }
 
-  return { success: true };
+  try {
+    const { error } = await supabase.from("Contact").insert({
+      name,
+      email,
+      phone,
+      Subject,
+      Service,
+      Message,
+    });
+
+    if (error) {
+      console.error("Supabase error (Contact):", error.message);
+      return { error: "حدث خطأ أثناء إرسال الرسالة" };
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Contact action error:", error);
+    return { error: "حدث خطأ غير متوقع أثناء إرسال الرسالة" };
+  }
 }
+

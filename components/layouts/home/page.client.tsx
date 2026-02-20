@@ -44,7 +44,7 @@ export default function BookingForm() {
               name="name"
               id="name"
               placeholder="أدخل اسمك"
-              className="block w-full p-2 rounded border-2 outline-0 focus:border-blue-500 focus:border-2"
+              className="block w-full p-2 rounded border-2 outline-0 focus:border-primary focus:border-2"
               required
             />
           </div>
@@ -56,7 +56,7 @@ export default function BookingForm() {
               name="email"
               id="email"
               placeholder="أدخل بريدك الإلكتروني"
-              className="block w-full border-2 p-2 rounded outline-0 focus:border-blue-500 focus:border-2"
+              className="block w-full border-2 p-2 rounded outline-0 focus:border-primary focus:border-2"
               required
             />
           </div>
@@ -69,7 +69,7 @@ export default function BookingForm() {
             name="subject"
             id="subject"
             placeholder="ادخل موضوع الرساله "
-            className="block w-full border-2 p-2 rounded outline-0 focus:border-blue-500 focus:border-2"
+            className="block w-full border-2 p-2 rounded outline-0 focus:border-primary focus:border-2"
             required
           />
         </div>
@@ -80,14 +80,14 @@ export default function BookingForm() {
             name="message"
             id="message"
             placeholder="أدخل رسالتك أو استفسارك"
-            className="block w-full border-2 p-2 rounded outline-0 focus:border-blue-500 focus:border-2"
+            className="block w-full border-2 p-2 rounded outline-0 focus:border-primary focus:border-2"
             rows={6}
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded disabled:opacity-50"
+          className="w-full bg-primary hover:bg-primary/85 text-white py-2 rounded disabled:opacity-50"
           disabled={isSubmitting}
         >
           {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
@@ -114,7 +114,7 @@ const testimonials = [
     name: "أحمد محمد",
     position: "المدير التنفيذي، شركة التقنية المتطورة",
     quote: "تعاملنا مع فريق ctrl p كان تجربة رائعة. قدموا لنا حلولًا إبداعية ساعدت في زيادة مبيعاتنا بنسبة 40%.",
-    rating: 5,
+    rating: 4,
   },
   {
     id: "2",
@@ -135,7 +135,7 @@ const testimonials = [
     name: "أحمد ادهم",
     position: "المدير التنفيذي، شركة التقنية المتطورة",
     quote: "تعاملنا مع فريق ctrl p كان تجربة رائعة. قدموا لنا حلولًا إبداعية ساعدت في زيادة مبيعاتنا بنسبة 40%.",
-    rating: 5,
+    rating: 4,
   },
   {
     id: "5",
@@ -170,7 +170,7 @@ const testimonials = [
     name: "خالد العوضي",
     position: "مؤسس، متجر الإلكترونيات الذكية",
     quote: "بفضل حملات التسويق الرقمي التي نفذها فريق ctrl p، تمكنا من الوصول إلى شريحة جديدة من العملاء وزيادة المبيعات.",
-    rating: 5,
+    rating: 4,
   },
 ]
 export function CarouselSize() {
@@ -182,7 +182,8 @@ export function CarouselSize() {
         align: "start",
         slidesToScroll: 1,
       }}
-      className="w-full xl:max-w-7xl mx-auto" dir="ltr"
+      dir="ltr"
+      className="w-full xl:max-w-7xl mx-auto" 
     >
       <CarouselContent className="-ml-4">
         {testimonials.map((testimonial) => (
@@ -192,7 +193,7 @@ export function CarouselSize() {
           >
             <div className="p-1 h-full">
               <Card className="h-full mx-auto w-[325px] md:w-[350px] lg:w-[300px] xl:w-full rounded-md pb-0 border bg-background flex flex-col justify-between transition-all ">
-                <CardContent className="p-6 relative flex flex-col justify-between h-full">
+                <CardContent dir="rtl" className="p-6 relative flex flex-col justify-between h-full">
                   <div className="absolute top-0 right-0 w-20 h-20 bg-secondary/10 rounded-full transform translate-x-1/2 -translate-y-1/2 blur-2xl" />
                   <div className="flex flex-col items-center space-y-3 z-10 relative">
                     <div className="rounded-full bg-primary/10 p-1">

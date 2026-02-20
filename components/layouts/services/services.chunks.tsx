@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import SectionTitle from "@/components/shared/section-title";
 import ServiceSection from "@/components/shared/ServiceSection";
+import { Button } from "@/components/ui/button";
 
 export function ServicesHeroLinks() {
 
@@ -429,10 +430,10 @@ export function SimilarServices() {
     <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
       <SectionTitle title="جاهز لتنمية أعمالك؟" description="دعنا نساعدك في تحقيق أهدافك التسويقية وتنمية أعمالك. تواصل معنا اليوم للحصول على استشارة مجانية." />
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 mt-5">
-        <button className="flex items-center justify-center sm:w-fit w-[70%] bg-primary text-white py-2 px-5 hover:bg-primary/90 rounded-md gap-3">
+        <Button size="lg">
           احصل على استشارة مجانية
           <ArrowRight className="h-4 w-4 mr-1" />
-        </button>
+        </Button>
         <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
           تعرف على المزيد
         </button>
