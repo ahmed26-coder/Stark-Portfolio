@@ -23,10 +23,10 @@ export default function Footer() {
     ];
 
     const socialLinks = [
-        { icon: <Twitter size={20} />, href: "#" },
-        { icon: <Facebook size={20} />, href: "#" },
-        { icon: <Instagram size={20} />, href: "#" },
-        { icon: <Linkedin size={20} />, href: "#" },
+        { icon: <Phone size={20} />, href: "https://wa.me/201121079983" },
+        { icon: <Facebook size={20} />, href: "https://www.facebook.com/people/Stark-Excel-Power-BI-AI-Solutions/61583014826632/" },
+        { icon: <Instagram size={20} />, href: "https://www.instagram.com/stark_ai1/" },
+        { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/mohamed-ibrahim-967831187" },
     ];
 
     return (
@@ -125,7 +125,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-muted-foreground">رقم الهاتف</p>
-                                    <p className="font-medium group-hover:text-primary transition-colors" dir="ltr">+20 112 324 4937</p>
+                                    <p className="font-medium group-hover:text-primary transition-colors" dir="ltr">+20 11 21079983</p>
                                 </div>
                             </a>
                         </div>

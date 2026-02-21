@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CheckCircle, Award, Disc2, Heart, Lightbulb, TrendingUp, ChevronLeft, Mail, Phone, MapPin } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Stagger, StaggerItem } from "@/components/shared/reveal";
 
 export function Journey() {
     return (
@@ -87,24 +88,28 @@ export function Values() {
         <>
             <div className="  bg-primary/5 py-15 sm:py-[13%] lg:py-20">
                 <SectionTitle headline="رسالتنا وقيمنا" title="رؤية ذكية للمستقبل" description="نسعى لتغيير مشهد التكنولوجيا في المنطقة من خلال تقديم حلول ذكاء اصطناعي تحقق نتائج حقيقية وملموسة" highlighted={true} />
-                <div className="max-w-7xl xl:mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 lg:mx-12 mt-10">
+                <Stagger className="max-w-7xl xl:mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 lg:mx-12 mt-10">
                     {DataValues.map((item) => (
-                        <article key={item.id} className=" rounded-2xl bg-card border-1 border-border p-8">
-                            <h1 className=" text-foreground font-bold text-3xl flex items-center gap-5"><span className="bg-primary/15 text-primary w-[55px] h-[55px] flex items-center justify-center rounded-full">{item.icon}</span>{item.title}</h1>
-                            <p className=" text-lg mt-3 text-muted-foreground">{item.description}</p>
-                        </article>
+                        <StaggerItem key={item.id}>
+                            <article className=" rounded-2xl bg-card border-1 border-border p-8">
+                                <h1 className=" text-foreground font-bold text-3xl flex items-center gap-5"><span className="bg-primary/15 text-primary w-[55px] h-[55px] flex items-center justify-center rounded-full">{item.icon}</span>{item.title}</h1>
+                                <p className=" text-lg mt-3 text-muted-foreground">{item.description}</p>
+                            </article>
+                        </StaggerItem>
                     ))}
-                </div>
+                </Stagger>
                 <h1 className=" text-3xl text-center my-8 font-medium text-foreground">قيمنا الأساسية</h1>
-                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 lg:px-10">
+                <Stagger className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 lg:px-10">
                     {DataBasic.map((item) => (
-                        <article key={item.id} className=" w-full xl:w-[290px] shadow-sm text-center rounded-2xl bg-card border-1 border-border p-8">
-                            <span className="text-primary flex justify-center">{item.icon}</span>
-                            <h2 className=" text-xl text-foreground font-bold my-3 ">{item.title}</h2>
-                            <p className="text-muted-foreground">{item.description}</p>
-                        </article>
+                        <StaggerItem key={item.id}>
+                            <article className=" w-full xl:w-[290px] shadow-sm text-center rounded-2xl bg-card border-1 border-border p-8">
+                                <span className="text-primary flex justify-center">{item.icon}</span>
+                                <h2 className=" text-xl text-foreground font-bold my-3 ">{item.title}</h2>
+                                <p className="text-muted-foreground">{item.description}</p>
+                            </article>
+                        </StaggerItem>
                     ))}
-                </div>
+                </Stagger>
             </div>
         </>
     )
@@ -136,14 +141,16 @@ export function Distinguishes() {
     return (
         <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
             <SectionTitle headline="لماذا تختارنا" title="ما يميزنا عن الآخرين" description="نقدم أكثر من مجرد خدمات تسويقية. نحن نقدم شراكة حقيقية تساعدك على تحقيق أهدافك" highlighted={true} />
-            <div className="max-w-7xl xl:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-12 mt-7">
+            <Stagger className="max-w-7xl xl:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-12 mt-7">
                 {DataDistinguishes.map((item) => (
-                    <article key={item.id} className=" rounded-2xl bg-card border-1 border-border p-6">
-                        <h2 className=" text-xl text-foreground font-bold my-3 ">{item.title}</h2>
-                        <p className="text-muted-foreground">{item.description}</p>
-                    </article>
+                    <StaggerItem key={item.id}>
+                        <article className=" rounded-2xl bg-card border-1 border-border p-6">
+                            <h2 className=" text-xl text-foreground font-bold my-3 ">{item.title}</h2>
+                            <p className="text-muted-foreground">{item.description}</p>
+                        </article>
+                    </StaggerItem>
                 ))}
-            </div>
+            </Stagger>
             <div className=" shadow-sm max-w-7xl xl:mx-auto space-y-8 sm:space-y-0 grid gap-8 md:grid-cols-2 items-center rounded-2xl bg-card border-1 border-border p-10 mx-5 lg:mx-12 mt-15">
                 <div className="">
                     <h1 className=" text-foreground text-2xl font-bold">جاهزون للبدء في التحول الذكي؟</h1>
@@ -151,19 +158,23 @@ export function Distinguishes() {
                     <Button size="lg">تواصل معنا الان<ChevronLeft /></Button>
                 </div>
                 <div className=" space-y-5">
-                    {DataContact.map((item) => (
-                        <article key={item.id} className=" flex gap-3">
-                            <div className="flex gap-4 items-center space-x-3 space-x-reverse">
-                                <div className="rounded-full bg-primary/10 p-2">
-                                    <span className="h-5 w-5 text-primary">{item.icon}</span>
-                                </div>
-                                <div>
-                                    <h4 className="text-lg font-bold">{item.title}</h4>
-                                    <p className="text-muted-foreground">{item.description}</p>
-                                </div>
-                            </div>
-                        </article>
-                    ))}
+                    <Stagger className=" space-y-5">
+                        {DataContact.map((item) => (
+                            <StaggerItem key={item.id}>
+                                <article className=" flex gap-3">
+                                    <div className="flex gap-4 items-center space-x-3 space-x-reverse">
+                                        <div className="rounded-full bg-primary/10 p-2">
+                                            <span className="h-5 w-5 text-primary">{item.icon}</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-lg font-bold">{item.title}</h4>
+                                            <p className="text-muted-foreground">{item.description}</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </StaggerItem>
+                        ))}
+                    </Stagger>
                 </div>
             </div>
         </div>

@@ -1,12 +1,13 @@
 import SectionTitle from "@/components/shared/section-title";
 import { DataAbout, status } from "../../../constants"
-import { PenTool, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Brain, ChevronLeft, Globe, Cpu, BarChart } from "lucide-react";
+import { PenTool, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Brain, ChevronLeft, Globe, Cpu, BarChart, MessageCircle } from "lucide-react";
 import React from "react";
 import BookingForm, { CarouselSize } from "./page.client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
+import { Stagger, StaggerItem } from "@/components/shared/reveal";
 
 
 export function HeroSection({ children }: { children: React.ReactNode }) {
@@ -43,21 +44,21 @@ export function HeroSection({ children }: { children: React.ReactNode }) {
 export function HeroStatus() {
 
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-10 text-center">
+        <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-10 text-center">
             {status.map((st, idx) => (
-                <div
-                    key={idx}
-                    className="p-4 rounded-lg bg-card/80 backdrop-blur border border-border relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-secondary/5 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-lg"></div>
-                    <div className="relative z-10">
-                        <div className="text-3xl font-bold text-primary">{st.title}</div>
-                        <div className="text-sm text-muted-foreground">
-                            {st.description}
+                <StaggerItem key={idx}>
+                    <div className="p-4 rounded-lg bg-card/80 backdrop-blur border border-border relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-secondary/5 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-lg"></div>
+                        <div className="relative z-10">
+                            <div className="text-3xl font-bold text-primary">{st.title}</div>
+                            <div className="text-sm text-muted-foreground">
+                                {st.description}
+                            </div>
                         </div>
                     </div>
-                </div>
+                </StaggerItem>
             ))}
-        </div>
+        </Stagger>
     );
 }
 
@@ -149,21 +150,23 @@ export function Services() {
                 <SectionTitle headline="خدماتنا" title="حلول ذكية متكاملة" description="نقدم مجموعة شاملة من خدمات الذكاء الاصطناعي المصممة خصيصًا لتلبية احتياجات عملك وتحقيق أهدافك التقنية" highlighted={true} />
 
                 {/* Cards */}
-                <div className=" gap-10 grid grid-cols-1 mt-[4%] mb-[10%] sm:grid-cols-2 lg:grid-cols-3">
+                <Stagger className=" gap-10 grid grid-cols-1 mt-[4%] mb-[10%] sm:grid-cols-2 lg:grid-cols-3">
                     {DataServices.map((item) => (
-                        <article key={item.id} className="group bg-gradient-to-br hover:from-secondary/5 to-transparent hover:shadow px-[5%] py-[7%] border-muted-foreground/20 border-1 rounded-xl">
+                        <StaggerItem key={item.id}>
+                            <article className="group bg-gradient-to-br hover:from-secondary/5 to-transparent hover:shadow px-[5%] py-[7%] border-muted-foreground/20 border-1 rounded-xl">
 
-                            <span className=" bg-primary/15 text-primary w-[60px] h-[60px] flex items-center justify-center rounded-full">
-                                {item.icon}
-                            </span>
-                            <h2 className=" font-bold text-xl my-3">{item.title}</h2>
-                            <p className=" text-muted-foreground mb-4 ">{item.description}</p>
-                            {item.features.map((f, idx) => (
-                                <p key={idx} className=" my-2 flex items-center"><CheckCircle className=" text-secondary w-[4.5%] ml-3" />{f}</p>
-                            ))}
-                        </article>
+                                <span className=" bg-primary/15 text-primary w-[60px] h-[60px] flex items-center justify-center rounded-full">
+                                    {item.icon}
+                                </span>
+                                <h2 className=" font-bold text-xl my-3">{item.title}</h2>
+                                <p className=" text-muted-foreground mb-4 ">{item.description}</p>
+                                {item.features.map((f, idx) => (
+                                    <p key={idx} className=" my-2 flex items-center"><CheckCircle className=" text-secondary w-[4.5%] ml-3" />{f}</p>
+                                ))}
+                            </article>
+                        </StaggerItem>
                     ))}
-                </div>
+                </Stagger>
             </div>
         </>
     );
@@ -207,21 +210,23 @@ export function Work() {
                 <SectionTitle headline="منهجية العمل" title="كيف نعمل معك" description="نتبع منهجية عمل واضحة ومنظمة لضمان تحقيق أفضل النتائج لعملائنا" highlighted={true} />
                 <div className="relative mt-[4%] mx-[5%]">
                     <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-primary/20 transform -translate-y-1/2 z-0"></div>
-                    <div className="grid gap-8 md:grid-cols-4">
+                    <Stagger className="grid gap-8 md:grid-cols-4">
                         {Datasteps.map((step) => (
-                            <article key={step.id} className="relative z-10">
-                                <div className="flex flex-col items-center">
-                                    <div className="w-16 h-16 rounded-full bg-background border-4 border-secondary/20 flex items-center justify-center mb-4 relative">
-                                        <div className="absolute inset-0 rounded-full bg-secondary/10 transform scale-0 hover:scale-100 transition-transform duration-300"></div>
-                                        <span className="text-xl font-bold relative z-10">{step.step}</span>
+                            <StaggerItem key={step.id}>
+                                <article className="relative z-10">
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-16 h-16 rounded-full bg-background border-4 border-secondary/20 flex items-center justify-center mb-4 relative">
+                                            <div className="absolute inset-0 rounded-full bg-secondary/10 transform scale-0 hover:scale-100 transition-transform duration-300"></div>
+                                            <span className="text-xl font-bold relative z-10">{step.step}</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                                        <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
+                                        <div className="mt-4 rounded-full bg-primary/10 p-3"> <span className="h-8 w-8 text-primary">{step.icon}</span></div>
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                    <p className="text-muted-foreground mt-5 text-center">{step.description}</p>
-                                    <div className="mt-4 rounded-full bg-primary/10 p-3"> <span className="h-8 w-8 text-primary">{step.icon}</span></div>
-                                </div>
-                            </article>
+                                </article>
+                            </StaggerItem>
                         ))}
-                    </div>
+                    </Stagger>
                 </div>
                 <Link href="/about-us">
                     <Button className=" flex items-center py-2 px-5 rounded-md gap-5 mx-auto mt-[5%]">تعرف علي منهجيتنا بالتفصيل <ArrowRight size={20} /></Button>
@@ -281,19 +286,21 @@ export function Marketing() {
                                 نؤمن بأن كل مؤسسة فريدة وتستحق حلولاً ذكية مخصصة تناسب أهدافها وتحدياتها الفنية. لذلك
                                 نركز على التفاصيل ونبذل قصارى جهدنا لضمان تقديم حلول تقنية تفوق التوقعات.
                             </p>
-                            <div className="pt-6 space-y-4">
+                            <Stagger className="pt-6 space-y-4">
                                 {DataAbout.map((about) => (
-                                    <article key={about.id} className="flex items-start gap-3">
-                                        <div className="rounded-full bg-primary/10 p-1 mt-1">
-                                            <CheckCircle className="h-4 w-4 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold">{about.title}</h4>
-                                            <p className="text-muted-foreground">{about.description}</p>
-                                        </div>
-                                    </article>
+                                    <StaggerItem key={about.id}>
+                                        <article className="flex items-start gap-3">
+                                            <div className="rounded-full bg-primary/10 p-1 mt-1">
+                                                <CheckCircle className="h-4 w-4 text-primary" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold">{about.title}</h4>
+                                                <p className="text-muted-foreground">{about.description}</p>
+                                            </div>
+                                        </article>
+                                    </StaggerItem>
                                 ))}
-                            </div>
+                            </Stagger>
                         </div>
                         <div className="flex gap-2 mt-6">
                             <Link href="/about-us"><Button size="lg">تعرف على فريقنا</Button></Link>
@@ -345,7 +352,7 @@ export function Consultation() {
                             </div>
                             <div>
                                 <h3 className="text-lg font-bold">رقم الهاتف</h3>
-                                <p className="text-muted-foreground">+966 12 345 6789</p>
+                                <p className="text-muted-foreground" dir="ltr">+20 11 21079983</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 space-x-reverse">
@@ -360,10 +367,10 @@ export function Consultation() {
                         <div className="mt-6">
                             <h3 className="text-lg font-bold mb-2">تابعنا على</h3>
                             <div className="flex mt-5 gap-4 space-x-reverse">
-                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Twitter /></a>
-                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Facebook /></a>
-                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Instagram /></a>
-                                <a href="" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Linkedin /></a>
+                                <a href="https://wa.me/201121079983" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Phone  /></a>
+                                <a href="https://www.facebook.com/people/Stark-Excel-Power-BI-AI-Solutions/61583014826632/" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Facebook /></a>
+                                <a href="https://www.instagram.com/stark_ai1/" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Instagram /></a>
+                                <a href="https://www.linkedin.com/in/mohamed-ibrahim-967831187" target="_black" className="rounded-full bg-background p-2 hover:bg-primary/10"><Linkedin /></a>
                             </div>
                         </div>
                     </div>
@@ -406,72 +413,73 @@ export async function Project({ limit = 6, showViewMore = true }: { limit?: numb
         <section className=" bg-primary/5 py-10sm:py-16 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
-                <div className=" mx-3 mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <Stagger className=" mx-3 mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {displayProjects.map((project, index) => (
-                        <div
-                            key={project.id || index}
-                            className="group relative overflow-hidden rounded-xl border bg-background transition-all hover:shadow-md"
-                        >
-                            <div className="p-6">
-                                <div className="rounded-full bg-secondary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
-                                    {ProjectIconMap[project.icon_name] || <PenTool className="h-8 w-8 text-primary" />}
-                                </div>
-                                <div className=" sm:flex pb-4 justify-between items-center">
-                                    <div className="">
-                                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                                        <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
-                                            {project.category}
+                        <StaggerItem key={project.id || index}>
+                            <div
+                                className="group relative overflow-hidden rounded-xl border bg-background transition-all hover:shadow-md"
+                            >
+                                <div className="p-6">
+                                    <div className="rounded-full bg-secondary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                                        {ProjectIconMap[project.icon_name] || <PenTool className="h-8 w-8 text-primary" />}
+                                    </div>
+                                    <div className=" sm:flex pb-4 justify-between items-center">
+                                        <div className="">
+                                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                            <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
+                                                {project.category}
+                                            </div>
+                                        </div>
+                                        {project.live && <Link href={project.live} className="text-primary hover:bg-primary hover:text-white border border-primary py-0 sm:py-0.5 sm:px-2.5 px-3.5 rounded-2xl ">عرض المشروع</Link>}
+                                    </div>
+                                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                                    <div className="relative">
+                                        <div className="h-40 rounded-lg bg-muted/50 overflow-hidden relative">
+                                            {project.main_image ? (
+                                                <Image
+                                                    src={project.main_image}
+                                                    alt={project.title}
+                                                    fill
+                                                    priority
+                                                    className="object-cover"
+                                                />
+                                            ) : (
+                                                <>
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/10"></div>
+                                                    <div className="absolute inset-0 flex items-center justify-center">
+                                                        <div className="w-16 h-16 rounded-lg border-2 border-dashed border-secondary/30 flex items-center justify-center">
+                                                            <div className="w-8 h-8 bg-secondary/20 rounded-md"></div>
+                                                        </div>
+                                                    </div>
+                                                </>
+                                            )}
                                         </div>
                                     </div>
-                                    {project.live && <Link href={project.live} className="text-primary hover:bg-primary hover:text-white border border-primary py-0 sm:py-0.5 sm:px-2.5 px-3.5 rounded-2xl ">عرض المشروع</Link>}
-                                </div>
-                                <p className="text-muted-foreground mb-4">{project.description}</p>
-                                <div className="relative">
-                                    <div className="h-40 rounded-lg bg-muted/50 overflow-hidden relative">
-                                        {project.main_image ? (
-                                            <Image
-                                                src={project.main_image}
-                                                alt={project.title}
-                                                fill
-                                                priority
-                                                className="object-cover"
+                                    <Link
+                                        href={`/portfolio/${project.id}`}
+                                        className="block group"
+                                    >
+                                        <div className="mt-4 flex justify-between items-center 
+                      px-2 py-2 rounded-md
+                      transition-all duration-300
+                      group-hover:bg-accent">
+
+                                            <span className="text-sm text-primary font-bold transition-colors duration-300 group-hover:text-white">
+                                                عرض التفاصيل
+                                            </span>
+
+                                            <ChevronLeft
+                                                className="h-4 w-4 text-primary transition-all duration-300
+                     group-hover:text-white
+                     group-hover:-translate-x-1"
                                             />
-                                        ) : (
-                                            <>
-                                                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/10"></div>
-                                                <div className="absolute inset-0 flex items-center justify-center">
-                                                    <div className="w-16 h-16 rounded-lg border-2 border-dashed border-secondary/30 flex items-center justify-center">
-                                                        <div className="w-8 h-8 bg-secondary/20 rounded-md"></div>
-                                                    </div>
-                                                </div>
-                                            </>
-                                        )}
-                                    </div>
+                                        </div>
+                                    </Link>
                                 </div>
-                                <Link
-                                    href={`/portfolio/${project.id}`}
-                                    className="block group"
-                                >
-                                    <div className="mt-4 flex justify-between items-center 
-                  px-2 py-2 rounded-md
-                  transition-all duration-300
-                  group-hover:bg-accent">
-
-                                        <span className="text-sm text-primary font-bold transition-colors duration-300 group-hover:text-white">
-                                            عرض التفاصيل
-                                        </span>
-
-                                        <ChevronLeft
-                                            className="h-4 w-4 text-primary transition-all duration-300
-                 group-hover:text-white
-                 group-hover:-translate-x-1"
-                                        />
-                                    </div>
-                                </Link>
                             </div>
-                        </div>
+                        </StaggerItem>
                     ))}
-                </div>
+                </Stagger>
                 {showViewMore && (
                     <div className="flex justify-center mt-12">
                         <Link href="/portfolio">

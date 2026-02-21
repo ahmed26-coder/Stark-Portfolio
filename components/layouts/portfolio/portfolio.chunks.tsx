@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Stagger, StaggerItem } from "@/components/shared/reveal";
 
 
 export function Stories() {
@@ -49,69 +50,71 @@ export function Stories() {
         title="قصص نجاح أخرى"
         description="استكشف المزيد من المشاريع الناجحة التي ساعدنا فيها عملائنا على تحقيق أهدافهم"
       />
-      <div className=" max-w-7xl xl:mx-auto mx-5 grid gap-8 md:grid-cols-2 mt-10">
+      <Stagger className=" max-w-7xl xl:mx-auto mx-5 grid gap-8 md:grid-cols-2 mt-10">
         {DataStories.map((caseStudy, index) => (
-          <article
-            key={index}
-            className="relative overflow-hidden rounded-xl border bg-background transition-all hover:shadow-md">
-            <div className="p-6">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10">
-                  {caseStudy.icon}
-                </div>
-                <div>
-                  <span className="inline-block px-3 py-1 bg-primary/10 rounded-full text-xs font-medium mb-1">
-                    {caseStudy.category}
-                  </span>
-                  <h3 className="text-xl font-bold">{caseStudy.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {caseStudy.industry}
-                  </p>
-                </div>
-              </div>
-
-              <div className="space-y-4 mb-6">
-                <div>
-                  <h4 className="text-sm font-bold text-muted-foreground mb-1">
-                    المشكلة:
-                  </h4>
-                  <p>{caseStudy.problem}</p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-muted-foreground mb-1">
-                    الحل:
-                  </h4>
-                  <p>{caseStudy.solution}</p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-muted-foreground mb-1">
-                    النتائج:
-                  </h4>
-                  <div className="grid grid-cols-2 gap-3 mt-2">
-                    {caseStudy.results.map((result, idx) => (
-                      <div
-                        key={idx}
-                        className="text-center p-3 bg-primary/5 rounded-lg">
-                        <p className="text-xl font-bold text-primary">
-                          {result.value}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {result.label}
-                        </p>
-                      </div>
-                    ))}
+          <StaggerItem key={index}>
+            <article
+              className="relative overflow-hidden rounded-xl border bg-background transition-all hover:shadow-md">
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10">
+                    {caseStudy.icon}
+                  </div>
+                  <div>
+                    <span className="inline-block px-3 py-1 bg-primary/10 rounded-full text-xs font-medium mb-1">
+                      {caseStudy.category}
+                    </span>
+                    <h3 className="text-xl font-bold">{caseStudy.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {caseStudy.industry}
+                    </p>
                   </div>
                 </div>
-              </div>
 
-              <button className=" flex gap-4 items-center justify-center hover:bg-accent py-2 border-1 border-muted-foreground/20 rounded-md hover:text-white w-full">
-                عرض دراسة الحالة كاملة
-                <ChevronLeft className="h-4 w-4 mr-1" />
-              </button>
-            </div>
-          </article>
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="text-sm font-bold text-muted-foreground mb-1">
+                      المشكلة:
+                    </h4>
+                    <p>{caseStudy.problem}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-muted-foreground mb-1">
+                      الحل:
+                    </h4>
+                    <p>{caseStudy.solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-muted-foreground mb-1">
+                      النتائج:
+                    </h4>
+                    <Stagger className="grid grid-cols-2 gap-3 mt-2">
+                      {caseStudy.results.map((result, idx) => (
+                        <StaggerItem
+                          key={idx}
+                          className="text-center p-3 bg-primary/5 rounded-lg"
+                        >
+                          <p className="text-xl font-bold text-primary">
+                            {result.value}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {result.label}
+                          </p>
+                        </StaggerItem>
+                      ))}
+                    </Stagger>
+                  </div>
+                </div>
+
+                <button className=" flex gap-4 items-center justify-center hover:bg-accent py-2 border-1 border-muted-foreground/20 rounded-md hover:text-white w-full">
+                  عرض دراسة الحالة كاملة
+                  <ChevronLeft className="h-4 w-4 mr-1" />
+                </button>
+              </div>
+            </article>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </div>
   );
 }

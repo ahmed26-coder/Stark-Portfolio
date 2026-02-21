@@ -5,23 +5,26 @@ import React from "react";
 import SectionTitle from "@/components/shared/section-title";
 import ServiceSection from "@/components/shared/ServiceSection";
 import { Button } from "@/components/ui/button";
+import { Stagger, StaggerItem } from "@/components/shared/reveal";
 
 export function ServicesHeroLinks() {
 
   return (
     <div className="mt-10 px-4">
-      <div className="flex items-center justify-center gap-x-2 gap-y-3 flex-wrap relative z-10 max-w-4xl mx-auto">
+      <Stagger className="flex items-center justify-center gap-x-2 gap-y-3 flex-wrap relative z-10 max-w-4xl mx-auto">
         {servicesLinks.map((service, index) => (
-          <article key={index}>
-            <Link
-              href={service.href}
-              className="flex items-center justify-center gap-2 w-fit px-4 py-2 bg-background rounded-full text-sm font-medium border hover:bg-primary/10 transition-colors"
-            >
-              {service.label}
-            </Link>
-          </article>
+          <StaggerItem key={index}>
+            <article>
+              <Link
+                href={service.href}
+                className="flex items-center justify-center gap-2 w-fit px-4 py-2 bg-background rounded-full text-sm font-medium border hover:bg-primary/10 transition-colors"
+              >
+                {service.label}
+              </Link>
+            </article>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </div>
   );
 }
@@ -76,19 +79,20 @@ export default function Contact() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-background"></div>
               <div className="absolute top-4 right-4 bottom-4 left-4 border-2 border-dashed border-primary/20 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-4 p-6">
+                <Stagger className="grid grid-cols-3 gap-4 p-6">
                   {DataIcons.map((Icon, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm p-4 rounded-lg shadow-sm"
-                    >
-                      <Icon className="h-8 w-8 text-primary mb-2" />
-                      <span className="text-xs font-medium text-center">
-                        {index === 0 ? "تواصل" : index === 1 ? "نمو" : "تفاعل"}
-                      </span>
-                    </div>
+                    <StaggerItem key={index}>
+                      <div
+                        className="flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm p-4 rounded-lg shadow-sm"
+                      >
+                        <Icon className="h-8 w-8 text-primary mb-2" />
+                        <span className="text-xs font-medium text-center">
+                          {index === 0 ? "تواصل" : index === 1 ? "نمو" : "تفاعل"}
+                        </span>
+                      </div>
+                    </StaggerItem>
                   ))}
-                </div>
+                </Stagger>
               </div>
             </div>
           </div>

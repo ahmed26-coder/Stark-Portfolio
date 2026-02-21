@@ -4,20 +4,23 @@ import React from 'react'
 import { Calendar, CheckCircle, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react'
 import ContactForm, { BookingForm } from './contact-us.client'
 import { Button } from '@/components/ui/button'
+import { Stagger, StaggerItem } from '@/components/shared/reveal'
 
 export function FAQ() {
 
     return (
         <div className=" max-w-7xl mx-auto py-15 sm:py-[13%] lg:py-20">
             <SectionTitle headline='الأسئله الشائعه' title='أسئلة يتم طرحها بشكل متكرر' description='إليك بعض الإجابات على الأسئلة الشائعة التي قد تكون لديك. إذا لم تجد إجابة لسؤالك، فلا تتردد في التواصل معنا مباشرة.' highlighted={true} />
-            <div className="max-w-3xl lg:mx-auto space-y-6 mx-5 mt-10">
+            <Stagger className="max-w-3xl lg:mx-auto space-y-6 mx-5 mt-10">
                 {DataFaq.map((faq, index) => (
-                    <article key={index} className="bg-primary/5 rounded-lg p-6">
-                        <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
-                        <p className="text-muted-foreground">{faq.answer}</p>
-                    </article>
+                    <StaggerItem key={index}>
+                        <article className="bg-primary/5 rounded-lg p-6">
+                            <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
+                            <p className="text-muted-foreground">{faq.answer}</p>
+                        </article>
+                    </StaggerItem>
                 ))}
-            </div>
+            </Stagger>
         </div>
     )
 }
@@ -34,23 +37,27 @@ export function Contactform() {
         {
             id: "2",
             title: "رقم الهاتف",
-            description: "+201123244937",
+            description: "+20 11 21079983",
             icon: <Phone />,
         },
     ];
 
     const DataIcon = [
         {
-            icon: <Twitter />,
+            icon: <Phone />,
+            url: "https://wa.me/201121079983"
         },
         {
             icon: <Facebook />,
+            url: "https://www.facebook.com/people/Stark-Excel-Power-BI-AI-Solutions/61583014826632/"
         },
         {
             icon: <Instagram />,
+            url: "https://www.instagram.com/stark_ai1/"
         },
         {
             icon: <Linkedin />,
+            url: "https://www.linkedin.com/in/mohamed-ibrahim-967831187"
         },
     ];
     return (
@@ -65,34 +72,40 @@ export function Contactform() {
                         يمكنك التواصل معنا مباشرة من خلال وسائل الاتصال التالية.
                     </p>
                 </div>
-                <div className="space-y-4">
+                <Stagger className="space-y-4">
                     {DataContact.map((item) => (
-                        <article key={item.id} className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10">
-                                <span className="text-primary text-3xl">{item.icon}</span>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold">{item.title}</h3>
-                                <p className="text-muted-foreground">{item.description}</p>
-                            </div>
-                        </article>
+                        <StaggerItem key={item.id}>
+                            <article className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary/10">
+                                    <span className="text-primary text-3xl">{item.icon}</span>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold">{item.title}</h3>
+                                    <p className="text-muted-foreground" dir='ltr'>{item.description}</p>
+                                </div>
+                            </article>
+                        </StaggerItem>
                     ))}
-                </div>
+                </Stagger>
 
                 <div>
                     <h3 className="text-lg font-bold mb-4">تابعنا على</h3>
                     <div className="flex items-center gap-4">
-                        {DataIcon.map((social, index) => (
-                            <article
-                                key={index}
-                                className="rounded-full p-3 bg-primary/10 hover:bg-primary/20 transition"
-                            >
-                                <a href='' className=" text-2xl">{social.icon}</a>
-                            </article>
-                        ))}
+                        <Stagger className="flex items-center gap-4">
+                            {DataIcon.map((social, index) => (
+                                <StaggerItem key={index}>
+                                    <article
+                                        className="rounded-full p-3 bg-primary/10 hover:bg-primary/20 transition"
+                                    >
+                                        <a href={social.url} className=" text-2xl">{social.icon}</a>
+                                    </article>
+                                </StaggerItem>
+                            ))}
+                        </Stagger>
                     </div>
                 </div>
                 <h1 className="text-3xl font-bold mb-4">موقعنا</h1>
+                
             </div>
         </div>
     )
@@ -114,11 +127,15 @@ export function Contactreservation() {
                         <h2 className=" text-3xl font-bold mt-5 text-accent">احجز استشارة مجانية</h2>
                         <p className=" text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التقنية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك الذكية.</p>
                         <div className=" space-y-2">
-                            {DataContact.map((item, index) => (
-                                <article key={index}>
-                                    <p className=" flex items-center gap-2"><CheckCircle size={20} className=" text-primary" />{item}</p>
-                                </article>
-                            ))}
+                            <Stagger className=" space-y-2">
+                                {DataContact.map((item, index) => (
+                                    <StaggerItem key={index}>
+                                        <article>
+                                            <p className=" flex items-center gap-2"><CheckCircle size={20} className=" text-primary" />{item}</p>
+                                        </article>
+                                    </StaggerItem>
+                                ))}
+                            </Stagger>
                         </div>
                         <Button size="lg">احجز موعدًا الان<Calendar /></Button>
                     </div>

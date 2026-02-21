@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 import { createBooking, sendMessage } from "./contact-us.actions";
 import { toast } from "sonner";
 
@@ -223,22 +224,28 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-2">
           <label htmlFor="Service" className="text-sm font-medium">الخدمة المطلوبة</label>
-          <select
-            id="Service"
-            name="Service"
-            defaultValue=""
-            required
-            className="flex h-10 w-full rounded-md border-2 outline-0 focus:border-primary focus:border-2 border-input bg-background px-3 text-sm"
-          >
-            <option value="" disabled>اختر الخدمة</option>
-            <option value="الذكاء الاصطناعي في الطب">الذكاء الاصطناعي في الطب</option>
-            <option value="الحلول الهندسية الذكية">الحلول الهندسية الذكية</option>
-            <option value="أنظمة المحاسبة المتقدمة">أنظمة المحاسبة المتقدمة</option>
-            <option value="التنبؤ بالمخازن">التنبؤ بالمخازن</option>
-            <option value="مساعد الفواتير الذكي">مساعد الفواتير الذكي</option>
-            <option value="تطوير النماذج المخصصة">تطوير النماذج المخصصة</option>
-            <option value="أخرى">أخرى</option>
-          </select>
+          <div className="relative">
+            <select
+              id="Service"
+              name="Service"
+              defaultValue=""
+              required
+              className="flex h-11 w-full appearance-none rounded-lg border-2 bg-background px-3 pe-10 text-sm outline-0 transition-colors focus:border-primary focus:ring-2 focus:ring-primary/15"
+            >
+              <option value="" disabled>اختر الخدمة</option>
+              <option value="الذكاء الاصطناعي في الطب">الذكاء الاصطناعي في الطب</option>
+              <option value="الحلول الهندسية الذكية">الحلول الهندسية الذكية</option>
+              <option value="أنظمة المحاسبة المتقدمة">أنظمة المحاسبة المتقدمة</option>
+              <option value="التنبؤ بالمخازن">التنبؤ بالمخازن</option>
+              <option value="مساعد الفواتير الذكي">مساعد الفواتير الذكي</option>
+              <option value="تطوير النماذج المخصصة">تطوير النماذج المخصصة</option>
+              <option value="أخرى">أخرى</option>
+            </select>
+            <ChevronDown
+              className="pointer-events-none absolute end-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+              aria-hidden="true"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

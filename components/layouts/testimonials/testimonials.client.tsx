@@ -1,12 +1,25 @@
 "use client";
 
-import React from 'react';
-import SectionTitle from '@/components/shared/section-title';
-import { supabase } from '@/lib/supabase';
-import { useState, useEffect } from 'react';
-import { Award, BarChart, MessageSquare, PenTool, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import React, { useEffect, useState } from 'react'
+import SectionTitle from '@/components/shared/section-title'
+import { supabase } from '@/lib/supabase'
+import { Stagger, StaggerItem } from '@/components/shared/reveal';
+
+import { Award, BarChart, MessageSquare, PenTool, TrendingUp, Users, Zap, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
 
 const iconComponents = {
     Award,
@@ -70,56 +83,47 @@ export function Clients() {
     return (
         <div className=" max-w-7xl mx-auto py-12 lg:py-20">
             <SectionTitle headline='شهادات مميزة' title='ما يميزنا في نظر عملائنا' highlighted={true} />
-            <div className=" grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-15 mx-5">
+            <Stagger className=" grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-15 mx-5">
                 {dataClients.map((item) => (
-                    <article key={item.id} className="bg-background rounded-xl p-6 border relative">
-                        <div className="absolute top-0 right-8 transform -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-background border">
-                            {getIcon(item.icon_name)}
-                        </div>
-                        <div className="pt-6">
-                            <div className="flex mb-4">
-                                {Array.from({ length: item.rating }).map((_, i) => (
-                                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                                ))}
+                    <StaggerItem key={item.id}>
+                        <article className="bg-background rounded-xl p-6 border relative">
+                            <div className="absolute top-0 right-8 transform -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-background border">
+                                {getIcon(item.icon_name)}
                             </div>
-                            <p className="text-muted-foreground mb-6">{item.quote}</p>
-                            <div className="flex gap-2 items-center">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3">
-                                    <span className="font-bold text-primary">{item.name.charAt(0)}</span>
+                            <div className="pt-6">
+                                <Stagger className="flex mb-4">
+                                    {Array.from({ length: item.rating }).map((_, i) => (
+                                        <StaggerItem key={i}>
+                                            <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                                        </StaggerItem>
+                                    ))}
+                                </Stagger>
+                                <p className="text-muted-foreground mb-6">{item.quote}</p>
+                                <div className="flex gap-2 items-center">
+                                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                        <span className="font-bold text-primary">{item.name.charAt(0)}</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold">{item.name}</h4>
+                                        <p className="text-sm text-muted-foreground">{item.position}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 className="font-bold">{item.name}</h4>
-                                    <p className="text-sm text-muted-foreground">{item.position}</p>
+                                <div className="mt-4 pt-4 border-t">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm font-medium">{item.company}</span>
+                                        <span className="text-xs bg-primary/10 px-2 py-1 rounded-full">{item.industry}</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="mt-4 pt-4 border-t">
-                                <div className="flex justify-between items-center">
-                                    <span className="text-sm font-medium">{item.company}</span>
-                                    <span className="text-xs bg-primary/10 px-2 py-1 rounded-full">{item.industry}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
+                    </StaggerItem>
                 ))}
-            </div>
+            </Stagger>
         </div>
     )
 }
 
 
-
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "sonner"
 
 export function Experience() {
     const [open, setOpen] = useState(false);
