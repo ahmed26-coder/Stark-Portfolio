@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export function Journey() {
     return (
         <>
-            <section className=" max-w-7xl xl:mx-auto my-10 mx-5 w-full py-12 md:py-24 lg:py-32 bg-background">
+            <section className=" max-w-7xl xl:mx-auto my-10 w-full py-12 md:py-24 lg:py-32 bg-background">
                 <div className="container px-4 md:px-6">
                     <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
                         <div className="relative">
@@ -17,6 +17,7 @@ export function Journey() {
                                 src="/about-us.jpg"
                                 width={600}
                                 height={500}
+                                priority
                                 alt="قصة الشركة"
                                 className="relative z-10 rounded-2xl object-cover"
                             />

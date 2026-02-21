@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { CheckCircle, ArrowRight, Zap, Target } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Target, Globe, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SectionTitle from '@/components/shared/section-title';
 import Link from 'next/link';
@@ -17,6 +17,8 @@ interface ProjectDetail {
     main_image: string;
     images: string[];
     features: string[];
+    live?: string | null;
+    demo?: string | null;
 }
 
 export default function PortfolioDetails({ project }: { project: ProjectDetail }) {
@@ -40,6 +42,32 @@ export default function PortfolioDetails({ project }: { project: ProjectDetail }
                         <p className="text-xl text-muted-foreground leading-relaxed">
                             {project.description}
                         </p>
+                        {(project.live || project.demo) && (
+                            <div className="flex flex-wrap gap-4 mt-8">
+                                {project.live && (
+                                    <Link
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-primary/30 hover:scale-105"
+                                    >
+                                        <Globe size={18} />
+                                        عرض المشروع
+                                    </Link>
+                                )}
+                                {project.demo && (
+                                    <Link
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-white transition-all hover:scale-105"
+                                    >
+                                        <Code size={18} />
+                                        عرض الكود
+                                    </Link>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

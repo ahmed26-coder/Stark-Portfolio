@@ -174,15 +174,15 @@ export function Experience() {
                         شارك تجربتك معنا <MessageSquare className="h-5 w-5 mr-1" />
                     </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[500px] text-right" dir="rtl">
+                <DialogContent className="w-full mx-auto max-w-[calc(100%-2rem)] sm:max-w-[500px] h-[85vh] sm:h-auto flex flex-col text-right" dir="rtl">
                     <DialogHeader>
                         <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-[#17ddb9] bg-clip-text text-transparent">شاركنا قصة نجاحك</DialogTitle>
                         <DialogDescription className="text-right">
                             يسعدنا سماع رأيك وتجربتك مع Stark AI. سيتم عرض رأيك في صفحة الشهادات بعد المراجعة.
                         </DialogDescription>
                     </DialogHeader>
-                    <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-                        <div className="grid grid-cols-2 gap-4">
+                    <form onSubmit={handleSubmit} className="space-y-4 mt-4 overflow-y-auto sm:overflow-visible flex-1 sm:flex-none pr-1">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label className="text-sm font-medium">الاسم الكامل</label>
                                 <Input
@@ -202,7 +202,7 @@ export function Experience() {
                                 />
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label className="text-sm font-medium">الشركة</label>
                                 <Input

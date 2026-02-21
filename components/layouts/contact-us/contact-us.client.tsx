@@ -74,7 +74,7 @@ export function BookingForm() {
     <>
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl transform rotate-3"></div>
-        <div className="relative bg-background rounded-2xl p-8 shadow-sm border">
+        <div className="relative bg-background rounded-2xl p-3 sm:p-8 shadow-sm border">
           <form onSubmit={handleSubmit} ref={formRef} className="p-4">
             <div className="text-center">
               <h3 className="text-xl font-bold mb-2">اختر وقتًا يناسبك</h3>

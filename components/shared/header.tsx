@@ -64,19 +64,25 @@ export default function Header() {
       )}>
       <div className="max-w-7xl mx-auto py-2 px-5">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/logo.jpeg"
-              className="rounded-full object-cover"
-              alt="logo"
-              width={50}
-              height={50}
-              priority
-            />
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-stark-cyan via-stark-purple to-stark-green rounded-full blur-xl opacity-40 animate-pulse"></div>
+              <video
+                autoPlay
+                loop
+                muted
+                width={56}
+                height={56}
+                playsInline
+                className="relative h-14 w-14 rounded-full object-cover stark-logo-glow drop-shadow-2xl"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663303194648/oWubjrfMnYuOknoT.mp4" type="video/mp4" />
+              </video>
+            </div>
             <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               STARK
             </h1>
-          </div>
+          </Link>
           <nav className="items-center justify-center gap-2 hidden lg:flex">
             {navLink.map((link) => (
               <Link
@@ -91,7 +97,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center justify-start gap-2">
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             <Link href={"/contact-us"} className="hidden lg:block">
               <Button>تواصل معنا</Button>
             </Link>

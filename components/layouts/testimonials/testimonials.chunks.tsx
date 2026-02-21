@@ -1,6 +1,5 @@
 import SectionTitle from '@/components/shared/section-title'
 import { ArrowRight } from 'lucide-react';
-import React from 'react'
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -17,7 +16,7 @@ export function Similartestimonials() {
                     </Button>
                 </Link>
                 <Link href="/contact-us" className="cursor-pointer">
-                    <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
+                    <button className="flex items-center justify-center sm:w-fit w-full border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
                         تعرف على المزيد من خدماتنا
                     </button>
                 </Link>

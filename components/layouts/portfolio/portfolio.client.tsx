@@ -22,6 +22,7 @@ interface Project {
     description: string;
     category: string;
     icon_name: string;
+    live?: string | null;
     main_image?: string;
     created_at: string;
 }
@@ -34,11 +35,12 @@ export default function PortfolioClient() {
 
     const categories = [
         'الكل',
+        'ذكاء اصطناعي',
         'الهوية البصرية',
-        'التسويق الرقمي',
-        'تطوير المواقع',
-        'وسائل التواصل',
-        'الإعلانات المدفوعة'
+        'تطوير المنصات',
+        'إدارة المجتمع',
+        'كتابة المحتوى',
+        'طباعة تقنية',
     ];
 
     useEffect(() => {
@@ -93,7 +95,6 @@ export default function PortfolioClient() {
                 </div>
             </section>
 
-            {/* Projects Grid */}
             <section className=" max-w-7xl mx-auto w-full py-12 bg-background">
                 <div className="container px-4 md:px-6">
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -114,9 +115,24 @@ export default function PortfolioClient() {
                                                 <div className="rounded-full bg-secondary/10 text-primary p-3 w-12 h-12 flex items-center justify-center mb-4">
                                                     {ProjectIconMap[project.icon_name] || <PenTool className="h-8 w-8 text-primary" />}
                                                 </div>
-                                                <h3 className="text-xl font-bold mb-2 line-clamp-1">{project.title}</h3>
-                                                <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
-                                                    {project.category}
+                                                <div className=" pb-4 sm:flex justify-between items-center">
+                                                    <div className="">
+                                                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                                        <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
+                                                            {project.category}
+                                                        </div>
+                                                    </div>
+                                                    {project.live && (
+                                                        <Link
+                                                            href={project.live}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            onClick={(e) => e.stopPropagation()}
+                                                            className="text-primary hover:bg-primary hover:text-white border border-primary py-0 sm:py-0.5 px-5 sm:px-2.5 rounded-2xl text-sm"
+                                                        >
+                                                            عرض المشروع
+                                                        </Link>
+                                                    )}
                                                 </div>
                                                 <p className="text-muted-foreground mb-4 line-clamp-2 text-sm h-10">{project.description}</p>
                                                 <div className="relative mb-4">

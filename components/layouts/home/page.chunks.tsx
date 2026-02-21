@@ -311,7 +311,7 @@ export function PageClient() {
 
 export function Consultation() {
     return (
-        <section className=" bg-primary/5 py-16 relative overflow-hidden">
+        <section className=" bg-primary/5 py-10 sm:py-16 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="اتصل بنا" highlighted={true} title="دعنا نناقش مشروعك الذكي" description="نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك بالذكاء الاصطناعي" />
                 <div className=" items-center grid gap-10 lg:mx-10 mt-10 lg:grid-cols-2 lg:gap-16">
@@ -389,10 +389,10 @@ export async function Project({ limit = 6, showViewMore = true }: { limit?: numb
     const displayProjects = projects || [];
 
     return (
-        <section className=" bg-primary/5 py-16 relative overflow-hidden">
+        <section className=" bg-primary/5 py-10sm:py-16 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
-                <div className=" mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className=" mx-3 mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {displayProjects.map((project, index) => (
                         <div
                             key={project.id || index}
@@ -402,9 +402,14 @@ export async function Project({ limit = 6, showViewMore = true }: { limit?: numb
                                 <div className="rounded-full bg-secondary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
                                     {ProjectIconMap[project.icon_name] || <PenTool className="h-8 w-8 text-primary" />}
                                 </div>
-                                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                                <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
-                                    {project.category}
+                                <div className=" sm:flex pb-4 justify-between items-center">
+                                    <div className="">
+                                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                        <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
+                                            {project.category}
+                                        </div>
+                                    </div>
+                                    {project.live && <Link href={project.live} className="text-primary hover:bg-primary hover:text-white border border-primary py-0 sm:py-0.5 sm:px-2.5 px-3.5 rounded-2xl ">عرض المشروع</Link>}
                                 </div>
                                 <p className="text-muted-foreground mb-4">{project.description}</p>
                                 <div className="relative">
@@ -414,6 +419,7 @@ export async function Project({ limit = 6, showViewMore = true }: { limit?: numb
                                                 src={project.main_image}
                                                 alt={project.title}
                                                 fill
+                                                priority
                                                 className="object-cover"
                                             />
                                         ) : (
