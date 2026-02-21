@@ -312,7 +312,7 @@ export function SimilarPortfolio() {
           احصل على استشارة تقنية مجانية
           <ArrowRight className="h-4 w-4 mr-1" />
         </Button>
-        <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 hover:bg-accent hover:text-white bg-white py-2 px-5 rounded-md gap-3">
+        <button className="flex items-center justify-center sm:w-fit w-[70%] border border-muted-foreground/20 hover:bg-accent hover:text-white bg-background py-2 px-5 rounded-md gap-3">
           تعرف على حلولنا الذكية
         </button>
       </div>

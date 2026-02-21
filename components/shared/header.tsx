@@ -59,7 +59,7 @@ export default function Header() {
   return (
     <div
       className={cn(
-        "sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-gray-200 transition duration-300",
+        "sticky top-0 z-50 bg-background/70 backdrop-blur-md border-b border-border transition duration-300",
         showNavbar ? "translate-y-0" : "-translate-y-full"
       )}>
       <div className="max-w-7xl mx-auto py-2 px-5">
@@ -89,7 +89,7 @@ export default function Header() {
                 key={link.lable}
                 href={link.href}
                 className={cn(
-                  "mx-4 text-gray-700 hover:text-gray-900",
+                  "mx-4 text-muted-foreground hover:text-foreground",
                   activePage === link.href && "text-primary"
                 )}>
                 {link.lable}
@@ -119,7 +119,7 @@ function MobileMenuSheet({ activePage }: { activePage: string }) {
           </Button>
         </SheetTrigger>
         <SheetContent>
-          <div className="flex flex-col items-start p-10 mt-10 text-2xl text-gray-700 space-y-5">
+          <div className="flex flex-col items-start p-10 mt-10 text-2xl text-foreground space-y-5">
             {navLink.map((link) => (
               <SheetClose asChild key={link.href}>
                 <Link

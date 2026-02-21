@@ -112,7 +112,7 @@ export function Contactreservation() {
                     <div className=" space-y-3">
                         <span className="bg-primary/10 rounded-lg text-sm w-fit mx-auto px-3 py-1">جدولة مكالمة</span>
                         <h2 className=" text-3xl font-bold mt-5 text-accent">احجز استشارة مجانية</h2>
-                        <p className=" text-muted-foreground text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التقنية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك الذكية.</p>
+                        <p className=" text-base ">احجز مكالمة استشارية مجانية مدتها 30 دقيقة مع أحد خبرائنا لمناقشة مشروعك واحتياجاتك<br /> التقنية. سنقدم لك رؤى قيمة ونصائح مخصصة لمساعدتك في تحقيق أهدافك الذكية.</p>
                         <div className=" space-y-2">
                             {DataContact.map((item, index) => (
                                 <article key={index}>

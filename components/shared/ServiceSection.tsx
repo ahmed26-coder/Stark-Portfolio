@@ -58,7 +58,7 @@ export default function ServiceSection({
           <h3 className="text-xl font-bold mb-4">عملية العمل</h3>
           <div className="grid gap-4 md:grid-cols-3">
             {workSteps.map((step) => (
-              <article key={step.id} className= {`p-6 rounded-lg ${highlighted ? "bg-primary/5" : "bg-white"}`}>
+              <article key={step.id} className= {`p-6 rounded-lg ${highlighted ? "bg-primary/5" : "bg-card"}`}>
                 <div className="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mb-3">
                   <span className="font-bold">{step.number}</span>
                 </div>
@@ -68,7 +68,7 @@ export default function ServiceSection({
             ))}
           </div>
         </div>
-        <div className={`mt-8 ${highlighted ? "bg-primary/5" : "bg-white"} p-4 rounded-lg`}>
+        <div className={`mt-8 ${highlighted ? "bg-primary/5" : "bg-card"} p-4 rounded-lg`}>
           <h3 className="text-xl font-bold mb-2">النتائج المتوقعة</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
             {expectedResults.map((result) => (

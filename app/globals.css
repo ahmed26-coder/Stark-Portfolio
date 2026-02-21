@@ -48,69 +48,107 @@
   --animate-float: float 8s infinite ease-in-out;
   --animate-spin-slow-reverse: spin-slow-reverse 5s linear infinite;
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #1285ca;
-  --primary-foreground: hsl(210 40% 98%);
-  --secondary: #17ddb9;
-  --secondary-foreground: hsl(222.2 47.4% 11.2%);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: #64748b;
-  --accent: #011749;
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --background: #0F172A;
+  --foreground: #E2E8F0;
+  --card: #111C33;
+  --card-foreground: #E2E8F0;
+  --popover: #111C33;
+  --popover-foreground: #E2E8F0;
+  --primary: #32E0FF;
+  --primary-foreground: #0B1220;
+  --secondary: #A855F7;
+  --secondary-foreground: #F8FAFC;
+  --muted: #0B1220;
+  --muted-foreground: #94A3B8;
+  --accent: #D946EF;
+  --accent-foreground: #F8FAFC;
+  --destructive: #F87171;
+  --border: #1E293B;
+  --input: #1E293B;
+  --ring: #32E0FF;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #0B1220;
+  --sidebar-foreground: #E2E8F0;
+  --sidebar-primary: #32E0FF;
+  --sidebar-primary-foreground: #0B1220;
+  --sidebar-accent: #111C33;
+  --sidebar-accent-foreground: #E2E8F0;
+  --sidebar-border: #1E293B;
+  --sidebar-ring: #32E0FF;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 @keyframes float-space-1 {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(30px, -50px) rotate(5deg); }
-  66% { transform: translate(-20px, 20px) rotate(-5deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(30px, -50px) rotate(5deg);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 @keyframes float-space-2 {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(-40px, 30px) rotate(-8deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-40px, 30px) rotate(-8deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 @keyframes float-space-3 {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(20px, 20px); }
-  75% { transform: translate(-20px, -20px); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(20px, 20px);
+  }
+
+  75% {
+    transform: translate(-20px, -20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
-.animate-float-space-1 { animation: float-space-1 15s infinite ease-in-out; }
-.animate-float-space-2 { animation: float-space-2 20s infinite ease-in-out; }
-.animate-float-space-3 { animation: float-space-3 12s infinite ease-in-out; }
+.animate-float-space-1 {
+  animation: float-space-1 15s infinite ease-in-out;
+}
 
+.animate-float-space-2 {
+  animation: float-space-2 20s infinite ease-in-out;
+}
+
+.animate-float-space-3 {
+  animation: float-space-3 12s infinite ease-in-out;
+}

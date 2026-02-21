@@ -142,7 +142,7 @@ export default function PortfolioDetails({ project }: { project: ProjectDetail }
                                     {project.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-start gap-4">
                                             <CheckCircle className="text-secondary flex-shrink-0 mt-1" size={20} />
-                                            <span className="text-gray-300">{feature}</span>
+                                            <span className="text-white/80">{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -175,7 +175,7 @@ export default function PortfolioDetails({ project }: { project: ProjectDetail }
                             <Button size="lg" className="px-10 py-7 text-xl">تواصل معنا الآن</Button>
                         </Link>
                         <Link href="/services">
-                            <button className="px-10 text-xl py-3 border text-primary bg-white border-white rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            <button className="px-10 text-xl py-3 border text-primary bg-background border-border rounded-lg hover:bg-primary hover:text-white transition-colors">
                                 استكشف خدماتنا
                             </button>
                         </Link>

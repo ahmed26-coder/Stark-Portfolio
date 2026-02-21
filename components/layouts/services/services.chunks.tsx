@@ -352,7 +352,7 @@ export function SimilarServices() {
           </Button>
         </Link>
         <Link href="/about-us">
-          <button className="flex items-center justify-center sm:w-fit w-full border border-muted-foreground/20 bg-white py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
+          <button className="flex items-center justify-center sm:w-fit w-full border border-muted-foreground/20 bg-background py-2 px-5 rounded-md gap-3 hover:bg-accent hover:text-white ">
             تعرف على حلولنا
           </button>
         </Link>

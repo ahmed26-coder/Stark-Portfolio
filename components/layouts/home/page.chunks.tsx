@@ -12,16 +12,30 @@ import { supabase } from "@/lib/supabase";
 export function HeroSection({ children }: { children: React.ReactNode }) {
     return (
         <main className="py-12 md:py-16 xl:py-36 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10 z-0"></div>
-            <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
-            <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-secondary/10 blur-3xl"></div>
-            <div className="absolute top-1/3 left-1/4 w-6 h-6 rounded-full bg-secondary/30"></div>
-            <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-primary/20"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-8 h-8 rounded-full bg-primary/20"></div>
-            <div className="absolute top-1/4 right-1/4 w-20 h-20 border-2 border-primary/20 rounded-lg transform rotate-45 animate-float"></div>
-            <div className="absolute bottom-1/3 left-1/3 w-16 h-16 border-2 border-secondary/30 rounded-full animate-float"></div>
-            <div className="absolute top-2/3 right-1/5 w-12 h-12 bg-secondary/10 rounded-md transform -rotate-12 animate-float"></div>
-            <div className="max-w-7xl mx-auto px-4">{children}</div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10 z-0" aria-hidden="true"></div>
+
+            <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
+                <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float-space-1"></div>
+                <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-secondary/10 blur-3xl animate-float-space-2"></div>
+
+                <div className="absolute top-[18%] left-[12%] w-6 h-6 rounded-full bg-secondary/30 animate-float-space-3"></div>
+                <div className="absolute top-[42%] left-[22%] w-2 h-2 rounded-full bg-primary/35 animate-float-space-2"></div>
+                <div className="absolute top-[28%] right-[18%] w-3 h-3 rounded-full bg-primary/30 animate-float-space-1"></div>
+                <div className="absolute top-[65%] right-[35%] w-1.5 h-1.5 rounded-full bg-secondary/35 animate-float-space-3"></div>
+                <div className="absolute bottom-[22%] right-[26%] w-8 h-8 rounded-full bg-primary/20 animate-float-space-2"></div>
+                <div className="absolute bottom-[14%] left-[18%] w-4 h-4 rounded-full bg-secondary/25 animate-float-space-1"></div>
+
+                <div className="absolute top-[22%] right-[28%] w-20 h-20 border-2 border-primary/20 rounded-lg transform rotate-45 animate-float-space-1"></div>
+                <div className="absolute top-[58%] left-[10%] w-14 h-14 border border-secondary/25 rounded-lg transform rotate-12 animate-float-space-2"></div>
+                <div className="absolute bottom-[30%] left-[32%] w-16 h-16 border-2 border-secondary/30 rounded-full animate-float-space-3"></div>
+                <div className="absolute top-[72%] right-[20%] w-12 h-12 bg-secondary/10 rounded-md transform -rotate-12 animate-float-space-2"></div>
+                <div className="absolute top-[10%] right-[8%] w-9 h-9 bg-primary/10 rounded-md transform rotate-12 animate-float-space-3"></div>
+
+                <div className="absolute top-[34%] left-[45%] w-40 h-40 rounded-full bg-accent/10 blur-3xl animate-float-space-3"></div>
+                <div className="absolute bottom-[10%] right-[10%] w-56 h-56 rounded-full bg-secondary/10 blur-3xl animate-float-space-1"></div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 relative z-10">{children}</div>
         </main>
     );
 }
@@ -33,7 +47,7 @@ export function HeroStatus() {
             {status.map((st, idx) => (
                 <div
                     key={idx}
-                    className="p-4 rounded-lg bg-white/80 backdrop-blur border relative overflow-hidden group">
+                    className="p-4 rounded-lg bg-card/80 backdrop-blur border border-border relative overflow-hidden group">
                     <div className="absolute inset-0 bg-secondary/5 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-lg"></div>
                     <div className="relative z-10">
                         <div className="text-3xl font-bold text-primary">{st.title}</div>
@@ -283,7 +297,7 @@ export function Marketing() {
                         </div>
                         <div className="flex gap-2 mt-6">
                             <Link href="/about-us"><Button size="lg">تعرف على فريقنا</Button></Link>
-                            <Link href="/portfolio"><button className=" border-1 py-2 px-5 rounded-md hover:bg-accent hover:text-white ">شاهد أعمالنا</button></Link>
+                            <Link href="/portfolio"><button className=" border-1 border-border py-2 px-5 rounded-md hover:bg-accent hover:text-white ">شاهد أعمالنا</button></Link>
                         </div>
                     </div>
                 </div>

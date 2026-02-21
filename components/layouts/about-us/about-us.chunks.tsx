@@ -89,18 +89,18 @@ export function Values() {
                 <SectionTitle headline="رسالتنا وقيمنا" title="رؤية ذكية للمستقبل" description="نسعى لتغيير مشهد التكنولوجيا في المنطقة من خلال تقديم حلول ذكاء اصطناعي تحقق نتائج حقيقية وملموسة" highlighted={true} />
                 <div className="max-w-7xl xl:mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 lg:mx-12 mt-10">
                     {DataValues.map((item) => (
-                        <article key={item.id} className=" rounded-2xl bg-white border-1 border-muted-foreground/15 p-8">
-                            <h1 className=" text-accent font-bold text-3xl flex items-center gap-5"><span className="bg-primary/15 text-primary w-[55px] h-[55px] flex items-center justify-center rounded-full">{item.icon}</span>{item.title}</h1>
+                        <article key={item.id} className=" rounded-2xl bg-card border-1 border-border p-8">
+                            <h1 className=" text-foreground font-bold text-3xl flex items-center gap-5"><span className="bg-primary/15 text-primary w-[55px] h-[55px] flex items-center justify-center rounded-full">{item.icon}</span>{item.title}</h1>
                             <p className=" text-lg mt-3 text-muted-foreground">{item.description}</p>
                         </article>
                     ))}
                 </div>
-                <h1 className=" text-3xl text-center my-8 font-medium text-accent">قيمنا الأساسية</h1>
+                <h1 className=" text-3xl text-center my-8 font-medium text-foreground">قيمنا الأساسية</h1>
                 <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-5 lg:px-10">
                     {DataBasic.map((item) => (
-                        <article key={item.id} className=" w-full xl:w-[290px] shadow-sm text-center rounded-2xl bg-white border-1 border-muted-foreground/15 p-8">
+                        <article key={item.id} className=" w-full xl:w-[290px] shadow-sm text-center rounded-2xl bg-card border-1 border-border p-8">
                             <span className="text-primary flex justify-center">{item.icon}</span>
-                            <h2 className=" text-xl text-accent font-bold my-3 ">{item.title}</h2>
+                            <h2 className=" text-xl text-foreground font-bold my-3 ">{item.title}</h2>
                             <p className="text-muted-foreground">{item.description}</p>
                         </article>
                     ))}
@@ -138,15 +138,15 @@ export function Distinguishes() {
             <SectionTitle headline="لماذا تختارنا" title="ما يميزنا عن الآخرين" description="نقدم أكثر من مجرد خدمات تسويقية. نحن نقدم شراكة حقيقية تساعدك على تحقيق أهدافك" highlighted={true} />
             <div className="max-w-7xl xl:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-12 mt-7">
                 {DataDistinguishes.map((item) => (
-                    <article key={item.id} className=" rounded-2xl bg-white border-1 border-muted-foreground/15 p-6">
-                        <h2 className=" text-xl text-accent font-bold my-3 ">{item.title}</h2>
+                    <article key={item.id} className=" rounded-2xl bg-card border-1 border-border p-6">
+                        <h2 className=" text-xl text-foreground font-bold my-3 ">{item.title}</h2>
                         <p className="text-muted-foreground">{item.description}</p>
                     </article>
                 ))}
             </div>
-            <div className=" shadow-sm max-w-7xl xl:mx-auto space-y-8 sm:space-y-0 grid gap-8 md:grid-cols-2 items-center rounded-2xl bg-white border-1 border-muted-foreground/15 p-10 mx-5 lg:mx-12 mt-15">
+            <div className=" shadow-sm max-w-7xl xl:mx-auto space-y-8 sm:space-y-0 grid gap-8 md:grid-cols-2 items-center rounded-2xl bg-card border-1 border-border p-10 mx-5 lg:mx-12 mt-15">
                 <div className="">
-                    <h1 className=" text-accent text-2xl font-bold">جاهزون للبدء في التحول الذكي؟</h1>
+                    <h1 className=" text-foreground text-2xl font-bold">جاهزون للبدء في التحول الذكي؟</h1>
                     <p className=" text-muted-foreground py-4  text-lg">دعنا نناقش كيف يمكن لتقنيات Stark AI مساعدتك في تحقيق أهدافك التقنية. احصل على استشارة مجانية مع أحد خبرائنا.</p>
                     <Button size="lg">تواصل معنا الان<ChevronLeft /></Button>
                 </div>

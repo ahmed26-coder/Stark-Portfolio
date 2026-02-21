@@ -24,7 +24,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${cairo.className} antialiased bg-white text-gray-900`}>
+      <body className={`${cairo.className} antialiased bg-background text-foreground`}>
         <Header />
         {children}
         <Toaster richColors position="top-center" />
