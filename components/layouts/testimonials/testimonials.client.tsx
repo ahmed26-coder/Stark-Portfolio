@@ -4,7 +4,7 @@ import React from 'react';
 import SectionTitle from '@/components/shared/section-title';
 import { supabase } from '@/lib/supabase';
 import { useState, useEffect } from 'react';
-import { ArrowRight, Award, BarChart, MessageSquare, PenTool, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { Award, BarChart, MessageSquare, PenTool, Star, TrendingUp, Users, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 

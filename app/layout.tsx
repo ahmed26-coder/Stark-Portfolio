@@ -13,8 +13,8 @@ const cairo = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "التسويق الرقمي و الحلول البرمجيه",
-  description: "وكالة متخصصة في تقديم خدمات التسويق الإبداعي وتطوير البرمجيات.",
+  title: "Stark | ذكاء الأعمال والحلول البرمجية المبتكرة",
+  description: "شريكك التقني للتحول الرقمي. نقدم حلول Stark AI المتكاملة للأتمتة الذكية، تحليل البيانات، وتطوير التطبيقات المخصصة لرفع كفاءة أعمالك.",
 };
 
 export default async function RootLayout({

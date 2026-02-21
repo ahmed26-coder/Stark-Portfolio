@@ -1,10 +1,13 @@
 import SectionTitle from "@/components/shared/section-title";
 import { DataAbout, status } from "../../../constants"
-import { ChartNoAxesColumnIncreasing, PenTool, Globe, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, BarChart, ChevronLeft, Brain } from "lucide-react";
+import { PenTool, Users, FileText, Printer, CheckCircle, ArrowRight, Target, Layers, Zap, TrendingUp, Calendar, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Brain, ChevronLeft, Globe, Cpu, BarChart } from "lucide-react";
 import React from "react";
 import BookingForm, { CarouselSize } from "./page.client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { supabase } from "@/lib/supabase";
+
 
 export function HeroSection({ children }: { children: React.ReactNode }) {
     return (
@@ -290,97 +293,10 @@ export function Marketing() {
 }
 
 
-export function Project() {
-    return (
-        <section className=" bg-primary/5 py-16 relative overflow-hidden">
-            <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
-                <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
-                <div className=" mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {[
-                        {
-                            title: "هورايزن للتقنية",
-                            category: "الهوية البصرية",
-                            description: "تطوير هوية بصرية جديدة لشركة تكنولوجية رائدة",
-                            icon: <PenTool className="h-8 w-8 text-primary" />,
-                        },
-                        {
-                            title: "جرين نيتشر",
-                            category: "التسويق الرقمي",
-                            description: "استراتيجية تسويق رقمي متكاملة لشركة منتجات طبيعية",
-                            icon: <BarChart className="h-8 w-8 text-primary" />,
-                        },
-                        {
-                            title: "منصة تعليم",
-                            category: "تطوير المواقع",
-                            description: "تصميم وتطوير منصة تعليمية إلكترونية متكاملة",
-                            icon: <Globe className="h-8 w-8 text-primary" />,
-                        },
-                        {
-                            title: "لاكشري هومز",
-                            category: "وسائل التواصل",
-                            description: "إدارة حسابات التواصل الاجتماعي لشركة عقارات فاخرة",
-                            icon: <Users className="h-8 w-8 text-primary" />,
-                        },
-                        {
-                            title: "هيلثي فود",
-                            category: "الإعلانات المدفوعة",
-                            description: "حملات إعلانية مدفوعة لسلسلة مطاعم صحية",
-                            icon: <TrendingUp className="h-8 w-8 text-primary" />,
-                        },
-                        {
-                            title: "وكالة سفريات الشرق",
-                            category: "الهوية البصرية",
-                            description: "تطوير هوية بصرية لوكالة سفر وسياحة",
-                            icon: <PenTool className="h-8 w-8 text-primary" />,
-                        },
-                    ].map((project, index) => (
-                        <div
-                            key={index}
-                            className="group relative overflow-hidden rounded-xl border bg-background transition-all hover:shadow-md"
-                        >
-                            <div className="p-6">
-                                <div className="rounded-full bg-secondary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
-                                    {project.icon}
-                                </div>
-                                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                                <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
-                                    {project.category}
-                                </div>
-                                <p className="text-muted-foreground mb-4">{project.description}</p>
-                                <div className="relative">
-                                    <div className="h-40 rounded-lg bg-muted/50 overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/10"></div>
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-16 h-16 rounded-lg border-2 border-dashed border-secondary/30 flex items-center justify-center">
-                                                <div className="w-8 h-8 bg-secondary/20 rounded-md"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mt-4 pt-4 border-t flex justify-between items-center">
-                                    <span className="text-sm text-primary">عرض التفاصيل</span>
-                                    <ChevronLeft className="h-4 w-4 text-primary transform group-hover:translate-x-[-4px] transition-transform" />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="flex justify-center mt-12">
-                    <Link href="/portfolio">
-                        <Button size="lg">عرض المزيد من الأعمال</Button>
-                    </Link>
-                </div>
-
-            </div>
-        </section>
-    )
-}
-
-
 
 export function PageClient() {
     return (
-        <section className=" py-12 relative overflow-hidden">
+        <section className=" py-10 relative overflow-hidden">
             <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
                 <SectionTitle headline="آراء العملاء" title="ماذا يقول عملاؤنا" description="نحن نفخر بالعلاقات طويلة الأمد التي بنيناها مع عملائنا" highlighted={true} />
                 <div className=" mt-10">
@@ -443,3 +359,108 @@ export function Consultation() {
         </section >
     )
 }
+
+
+
+
+
+
+const ProjectIconMap: Record<string, React.ReactNode> = {
+    PenTool: <PenTool className="h-8 w-8 text-primary" />,
+    BarChart: <BarChart className="h-8 w-8 text-primary" />,
+    Globe: <Globe className="h-8 w-8 text-primary" />,
+    Users: <Users className="h-8 w-8 text-primary" />,
+    TrendingUp: <TrendingUp className="h-8 w-8 text-primary" />,
+    Brain: <Brain className="h-8 w-8 text-primary" />,
+    Cpu: <Cpu className="h-8 w-8 text-primary" />,
+};
+
+export async function Project({ limit = 6, showViewMore = true }: { limit?: number, showViewMore?: boolean } = {}) {
+    const { data: projects, error } = await supabase
+        .from('projects')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(limit);
+
+    if (error) {
+        console.error('Error fetching projects:', error);
+    }
+
+    const displayProjects = projects || [];
+
+    return (
+        <section className=" bg-primary/5 py-16 relative overflow-hidden">
+            <div className=" max-w-7xl mx-auto w-full  py-[20%] sm:py-[13%] lg:py-[6%]">
+                <SectionTitle headline="أعمالنا" title="مشاريع ناجحة" description="نفخر بالعمل مع مجموعة متنوعة من العملاء في مختلف القطاعات" highlighted={true} />
+                <div className=" mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {displayProjects.map((project, index) => (
+                        <div
+                            key={project.id || index}
+                            className="group relative overflow-hidden rounded-xl border bg-background transition-all hover:shadow-md"
+                        >
+                            <div className="p-6">
+                                <div className="rounded-full bg-secondary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                                    {ProjectIconMap[project.icon_name] || <PenTool className="h-8 w-8 text-primary" />}
+                                </div>
+                                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                <div className="inline-block px-2 py-1 bg-primary/10 rounded-full text-xs font-medium mb-3">
+                                    {project.category}
+                                </div>
+                                <p className="text-muted-foreground mb-4">{project.description}</p>
+                                <div className="relative">
+                                    <div className="h-40 rounded-lg bg-muted/50 overflow-hidden relative">
+                                        {project.main_image ? (
+                                            <Image
+                                                src={project.main_image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        ) : (
+                                            <>
+                                                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/10"></div>
+                                                <div className="absolute inset-0 flex items-center justify-center">
+                                                    <div className="w-16 h-16 rounded-lg border-2 border-dashed border-secondary/30 flex items-center justify-center">
+                                                        <div className="w-8 h-8 bg-secondary/20 rounded-md"></div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
+                                </div>
+                                <Link
+                                    href={`/portfolio/${project.id}`}
+                                    className="block group"
+                                >
+                                    <div className="mt-4 flex justify-between items-center 
+                  px-2 py-2 rounded-md
+                  transition-all duration-300
+                  group-hover:bg-accent">
+
+                                        <span className="text-sm text-primary font-bold transition-colors duration-300 group-hover:text-white">
+                                            عرض التفاصيل
+                                        </span>
+
+                                        <ChevronLeft
+                                            className="h-4 w-4 text-primary transition-all duration-300
+                 group-hover:text-white
+                 group-hover:-translate-x-1"
+                                        />
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {showViewMore && (
+                    <div className="flex justify-center mt-12">
+                        <Link href="/portfolio">
+                            <Button size="lg">عرض المزيد من الأعمال</Button>
+                        </Link>
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+}
+

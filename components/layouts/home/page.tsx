@@ -1,4 +1,4 @@
-import { Project, Consultation, Marketing, Services, Work, PageClient } from "./page.chunks"
+import { Consultation, Marketing, Services, Work, PageClient, Project } from "./page.chunks"
 import React from "react";
 import { HeroSection, HeroStatus } from "./page.chunks";
 import Link from "next/link";
@@ -32,7 +32,7 @@ export default function HomePage() {
               size="lg"
               className="gap-1 text-base px-8 py-6 relative overflow-hidden group ">
               <span className="absolute inset-0 w-full h-full bg-primary/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
-              <span className="relative z-10">ابدأ الآن</span>
+              <span className="relative z-10">االسيره الذاتيه</span>
               <ArrowRight className="h-4 w-4 mr-1 relative z-10" />
             </Button>
           </Link>
@@ -52,7 +52,7 @@ export default function HomePage() {
       <Work />
       <DecorativeSeparator />
       <Marketing />
-      <Project />
+      <Project limit={6}  />
       <DecorativeSeparator />
       <PageClient />
       <Consultation />

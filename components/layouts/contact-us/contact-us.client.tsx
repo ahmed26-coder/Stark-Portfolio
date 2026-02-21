@@ -182,7 +182,7 @@ export default function ContactForm() {
         toast.success("تم إرسال الرسالة بنجاح!");
         form.reset();
       }
-    } catch (error) {
+    } catch {
       toast.error("حدث خطأ غير متوقع. حاول مرة أخرى.");
     }
 

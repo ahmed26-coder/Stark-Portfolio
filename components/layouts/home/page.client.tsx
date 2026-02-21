@@ -10,8 +10,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Star, Award, Zap, Users, TrendingUp, BarChart, PenTool } from "lucide-react"
+import { Star, Award, Zap, Users, TrendingUp, BarChart, PenTool} from "lucide-react"
 import { supabase } from "@/lib/supabase"
+
 
 
 export default function BookingForm() {
@@ -208,8 +209,8 @@ export function CarouselSize() {
                     </div>
                     <div className="mt-4 pt-4 border-t">
                       <div className="flex justify-between items-center">
-                        <span className="text-xs font-medium">{item.company}</span>
-                        <span className="text-[10px] bg-primary/10 px-2 py-1 rounded-full">{item.industry}</span>
+                        <span className="text-xs font-bold">{item.company}</span>
+                        <span className="text-sm bg-primary/10 px-2 py-1 rounded-full">{item.industry}</span>
                       </div>
                     </div>
                   </div>

@@ -1,177 +1,17 @@
 import SectionTitle from "@/components/shared/section-title";
-import { DataSolution, DataResults } from "../../../constants";
+
 import {
   ArrowRight,
-  Award,
-  BarChart,
   CheckCircle,
   ChevronLeft,
   Globe,
-  PenTool,
-  Users,
-  Zap,
   Cpu,
+  Brain,
 } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-export function Casestudy() {
-  return (
-    <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-      <SectionTitle
-        headline="دراسة حالة مميزة"
-        title="كيف ساعدنا مستشفى النخبة على زيادة دقة التشخيص بنسبة 98%"
-        highlighted={true}
-      />
-      <div className=" max-w-7xl xl:mx-auto mt-15 mx-5 sm:mx-10 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-        <div className="relative h-[400px] overflow-hidden rounded-xl">
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-background"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-full max-w-md grid grid-cols-2 gap-6 p-6">
-              <div className="relative">
-                <div className="absolute top-0 left-0 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
-                  قبل
-                </div>
-                <div className="border rounded-lg bg-background/40 backdrop-blur-sm p-4 h-full">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center">
-                      <span className="text-muted-foreground">شعار</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-2 bg-muted rounded-full w-full"></div>
-                    <div className="h-2 bg-muted rounded-full w-3/4"></div>
-                    <div className="h-2 bg-muted rounded-full w-1/2"></div>
-                  </div>
-                  <div className="mt-4 flex justify-between">
-                    <div className="text-center">
-                      <div className="text-sm font-bold text-muted-foreground">
-                        20%
-                      </div>
-                      <div className="text-xs text-muted-foreground">تحويل</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm font-bold text-muted-foreground">
-                        500
-                      </div>
-                      <div className="text-xs text-muted-foreground">زيارة</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute top-0 left-0 bg-primary/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
-                  بعد
-                </div>
-                <div className="border-2 border-primary/20 rounded-lg bg-background/60 backdrop-blur-sm p-4 h-full shadow-sm">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <PenTool className="h-8 w-8 text-primary" />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-2 bg-primary/20 rounded-full w-full"></div>
-                    <div className="h-2 bg-primary/20 rounded-full w-3/4"></div>
-                    <div className="h-2 bg-primary/20 rounded-full w-1/2"></div>
-                  </div>
-                  <div className="mt-4 flex justify-between">
-                    <div className="text-center">
-                      <div className="text-sm font-bold text-primary">65%</div>
-                      <div className="text-xs text-muted-foreground">تحويل</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm font-bold text-primary">2500</div>
-                      <div className="text-xs text-muted-foreground">زيارة</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="space-y-6">
-          <div className="flex items-center gap-2">
-            <div className="inline-block rounded-lg bg-primary/10 p-2">
-              <PenTool className="h-5 w-5 text-primary" />
-            </div>
-            <div>
-              <span className="text-sm text-muted-foreground">العميل:</span>
-              <h3 className="font-bold">مستشفى النخبة</h3>
-            </div>
-            <div className="mr-4">
-              <span className="text-sm text-muted-foreground">المجال:</span>
-              <h3 className="font-bold">الرعاية الصحية</h3>
-            </div>
-          </div>
-          <div className="bg-background rounded-lg p-6 border">
-            <h3 className="text-lg font-bold mb-3 flex items-center">
-              <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 ml-2">
-                <span>1</span>
-              </div>
-              المشكلة
-            </h3>
-            <p className="text-muted-foreground">
-              كان مستشفى النخبة يعاني من ضغط هائل على قسم الأشعة وتأخر في صدور
-              النتائج، مما أدى إلى تزاحم المواعيد وصعوبة في إدارة حالات الطوارئ
-              بدقة وسرعة.
-            </p>
-          </div>
-          <div className="bg-background rounded-lg p-6 border">
-            <h3 className="text-lg font-bold mb-3 flex items-center">
-              <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 ml-2">
-                <span>2</span>
-              </div>
-              الحل
-            </h3>
-            <p className="text-muted-foreground mb-4">
-              قمنا بتطبيق نظام Stark AI للتشخيص الطبي، والذي يعمل على تحليل الصور
-              الإشعاعية فورياً وتقديم تقرير أولي دقيق للأطباء. شمل الحل:
-            </p>
-            <ul className="space-y-2">
-              {DataSolution.map((item, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-background rounded-lg p-6 border">
-            <h3 className="text-lg font-bold mb-3 flex items-center">
-              <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 ml-2">
-                <span>3</span>
-              </div>
-              النتائج
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              {DataResults.map((item) => (
-                <article
-                  key={item.id}
-                  className="text-center p-3 bg-primary/5 rounded-lg">
-                  <p className="text-2xl font-bold text-primary">
-                    {item.title}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-            <p className="text-muted-foreground">
-              أدى تطبيق النظام إلى تحول جذري في قسم الأشعة، حيث انخفض وقت انتظار
-              المرضى بشكل كبير وتحسنت دقة التشخيص، مما ساهم في إنقاذ العديد من
-              الحالات الحرجة بفضل التدخل المبكر المدعوم بالذكاء الاصطناعي.
-            </p>
-          </div>
-          <Button size="lg" className=" w-full">
-            عرض دراسة الحالة كاملة
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function Stories() {
   const DataStories = [
@@ -276,65 +116,188 @@ export function Stories() {
   );
 }
 
-export function Clients() {
-  const DataClients = [
-    {
-      id: "1",
-      icon: <Award />,
-      description:
-        "نظام Stark AI في الطب غير مفهوم الرعاية لدينا. الدقة في تحليل الصور الطبية أصبحت مذهلة وسرعت اتخاذ القرار السريري.",
-      title: "د. خالد المنصور",
-      responsible: "المدير الطبي، مستشفى النخبة",
-    },
-    {
-      id: "2",
-      icon: <Zap />,
-      description:
-        "ساعدنا حل Stark AI الهندسي على تقليل تكاليف المواد بشكل ملحوظ وتحسين دقة الجدولة الزمنية لمشاريعنا الكبرى.",
-      title: "م. سارة القحطاني",
-      responsible: "مديرة المشاريع، مجموعة بن لادن",
-    },
-    {
-      id: "3",
-      icon: <Users />,
-      description:
-        "الموقع الجديد الذي طوره فريق Stark AI غير تجربة المستخدم بالكامل وساهم في زيادة التسجيلات في منصتنا بنسبة 85%.",
-      title: "محمد العتيبي",
-      responsible: "مؤسس منصة تعليم",
-    },
-  ];
+
+
+
+export function Learn() {
   return (
-    <div className=" bg-primary/5 py-15 sm:py-[13%] lg:py-20">
-      <SectionTitle
-        headline="آراء العملاء"
-        title="ماذا يقول عملاؤنا عن تجربتهم معنا"
-        highlighted={true}
-      />
-      <div className=" max-w-7xl xl:mx-auto mx-5 grid gap-8 md:grid-cols-3 mt-15">
-        {DataClients.map((item) => (
-          <article
-            key={item.id}
-            className="bg-background rounded-xl p-6 border relative">
-            <div className="absolute top-0 text-primary right-8 transform -translate-y-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-background border">
-              {item.icon}
-            </div>
-            <div className="pt-6">
-              <p className="text-muted-foreground mb-6">{item.description}</p>
-              <div className="flex items-center">
-                <div>
-                  <h4 className="font-bold">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {item.responsible}
-                  </p>
+    <section className="w-full py-16 md:py-24 bg-primary/10">
+      <div className=" max-w-7xl mx-auto container px-4 md:px-6">
+        <div className="text-center mb-12">
+          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm mb-4">دراسة حالة مميزة</div>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-4">
+            كيف ساعدنا &quot;مجموعة زاد&quot; على خفض التكاليف
+            <br />
+            بنسبة <span className="text-primary">40%</span> وزيادة الوصول بنسبة <span className="text-primary">300%</span>
+          </h2>
+        </div>
+
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+          {/* Visual representation */}
+          <div className="relative h-[400px] overflow-hidden rounded-xl">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-background"></div>
+
+            {/* Before/After visualization */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-full max-w-md grid grid-cols-2 gap-6 p-6">
+                <div className="relative">
+                  <div className="absolute top-0 left-0 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
+                    قبل
+                  </div>
+                  <div className="border rounded-lg bg-background/40 backdrop-blur-sm p-4 h-full">
+                    <div className="flex justify-center mb-4">
+                      <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center">
+                        <span className="text-muted-foreground">بيانات</span>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-muted rounded-full w-full"></div>
+                      <div className="h-2 bg-muted rounded-full w-3/4"></div>
+                      <div className="h-2 bg-muted rounded-full w-1/2"></div>
+                    </div>
+                    <div className="mt-4 flex justify-between">
+                      <div className="text-center">
+                        <div className="text-sm font-bold text-muted-foreground">15%</div>
+                        <div className="text-xs text-muted-foreground">كفاءة</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-sm font-bold text-muted-foreground">1.2k</div>
+                        <div className="text-xs text-muted-foreground">تفاعل</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute top-0 left-0 bg-primary/20 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
+                    بعد
+                  </div>
+                  <div className="border-2 border-primary/20 rounded-lg bg-background/60 backdrop-blur-sm p-4 h-full shadow-sm">
+                    <div className="flex justify-center mb-4">
+                      <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Brain className="h-8 w-8 text-primary" />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-primary/20 rounded-full w-full"></div>
+                      <div className="h-2 bg-primary/20 rounded-full w-3/4"></div>
+                      <div className="h-2 bg-primary/20 rounded-full w-1/2"></div>
+                    </div>
+                    <div className="mt-4 flex justify-between">
+                      <div className="text-center">
+                        <div className="text-sm font-bold text-primary">85%</div>
+                        <div className="text-xs text-muted-foreground">كفاءة</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-center">
+                          <div className="text-sm font-bold text-primary">5.8k</div>
+                          <div className="text-xs text-muted-foreground">تفاعل</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </article>
-        ))}
+          </div>
+
+          {/* Case study content */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <div className="inline-block rounded-lg bg-primary/10 p-2">
+                <Brain className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <span className="text-sm text-muted-foreground">العميل:</span>
+                <h3 className="font-bold">مجموعة زاد التجارية</h3>
+              </div>
+              <div className="mr-4">
+                <span className="text-sm text-muted-foreground">المجال:</span>
+                <h3 className="font-bold">التجارة والتجزئة</h3>
+              </div>
+            </div>
+
+            {/* Problem */}
+            <div className="bg-background rounded-lg p-6 border">
+              <h3 className="text-lg font-bold mb-3 flex items-center">
+                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 ml-2">
+                  <span>1</span>
+                </div>
+                المشكلة
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                كانت مجموعة زاد تواجه صعوبة في تحليل بيانات عملائها الضخمة، مما أدى لتبديد ميزانية التسويق في حملات غير مستهدفة، بالإضافة إلى تكاليف تشغيلية مرتفعة نتيجة العمليات اليدوية في إدارة المخزون وتوقع الطلب.
+              </p>
+            </div>
+
+            {/* Solution */}
+            <div className="bg-background rounded-lg p-6 border">
+              <h3 className="text-lg font-bold mb-3 flex items-center">
+                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 ml-2">
+                  <span>2</span>
+                </div>
+                الحل
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                قمنا بتطبيق نظام Stark AI المتكامل الذي يربط بين تحليل البيانات وأتمتة العمليات التسويقية، مما خلق تجربة مستخدم مخصصة وذكية:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {[
+                  "تحليل سلوك المستهلك بالذكاء الاصطناعي",
+                  "أتمتة الحملات الإعلانية الموسمية",
+                  "نظام توقع الطلب وخفض الهدر",
+                  "تحسين تجربة العميل الرقمية (UI/UX)",
+                  "تكامل ذكي مع منصات التواصل الاجتماعي",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-2 text-xs">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Results */}
+            <div className="bg-background rounded-lg p-6 border">
+              <h3 className="text-lg font-bold mb-3 flex items-center">
+                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 ml-2">
+                  <span>3</span>
+                </div>
+                النتائج
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                <div className="text-center p-3 bg-primary/5 rounded-lg">
+                  <p className="text-2xl font-bold text-primary">+300%</p>
+                  <p className="text-[10px] text-muted-foreground">زيادة في الوصول</p>
+                </div>
+                <div className="text-center p-3 bg-primary/5 rounded-lg">
+                  <p className="text-2xl font-bold text-primary">+85%</p>
+                  <p className="text-[10px] text-muted-foreground">معدل التحويل</p>
+                </div>
+                <div className="text-center p-3 bg-primary/5 rounded-lg">
+                  <p className="text-2xl font-bold text-primary">-40%</p>
+                  <p className="text-[10px] text-muted-foreground">التكاليف التشغيلية</p>
+                </div>
+                <div className="text-center p-3 bg-primary/5 rounded-lg">
+                  <p className="text-2xl font-bold text-primary">+200%</p>
+                  <p className="text-[10px] text-muted-foreground">نمو المبيعات</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-xs">
+                تحول العمل من التخمين إلى اتخاذ قرارات مبنية على البيانات اللحظية، مما ساهم في تحقيق استدامة مالية ونمو متسارع في فترة قياسية.
+              </p>
+            </div>
+            <Link href="/contact-us">
+              <Button className="w-full">عرض دراسة الحالة كاملة</Button>
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
+
+
 
 export function SimilarPortfolio() {
   return (
