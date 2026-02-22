@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Arabic } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/shared/header";
 import { Toaster } from "sonner";
 import Footer from "@/components/shared/footer";

@@ -91,7 +91,7 @@ export default function PortfolioDetails({ project }: { project: ProjectDetail }
 
                             {/* Problem & Solution */}
                             <div className="grid md:grid-cols-2 gap-8 mt-12">
-                                <div className="bg-red-50/50 p-8 rounded-2xl border border-red-100">
+                                <div className=" bg-red-300/10 p-8 rounded-2xl border border-red-100">
                                     <div className="flex items-center gap-3 mb-4 text-red-600">
                                         <Target size={24} />
                                         <h3 className="text-xl font-bold">التحدي</h3>
@@ -141,7 +141,7 @@ export default function PortfolioDetails({ project }: { project: ProjectDetail }
                                 <ul className="space-y-4">
                                     {project.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-start gap-4">
-                                            <CheckCircle className="text-secondary flex-shrink-0 mt-1" size={20} />
+                                            <CheckCircle className="text-background flex-shrink-0 mt-1" size={20} />
                                             <span className="text-white/80">{feature}</span>
                                         </li>
                                     ))}

@@ -97,7 +97,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center justify-start gap-2">
-            {/* <LanguageSwitcher /> */}
+            <LanguageSwitcher />
             <Link href={"/contact-us"} className="hidden lg:block">
               <Button>تواصل معنا</Button>
             </Link>
